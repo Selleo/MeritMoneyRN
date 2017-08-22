@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import {Button} from 'react-native-elements';
-import {Text, View, StyleSheet, Alert} from 'react-native';
-import {Google} from 'expo';
+import React, { Component } from 'react';
+import { Button } from 'react-native-elements';
+import { Text, View, StyleSheet, Alert } from 'react-native';
+import { Google } from 'expo';
 
 export default class Index extends Component {
   _handleGoogleLogin = async () => {

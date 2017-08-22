@@ -10,15 +10,13 @@
     "dirty-chai": "2.0.1",
     "enzyme": "2.9.1",
     "enzyme-to-json": "1.5.1",
-    "eslint": "4.4.1",
+    "eslint": "4.5.0",
     "eslint-plugin-import": "2.7.0",
-    "eslint-plugin-react": "7.1.0",
+    "eslint-plugin-react": "7.3.0",
     "eslint-plugin-react-native": "3.0.1",
-    "install": "0.10.1",
-    "jest-expo": "19.0.0",
-    "npm": "5.3.0",
+    "jest-expo": "20.0.0",
     "react-devtools-core": "^2.5.0",
-    "react-native-scripts": "1.1.0",
+    "react-native-scripts": "1.2.1",
     "react-test-renderer": "16.0.0-alpha.12"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
@@ -30,17 +28,18 @@
     "eslint": "./node_modules/.bin/eslint --ext .js --ext .jsx ./app",
     "ios": "react-native-scripts ios",
     "newclear": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build/ModuleCache/* && rm -rf node_modules/ && npm cache clean && npm i",
+    "start": "react-native-scripts start",
     "test": "node node_modules/jest/bin/jest.js --watch"
   },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
-    "expo": "19.0.0",
+    "expo": "20.0.1",
     "prop-types": "15.5.10",
     "react": "16.0.0-alpha.12",
     "react-dom": "16.0.0-alpha.12",
-    "react-native": "0.46.1",
-    "react-native-elements": "0.15.0"
+    "react-native": "0.47.2",
+    "react-native-elements": "0.16.0"
   }
 }

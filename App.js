@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {Constants} from 'expo';
-import {View, StyleSheet} from 'react-native';
+import React, { Component } from 'react';
+import { Constants } from 'expo';
+import { View, StyleSheet } from 'react-native';
 
 import Index from './app/index';
 
