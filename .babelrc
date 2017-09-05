@@ -1,17 +1,3 @@
 {
-  "presets": ["babel-preset-expo"],
-  "plugins": [
-    ["module-resolver", {
-      "cwd": "babelrc",
-      "root": ["./app"],
-      "alias": {
-        "app": "./app"
-      }
-    }]
-  ],
-  "env": {
-    "development": {
-      "plugins": ["transform-react-jsx-source"]
-    }
-  }
+  "presets": ["react-native", "react-native-dotenv"]
 }

@@ -1,45 +1,33 @@
 {
-  "name": "merit-money-native",
-  "version": "0.1.0",
-  "private": true,
-  "devDependencies": {
-    "babel-eslint": "7.2.3",
-    "babel-jest": "20.0.3",
-    "babel-plugin-module-resolver": "2.7.1",
-    "chai": "4.1.1",
-    "dirty-chai": "2.0.1",
-    "enzyme": "2.9.1",
-    "enzyme-to-json": "1.5.1",
-    "eslint": "4.5.0",
-    "eslint-plugin-import": "2.7.0",
-    "eslint-plugin-react": "7.3.0",
-    "eslint-plugin-react-native": "3.0.1",
-    "jest-expo": "20.0.0",
-    "react-devtools-core": "^2.5.0",
-    "react-native-scripts": "1.2.1",
-    "react-test-renderer": "16.0.0-alpha.12"
-  },
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
-  "scripts": {
-    "android": "react-native-scripts android",
-    "clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean",
-    "debugger": "open 'rndebugger://set-debugger-loc?host=localhost&port=19001'",
-    "eject": "react-native-scripts eject",
-    "eslint": "./node_modules/.bin/eslint --ext .js --ext .jsx ./app",
-    "ios": "react-native-scripts ios",
-    "newclear": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build/ModuleCache/* && rm -rf node_modules/ && npm cache clean && npm i",
-    "start": "react-native-scripts start",
-    "test": "node node_modules/jest/bin/jest.js --watch"
-  },
-  "jest": {
-    "preset": "jest-expo"
-  },
-  "dependencies": {
-    "expo": "20.0.1",
-    "prop-types": "15.5.10",
-    "react": "16.0.0-alpha.12",
-    "react-dom": "16.0.0-alpha.12",
-    "react-native": "0.47.2",
-    "react-native-elements": "0.16.0"
-  }
+	"name": "meritMoneyNative",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"test": "jest"
+	},
+	"dependencies": {
+		"jwt-decode": "^2.2.0",
+		"prop-types": "15.5.10",
+		"react": "16.0.0-alpha.12",
+		"react-native": "0.48.1",
+		"react-native-auth0": "^1.1.1",
+		"react-native-elements": "^0.16.0",
+		"react-native-vector-icons": "^4.3.0"
+	},
+	"devDependencies": {
+		"babel-eslint": "7.2.3",
+		"babel-jest": "21.0.0",
+		"babel-preset-react-native": "3.0.2",
+		"eslint": "4.5.0",
+		"eslint-plugin-import": "2.7.0",
+		"eslint-plugin-react": "7.3.0",
+		"eslint-plugin-react-native": "3.1.0",
+		"jest": "21.0.1",
+		"react-native-dotenv": "^0.1.0",
+		"react-test-renderer": "16.0.0-alpha.12"
+	},
+	"jest": {
+		"preset": "react-native"
+	}
 }
