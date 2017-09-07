@@ -5,6 +5,8 @@ import { Button, Rating } from 'react-native-elements'
 import jwtDecoder from 'jwt-decode'
 import { CLIENT_ID, DOMAIN_URL } from 'react-native-dotenv'
 
+import TopBar from './TopBar';
+
 export default class Main extends Component {
   state = {
     loading: true,
@@ -44,6 +46,7 @@ export default class Main extends Component {
 
     return (
       <View style={styles.container}>
+        <TopBar />
         <Text testID="main"> MeritMoney </Text>
         <Rating
           imageSize={40}
