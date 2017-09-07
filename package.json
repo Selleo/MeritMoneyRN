@@ -4,7 +4,9 @@
 	"private": true,
 	"scripts": {
 		"start": "node node_modules/react-native/local-cli/cli.js start",
-		"test": "jest"
+		"test": "yarn test:unit && yarn test:e2e",
+		"test:e2e": "detox build && jest __e2e__",
+		"test:unit": "jest __tests__"
 	},
 	"dependencies": {
 		"jwt-decode": "^2.2.0",
@@ -19,6 +21,7 @@
 		"babel-eslint": "7.2.3",
 		"babel-jest": "21.0.0",
 		"babel-preset-react-native": "3.0.2",
+		"detox": "^5.6.1",
 		"eslint": "4.5.0",
 		"eslint-plugin-import": "2.7.0",
 		"eslint-plugin-react": "7.3.0",
@@ -28,6 +31,18 @@
 		"react-test-renderer": "16.0.0-alpha.12"
 	},
 	"jest": {
-		"preset": "react-native"
+		"preset": "react-native",
+		"bail": true,
+		"setupTestFrameworkScriptFile": "<rootDir>/jest/setup.js"
+	},
+	"detox": {
+		"configurations": {
+			"ios.sim.debug": {
+				"binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/meritMoneyNative.app",
+				"build": "xcodebuild -project ios/meritMoneyNative.xcodeproj -scheme meritMoneyNative -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+				"type": "ios.simulator",
+				"name": "iPhone 7"
+			}
+		}
 	}
 }

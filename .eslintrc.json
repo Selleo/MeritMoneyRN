@@ -36,7 +36,13 @@
     ],
     "semi": [
       "error",
-      "always"
+      "never"
     ]
+  },
+  "globals": {
+    "by": true,
+    "device": true,
+    "element": true,
+    "jasmine": true
   }
 }
