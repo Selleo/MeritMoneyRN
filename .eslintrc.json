@@ -19,6 +19,7 @@
     "react-native"
   ],
   "rules": {
+    "no-debugger": "off",
     "no-unused-vars": [
       "error",
       {
@@ -35,7 +36,7 @@
       "single"
     ],
     "semi": [
-      "error",
+      "warn",
       "never"
     ]
   },
