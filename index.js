@@ -6,7 +6,7 @@
 
 import React, { Component } from 'react'
 import { AppRegistry } from 'react-native'
-import Routes from './src/routes';
+import Routes from './src/scenes';
 
 export default class App extends Component {
   render() {
