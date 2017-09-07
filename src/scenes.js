@@ -46,5 +46,3 @@ const TabNavigatorConfig = {
 };
 
 export default TabNavigator(RoutesConfig, TabNavigatorConfig);
-
-
