@@ -12,21 +12,27 @@ const RoutesConfig = {
     screen: Main,
     navigationOptions: {
       tabBarLabel: 'Main',
-      tabBarIcon: () => <Icon name='home'/>
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name='home' iconStyle={{color: tintColor}}/>
+      )
     },
   },
   Comments: {
     screen: Comments,
     navigationOptions: {
       tabBarLabel: 'Comments',
-      tabBarIcon: () => <Icon name='comment'/>
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name='comment' iconStyle={{color: tintColor}}/>
+      )
     },
   },
   CollectorsAndHamsters: {
     screen: CollectorsAndHamsters,
     navigationOptions: {
       tabBarLabel: 'Collectors & Hamsters',
-      tabBarIcon: () => <Icon name='supervisor-account'/>
+      tabBarIcon: ({ tintColor }) => (
+        <Icon name='supervisor-account' iconStyle={{color: tintColor}}/>
+      )
     },
   },
 };
@@ -36,21 +42,7 @@ const TabNavigatorConfig = {
   initialRoute: 'Main',
   tabBarOptions: {
     showIcon: true,
-    style: {
-      backgroundColor: '#ffffff',
-      borderTopWidth: 1,
-      borderTopColor: '#ededed'
-    },
   },
 };
 
-const styles = StyleSheet.create({
-  icon: {
-    width: 28,
-    height: 28
-  }
-});
-
 export default TabNavigator(RoutesConfig, TabNavigatorConfig);
-
-
