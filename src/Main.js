@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, StyleSheet } from 'react-native'
 import Auth0 from 'react-native-auth0'
 import { Button, Rating } from 'react-native-elements'
 import jwtDecoder from 'jwt-decode'
@@ -32,7 +32,7 @@ export default class Main extends Component {
 
     if (!userInfo) {
       return (
-        <View>
+        <View style={styles.container}>
           <Button
             onPress={this.authorize}
             testID="main"
@@ -43,7 +43,7 @@ export default class Main extends Component {
     }
 
     return (
-      <View>
+      <View style={styles.container}>
         <Text testID="main"> MeritMoney </Text>
         <Rating
           imageSize={40}
@@ -56,3 +56,11 @@ export default class Main extends Component {
     )
   }
 }
+
+const styles =StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
+});
