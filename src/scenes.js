@@ -1,13 +1,13 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { TabNavigator } from 'react-navigation';
+import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 
 import Comments from './Comments';
 import CollectorsAndHamsters from './CollectorsAndHamsters';
 import Main from './Main';
+import TopBar from './TopBar';
 
-const RoutesConfig = {
+const ScenesConfig = {
   Main: {
     screen: Main,
     navigationOptions: {
@@ -45,4 +45,13 @@ const TabNavigatorConfig = {
   },
 };
 
-export default TabNavigator(RoutesConfig, TabNavigatorConfig);
+const HeaderConfig = {
+  Main: {
+    screen: TabNavigator(ScenesConfig, TabNavigatorConfig),
+    navigationOptions: {
+      header: <TopBar />
+    },
+  },
+};
+
+export default StackNavigator(HeaderConfig)
