@@ -5,7 +5,7 @@ import { Button, Rating } from 'react-native-elements'
 import jwtDecoder from 'jwt-decode'
 import { CLIENT_ID, DOMAIN_URL } from 'react-native-dotenv'
 
-import TopBar from './TopBar'
+import UserListElement from './UserListElement';
 
 export default class Main extends Component {
   state = {
@@ -46,15 +46,8 @@ export default class Main extends Component {
 
     return (
       <View style={styles.container}>
-        <TopBar />
         <Text testID="main"> MeritMoney </Text>
-        <Rating
-          imageSize={40}
-          onFinishRating={() => {}}
-          showRating
-          startingValue={1}
-          type="star"
-        />
+        <UserListElement />
       </View>
     )
   }
@@ -63,7 +56,7 @@ export default class Main extends Component {
 const styles =StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
   }
 })
