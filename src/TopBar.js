@@ -28,13 +28,13 @@ export default class TopBar extends Component {
     } = this.props.currentUser
 
     return (
-      <Header backgroundColor='#45aeea'>
+      <Header backgroundColor='#45aeea'
+        leftComponent={
         <View style={styles.container}>
-          <View style={styles.container}>
-            <Avatar medium rounded source={{uri: avatar}} />
-            <Text>{kudosLeft} left</Text>
-          </View>
-
+          <Avatar medium rounded source={{uri: avatar}} />
+          <Text>{kudosLeft} left</Text>
+        </View>}
+        rightComponent={
           <View>
             <Icon
               name={hasReceivedMoreThanLastWeek ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
@@ -43,8 +43,8 @@ export default class TopBar extends Component {
             />
             <Text>{lastWeekKudos} ({sinceLastBonus})</Text>
           </View>
-        </View>
-      </Header>
+        }
+      />
     )
   }
 }
