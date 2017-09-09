@@ -19,7 +19,14 @@ export default class TopBar extends Component {
   }
 
   render() {
-    const {avatar, hasReceivedMoreThanLastWeek, lastWeekKudos, sinceLastBonus, kudosLeft} = this.props.currentUser
+    const {
+      avatar,
+      hasReceivedMoreThanLastWeek,
+      lastWeekKudos,
+      sinceLastBonus,
+      kudosLeft
+    } = this.props.currentUser
+
     return (
       <View style={styles.container}>
         <Header backgroundColor='#45aeea'>
@@ -45,5 +52,6 @@ export default class TopBar extends Component {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-  }
+    marginTop: 20,
+  },
 })
