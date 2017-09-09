@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { View, Text, StyleSheet } from 'react-native'
 import { Header, Avatar, Icon } from 'react-native-elements'
 
+import { PRIMARY_COLOR } from './utils/variables'
+
 export default class TopBar extends Component {
   static propTypes = {
     currentUser: PropTypes.object,
@@ -28,20 +30,21 @@ export default class TopBar extends Component {
     } = this.props.currentUser
 
     return (
-      <Header backgroundColor='#45aeea'
+      <Header
+        style={styles.container}
         leftComponent={
-        <View style={styles.container}>
+        <View style={styles.avatar}>
           <Avatar medium rounded source={{uri: avatar}} />
-          <Text>{kudosLeft} left</Text>
+          <Text style={styles.headerText}>{kudosLeft} left</Text>
         </View>}
         rightComponent={
-          <View>
+          <View style={styles.kudoCounter}>
+            <Text style={styles.headerText}>{lastWeekKudos} ({sinceLastBonus})</Text>
             <Icon
               name={hasReceivedMoreThanLastWeek ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
               iconStyle={{color: hasReceivedMoreThanLastWeek ? 'green' : 'red'}}
               size={35}
             />
-            <Text>{lastWeekKudos} ({sinceLastBonus})</Text>
           </View>
         }
       />
@@ -51,7 +54,20 @@ export default class TopBar extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: PRIMARY_COLOR,
     flexDirection: 'row',
-    marginTop: 20,
+    paddingTop: 15,
   },
+  avatar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 5,
+  },
+  headerText: {
+    padding: 10
+  },
+  kudoCounter: {
+    flexDirection: 'row',
+  }
 })
