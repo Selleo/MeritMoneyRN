@@ -1,11 +1,11 @@
-import React from 'react';
-import { TabNavigator, StackNavigator } from 'react-navigation';
-import { Icon } from 'react-native-elements';
+import React from 'react'
+import { TabNavigator, StackNavigator } from 'react-navigation'
+import { Icon } from 'react-native-elements'
 
-import Comments from './Comments';
-import CollectorsAndHamsters from './CollectorsAndHamsters';
-import Main from './Main';
-import TopBar from './TopBar';
+import Comments from './Comments'
+import CollectorsAndHamsters from './CollectorsAndHamsters'
+import Main from './Main'
+import TopBar from './TopBar'
 
 const ScenesConfig = {
   Main: {
@@ -35,7 +35,7 @@ const ScenesConfig = {
       )
     },
   },
-};
+}
 
 const TabNavigatorConfig = {
   tabBarPosition: 'bottom',
@@ -43,7 +43,7 @@ const TabNavigatorConfig = {
   tabBarOptions: {
     showIcon: true,
   },
-};
+}
 
 const HeaderConfig = {
   Main: {
@@ -52,6 +52,6 @@ const HeaderConfig = {
       header: <TopBar />
     },
   },
-};
+}
 
 export default StackNavigator(HeaderConfig)
