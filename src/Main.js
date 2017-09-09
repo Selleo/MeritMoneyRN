@@ -34,7 +34,7 @@ export default class Main extends Component {
 
     if (!userInfo) {
       return (
-        <View style={styles.container}>
+        <View style={styles.login}>
           <Button
             onPress={this.authorize}
             testID="main"
@@ -54,9 +54,12 @@ export default class Main extends Component {
 }
 
 const styles =StyleSheet.create({
-  container: {
+  login: {
     flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  container: {
+    flex: 1
   }
 })
