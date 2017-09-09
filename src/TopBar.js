@@ -28,8 +28,8 @@ export default class TopBar extends Component {
     } = this.props.currentUser
 
     return (
-      <View style={styles.container}>
-        <Header backgroundColor='#45aeea'>
+      <Header backgroundColor='#45aeea'>
+        <View style={styles.container}>
           <View style={styles.container}>
             <Avatar medium rounded source={{uri: avatar}} />
             <Text>{kudosLeft} left</Text>
@@ -43,8 +43,8 @@ export default class TopBar extends Component {
             />
             <Text>{lastWeekKudos} ({sinceLastBonus})</Text>
           </View>
-        </Header>
-      </View>
+        </View>
+      </Header>
     )
   }
 }
