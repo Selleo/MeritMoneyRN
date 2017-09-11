@@ -2,6 +2,7 @@ import React from 'react'
 import { TabNavigator, StackNavigator } from 'react-navigation'
 import { Icon } from 'react-native-elements'
 
+import { PRIMARY_COLOR } from '../utils/variables'
 import Comments from '../Comments'
 import CollectorsAndHamsters from '../CollectorsAndHamsters'
 import Main from '../Main'
@@ -41,6 +42,7 @@ const TabNavigatorConfig = {
   tabBarPosition: 'bottom',
   initialRoute: 'Main',
   tabBarOptions: {
+    activeTintColor: PRIMARY_COLOR,
     showIcon: true,
   },
 }

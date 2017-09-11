@@ -66,7 +66,8 @@ const styles = StyleSheet.create({
     padding: 5,
   },
   headerText: {
-    padding: 10
+    padding: 10,
+    color: '#fff',
   },
   kudoCounter: {
     flexDirection: 'row',
