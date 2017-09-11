@@ -24,10 +24,7 @@ export default class Main extends Component {
       .authorize({
         audience: `https://${DOMAIN_URL}/userinfo`,
         scope: 'openid email profile',
-      })
-      .then(({ idToken }) => {
-        this.setState({ userInfo: jwtDecoder(idToken) })
-      })
+      }).then(({ idToken }) => this.setState({ userInfo: jwtDecoder(idToken) }))
   }
 
   render() {
@@ -43,7 +40,7 @@ export default class Main extends Component {
             raised
             onPress={this.authorize}
             testID="loginButton"
-            title='Loading'
+            title='Login'
           />
         </View>
       )
