@@ -7,7 +7,7 @@ import { PRIMARY_COLOR } from './utils/variables'
 
 export default class TopBar extends Component {
   static propTypes = {
-    currentUser: PropTypes.object,
+    currentUser: PropTypes.object.isRequired,
   }
 
   static defaultProps = {
@@ -33,10 +33,11 @@ export default class TopBar extends Component {
       <Header
         style={styles.container}
         leftComponent={
-        <View style={styles.avatar}>
-          <Avatar medium rounded source={{uri: avatar}} />
-          <Text style={styles.headerText}>{kudosLeft} left</Text>
-        </View>}
+          <View style={styles.avatar}>
+            <Avatar medium rounded source={{uri: avatar}} />
+            <Text style={styles.headerText}>{kudosLeft} left</Text>
+          </View>
+        }
         rightComponent={
           <View style={styles.kudoCounter}>
             <Text style={styles.headerText}>{lastWeekKudos} ({sinceLastBonus})</Text>

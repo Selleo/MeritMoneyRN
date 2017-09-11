@@ -2,10 +2,10 @@ import React from 'react'
 import { TabNavigator, StackNavigator } from 'react-navigation'
 import { Icon } from 'react-native-elements'
 
-import Comments from './Comments'
-import CollectorsAndHamsters from './CollectorsAndHamsters'
-import Main from './Main'
-import TopBar from './TopBar'
+import Comments from '../Comments'
+import CollectorsAndHamsters from '../CollectorsAndHamsters'
+import Main from '../Main'
+import TopBar from '../TopBar'
 
 const ScenesConfig = {
   Main: {
@@ -13,7 +13,7 @@ const ScenesConfig = {
     navigationOptions: {
       tabBarLabel: 'Main',
       tabBarIcon: ({ tintColor }) => (
-        <Icon name='home' iconStyle={{color: tintColor}}/>
+        <Icon name='home' iconStyle={{ color: tintColor }} />
       )
     },
   },
@@ -22,7 +22,7 @@ const ScenesConfig = {
     navigationOptions: {
       tabBarLabel: 'Comments',
       tabBarIcon: ({ tintColor }) => (
-        <Icon name='comment' iconStyle={{color: tintColor}}/>
+        <Icon name='comment' iconStyle={{ color: tintColor }} />
       )
     },
   },
@@ -31,7 +31,7 @@ const ScenesConfig = {
     navigationOptions: {
       tabBarLabel: 'Collectors & Hamsters',
       tabBarIcon: ({ tintColor }) => (
-        <Icon name='supervisor-account' iconStyle={{color: tintColor}}/>
+        <Icon name='supervisor-account' iconStyle={{ color: tintColor }} />
       )
     },
   },
