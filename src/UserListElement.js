@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Animated, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import { Avatar, Button, Icon, Rating } from 'react-native-elements'
+import { Avatar, Button, Icon, Rating, Badge } from 'react-native-elements'
 
 import { PRIMARY_COLOR } from './utils/variables'
 
@@ -13,7 +13,8 @@ export default class UserListElement extends Component {
   static defaultProps = {
     user: {
       name: 'John Doe',
-      avatar: 'https://www.wykop.pl/cdn/c3201142/comment_lD8RanwxW9vxI4DNHXjEB2LLFh7wmnYk.jpg'
+      avatar: 'https://www.wykop.pl/cdn/c3201142/comment_lD8RanwxW9vxI4DNHXjEB2LLFh7wmnYk.jpg',
+      givenKudos: 5,
     }
   }
 
@@ -49,7 +50,7 @@ export default class UserListElement extends Component {
   }
 
   render() {
-    const { avatar, name } = this.props.user
+    const { avatar, name, givenKudos } = this.props.user
     const { animation, disabled, expanded } = this.state
 
     return (
@@ -60,6 +61,7 @@ export default class UserListElement extends Component {
         >
         <View style={styles.userInfoContainer} onLayout={this.setMinHeight}>
           <Avatar medium rounded source={{uri: avatar}} avatarStyle={styles.avatar} />
+          <Badge value={givenKudos} />
           <Text style={styles.userName}> {name} </Text>
             <View style={styles.userInfoExpanded}>
               <Icon
@@ -100,7 +102,7 @@ export default class UserListElement extends Component {
   }
 }
 
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
     margin:10,
