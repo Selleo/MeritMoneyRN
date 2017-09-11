@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import Auth0 from 'react-native-auth0'
-import { Button, Rating } from 'react-native-elements'
+import { Button } from 'react-native-elements'
 import jwtDecoder from 'jwt-decode'
 import { CLIENT_ID, DOMAIN_URL } from 'react-native-dotenv'
 
-import UserListElement from './UserListElement';
+import { PRIMARY_COLOR } from './utils/variables'
+import UserListElement from './UserListElement'
 
 export default class Main extends Component {
   state = {
@@ -14,8 +15,8 @@ export default class Main extends Component {
 
   authorize = async () => {
     let auth0 = new Auth0({
-      domain: `https://${DOMAIN_URL}`,
       clientId: CLIENT_ID,
+      domain: `https://${DOMAIN_URL}`,
     })
 
     auth0
@@ -27,7 +28,7 @@ export default class Main extends Component {
       .then(({ idToken }) => {
         this.setState({ userInfo: jwtDecoder(idToken) })
       })
-    }
+  }
 
   render() {
     const { userInfo } = this.state
@@ -36,8 +37,12 @@ export default class Main extends Component {
       return (
         <View style={styles.login}>
           <Button
+            backgroundColor={PRIMARY_COLOR}
+            borderRadius={50}
+            large
+            raised
             onPress={this.authorize}
-            testID="main"
+            testID="loginButton"
             title='Loading'
           />
         </View>
@@ -46,14 +51,13 @@ export default class Main extends Component {
 
     return (
       <View style={styles.container}>
-        <Text testID="main"> MeritMoney </Text>
         <UserListElement />
       </View>
     )
   }
 }
 
-const styles =StyleSheet.create({
+const styles = StyleSheet.create({
   login: {
     flex: 1,
     justifyContent: 'center',
