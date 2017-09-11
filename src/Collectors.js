@@ -27,19 +27,19 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   thirdPlace: {
-    height: 100,
+    height: '50%',
     width: 50,
     backgroundColor: '#888',
     alignSelf: 'flex-end'
   },
   secondPlace: {
-    height: 140,
+    height: '75%',
     width: 50,
     backgroundColor: '#888',
     alignSelf: 'flex-end'
   },
   firstPlace: {
-    height: 180,
+    height: '100%',
     width: 50,
     backgroundColor: '#888',
     alignSelf: 'flex-end'
