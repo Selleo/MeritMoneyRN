@@ -1,7 +1,7 @@
 import { types } from './'
 
 const initialState = {
-  currentUser: null
+
 }
 
 export default (state = initialState, action) => {

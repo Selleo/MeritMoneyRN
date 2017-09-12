@@ -39,9 +39,7 @@ export class Main extends Component {
       }).then(({ idToken }) => this.props.setCurrentUser(jwtDecoder(idToken)))
   }
 
-  listUsers = () => {
-    return this.props.users.map((user, i) => <UserListElement key={i} user={user} />)
-  }
+  listUsers = () => this.props.users.map((user, i) => <UserListElement key={i} user={user} />)
 
   render() {
     const { currentUser } = this.props
