@@ -11,7 +11,7 @@ export default class UserListElement extends Component {
   }
 
   state = {
-    comment: null,
+    comment: '',
     expanded: false,
     animation: new Animated.Value(),
   }
