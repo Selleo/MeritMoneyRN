@@ -10,14 +10,6 @@ export default class UserListElement extends Component {
     user: PropTypes.object.isRequired,
   }
 
-  static defaultProps = {
-    user: {
-      name: 'John Doe',
-      avatar: 'https://www.wykop.pl/cdn/c3201142/comment_lD8RanwxW9vxI4DNHXjEB2LLFh7wmnYk.jpg',
-      givenKudos: 5,
-    }
-  }
-
   state = {
     comment: null,
     expanded: false,
