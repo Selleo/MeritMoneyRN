@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Animated, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import { Avatar, Button, Icon, Rating, Badge } from 'react-native-elements'
+import { Avatar, Button, Icon, Badge } from 'react-native-elements'
+import StarRating from 'react-native-star-rating'
 
 import { PRIMARY_COLOR } from './utils/variables'
 
@@ -11,9 +12,10 @@ export default class UserListElement extends Component {
   }
 
   state = {
+    animation: new Animated.Value(),
     comment: '',
     expanded: false,
-    animation: new Animated.Value(),
+    rating: 1,
   }
 
   toggle = () => {
@@ -43,7 +45,7 @@ export default class UserListElement extends Component {
 
   render() {
     const { avatar, name, givenKudos } = this.props.user
-    const { animation, disabled, expanded } = this.state
+    const { animation, disabled, expanded, rating } = this.state
 
     return (
       <Animated.View style={[styles.container, { height: animation }]}>
@@ -72,12 +74,10 @@ export default class UserListElement extends Component {
               placeholder='Comment'
               returnKeyType='send'
             />
-            <Rating
-              imageSize={40}
-              onFinishRating={(rate) => { this.setState({ rate })}}
-              showRating
-              startingValue={1}
-              type="star"
+            <StarRating
+              maxStars={5}
+              rating={rating}
+              selectedStar={(rating) => { this.setState({ rating })}}
             />
             <Button
               backgroundColor={PRIMARY_COLOR}
