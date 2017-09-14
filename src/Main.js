@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, StyleSheet } from 'react-native'
+import { ScrollView, View, StyleSheet, RefreshControl } from 'react-native'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Auth0 from 'react-native-auth0'
@@ -21,8 +21,19 @@ export class Main extends Component {
     users: PropTypes.array.isRequired,
   }
 
+  state = {
+    isRefreshing: false,
+  }
+
   componentWillMount = () => {
     this.props.getUsers()
+  }
+
+  onRefresh = () => {
+    this.setState({ isRefreshing: true })
+    setTimeout(() => {
+      this.setState({ isRefreshing: false })
+    }, 1000)
   }
 
   authorize = async () => {
@@ -43,6 +54,7 @@ export class Main extends Component {
 
   render() {
     const { currentUser } = this.props
+    const { isRefreshing } = this.state
 
     if (!currentUser.name) {
       return (
@@ -61,9 +73,22 @@ export class Main extends Component {
     }
 
     return (
-      <View style={styles.container}>
+      <ScrollView
+        style={styles.container}
+        refreshControl={
+          <RefreshControl
+            refreshing={isRefreshing}
+            onRefresh={this.onRefresh}
+            tintColor={PRIMARY_COLOR}
+            title="Loading..."
+            titleColor="black"
+            colors={[PRIMARY_COLOR]}
+            progressBackgroundColor="#e2e2ff"
+          />
+        }
+      >
         {this.listUsers()}
-      </View>
+      </ScrollView>
     )
   }
 }

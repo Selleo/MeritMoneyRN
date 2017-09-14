@@ -1,40 +1,33 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import { View, Text, StyleSheet } from 'react-native'
 import { Header, Avatar, Icon } from 'react-native-elements'
 
 import { PRIMARY_COLOR } from './utils/variables'
 
-export default class TopBar extends Component {
+export class TopBar extends Component {
   static propTypes = {
     currentUser: PropTypes.object.isRequired,
   }
 
-  static defaultProps = {
-    currentUser: {
-      avatar: 'https://www.wykop.pl/cdn/c3201142/comment_lD8RanwxW9vxI4DNHXjEB2LLFh7wmnYk.jpg',
-      hasReceivedMoreThanLastWeek: true,
-      lastWeekKudos: 12,
-      sinceLastBonus: 123,
-      kudosLeft: 20,
-    }
-  }
-
   render() {
     const {
-      avatar,
+      picture,
       hasReceivedMoreThanLastWeek,
       lastWeekKudos,
       sinceLastBonus,
       kudosLeft
     } = this.props.currentUser
 
+    if (!picture) { return <Header style={styles.container} /> }
+
     return (
       <Header
         style={styles.container}
         leftComponent={
           <View style={styles.avatar}>
-            <Avatar medium rounded source={{uri: avatar}} />
+            <Avatar medium rounded source={{ uri: picture }} />
             <Text style={styles.headerText}>{kudosLeft} left</Text>
           </View>
         }
@@ -57,6 +50,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: PRIMARY_COLOR,
     flexDirection: 'row',
+    height: 75,
     paddingTop: 15,
   },
   avatar: {
@@ -73,3 +67,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   }
 })
+
+const mapStateToProps = ({ currentUser }) => ({
+  currentUser
+})
+
+export default connect(mapStateToProps)(TopBar)
