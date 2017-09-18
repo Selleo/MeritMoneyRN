@@ -1,44 +1,49 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Text, View, StyleSheet, FlatList } from 'react-native'
-import {Badge} from 'react-native-elements'
-import { PRIMARY_COLOR } from './utils/variables'
+import { connect } from 'react-redux'
+import { AsyncStorage, Text, View, StyleSheet, FlatList } from 'react-native'
+import { Badge } from 'react-native-elements'
 
-export default class Comments extends Component {
+import { PRIMARY_COLOR } from './utils/variables'
+import { actions as commentsActions } from './store/comments'
+
+
+export class Comments extends Component {
+  static propTypes = {
+    myComments: PropTypes.array.isRequired,
+    otherComments: PropTypes.array.isRequired
+  }
+
   static defaultProps = {
-    myComments: [
-      {comment: 'some long and fancy comment', value: 5},
-      {comment: 'some long and fancy comment',  value: 5},
-      {comment: 'some long and fancy comment',  value: 5},
-      {comment: 'some long and fancy comment',  value: 5},
-      {comment: 'some long and fancy comment',  value: 5},
-      {comment: 'some long and fancy comment',  value: 5},
-    ],
-    otherComments: [
-      {comment: 'some long and fancy comment',  value: 5},
-      {comment: 'some long and fancy comment',  value: 5},
-      {comment: 'some long and fancy comment',  value: 5},
-      {comment: 'some long and fancy comment',  value: 5},
-      {comment: 'some long and fancy comment',  value: 5},
-      {comment: 'some long and fancy comment',  value: 5},
-      {comment: 'some long and fancy comment',  value: 5},
-    ],
+    myComments: [],
+    otherComments: [],
     currentUser: {
       id: 1,
     }
   }
 
-  renderComment = ({item: comment, index}) => {
-   return (
-     <View key={index} style={styles.comment}>
-      { index === 0 &&
-        <Text style={styles.section}>me for:</Text>
-      }
-      <Badge value={comment.value} />
-      <Text> {comment.comment} </Text>
-        { index === (this.props.myComments.length - 1) &&
-          <Text style={styles.section}>my colleagues for:</Text>
-        }
+  savedComments = async () => {
+    const [firstKey, secondKey] = await AsyncStorage.multiGet(['myComments', 'otherComments'])
+    const [, myComments] = firstKey
+    const [, otherComments] = secondKey
+
+    return {
+      myComments: JSON.parse(myComments),
+      otherComments: JSON.parse(otherComments)
+    }
+  }
+
+  componentWillMount = async() => {
+    const comments = await this.savedComments()
+    // When user will be provided fetch new comments from API
+    this.props.loadComments(comments)
+  }
+
+  renderComment = ({item: { comment, value } }) => {
+    return (
+      <View style={styles.comment}>
+        <Badge value={value} />
+        <Text> {comment} </Text>
       </View>
     )
   }
@@ -46,11 +51,24 @@ export default class Comments extends Component {
   keyExtractor = (item, index) => `comment${index}`;
 
   render() {
+    const { myComments, otherComments } = this.props
+
     return (
       <View style={styles.container}>
-        <Text style={styles.header}>Selleo team appreciate…</Text>
+        <Text style={styles.header}>
+          Selleo team appreciate…
+        </Text>
+        <Text style={styles.section}>
+          me for:
+        </Text>
         <FlatList
-          data={[...this.props.myComments, ...this.props.otherComments]}
+          data={myComments}
+          renderItem={this.renderComment}
+          keyExtractor={this.keyExtractor}
+        />
+        <Text style={styles.section}>my colleagues for:</Text>
+        <FlatList
+          data={otherComments}
           renderItem={this.renderComment}
           keyExtractor={this.keyExtractor}
         />
@@ -61,24 +79,35 @@ export default class Comments extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
+    flex: 1,
     flexWrap: 'wrap',
+    justifyContent: 'center',
   },
   comment: {
     flexDirection: 'row',
     flexWrap: 'wrap',
+    justifyContent: 'space-between',
     margin: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   header: {
-    fontSize: 26,
     color: PRIMARY_COLOR,
+    fontSize: 26,
   },
   section: {
-    fontSize: 20,
     color: PRIMARY_COLOR,
+    fontSize: 20,
+    margin: 10,
   }
 })
+
+const mapStateToProps = ({ comments }) => ({
+  myComments: comments.myComments,
+  otherComments: comments.otherComments
+})
+
+const mapDispatchToProps = {
+  loadComments: commentsActions.loadComments
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Comments)

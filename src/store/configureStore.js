@@ -4,6 +4,7 @@ import thunkMiddleware from 'redux-thunk'
 
 import currentUser from './currentUser'
 import users from './users'
+import comments from './comments'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const composeEnhancers = isDevelopment
@@ -12,6 +13,7 @@ const composeEnhancers = isDevelopment
 
 const reducers = combineReducers({
   currentUser,
+  comments,
   users,
 })
 
