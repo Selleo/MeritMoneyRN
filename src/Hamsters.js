@@ -6,15 +6,8 @@ export default class Hamsters extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.hamstersContainer}>
-          <Avatar medium rounded source={{uri: 'https://www.javascript.ba/images/logos/framework/EmberJS.jpg'}} />
-          <Avatar medium rounded source={{uri: 'https://www.javascript.ba/images/logos/framework/EmberJS.jpg'}} />
-          <Avatar medium rounded source={{uri: 'https://www.javascript.ba/images/logos/framework/EmberJS.jpg'}} />
-          <Avatar medium rounded source={{uri: 'https://www.javascript.ba/images/logos/framework/EmberJS.jpg'}} />
-          <Avatar medium rounded source={{uri: 'https://www.javascript.ba/images/logos/framework/EmberJS.jpg'}} />
-          <Avatar medium rounded source={{uri: 'https://www.javascript.ba/images/logos/framework/EmberJS.jpg'}} />
-          <Avatar medium rounded source={{uri: 'https://www.javascript.ba/images/logos/framework/EmberJS.jpg'}} />
-          <Avatar medium rounded source={{uri: 'https://www.javascript.ba/images/logos/framework/EmberJS.jpg'}} />
+        <View testID="hamstersContainer" style={styles.hamstersContainer}>
+          <Avatar medium rounded source={{ uri: 'https://www.emberjs.com/images/tomsters/teaching-reverse-79f66d70.png' }} />
         </View>
         <View style={styles.imageContainer}>
           <Image

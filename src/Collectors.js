@@ -1,20 +1,13 @@
 import React, { Component } from 'react'
 import { StyleSheet, View } from 'react-native'
-import { Avatar } from 'react-native-elements'
 
 export default class Collectors extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.firstPlace}>
-          <Avatar medium source={{uri: 'https://www.wykop.pl/cdn/c3201142/comment_lD8RanwxW9vxI4DNHXjEB2LLFh7wmnYk.jpg'}} />
-        </View>
-        <View style={styles.secondPlace}>
-          <Avatar medium source={{uri: 'https://www.wykop.pl/cdn/c3201142/comment_lD8RanwxW9vxI4DNHXjEB2LLFh7wmnYk.jpg'}} />
-        </View>
-        <View style={styles.thirdPlace}>
-          <Avatar medium source={{uri: 'https://www.wykop.pl/cdn/c3201142/comment_lD8RanwxW9vxI4DNHXjEB2LLFh7wmnYk.jpg'}} />
-        </View>
+      <View testID="collectorsContainer" style={styles.container}>
+        <View style={styles.firstPlace} />
+        <View style={styles.secondPlace} />
+        <View style={styles.thirdPlace} />
       </View>
     )
   }
