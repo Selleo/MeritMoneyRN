@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { View, Text, StyleSheet } from 'react-native'
 import { Header, Avatar, Icon } from 'react-native-elements'
 
-import { PRIMARY_COLOR } from './utils/variables'
+import { PRIMARY_COLOR } from '../utils/variables'
 
 export class TopBar extends Component {
   static propTypes = {

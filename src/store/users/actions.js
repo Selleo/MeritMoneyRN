@@ -12,5 +12,5 @@ const setUsers = (users) => ({
 })
 
 export const getUsers = () => (dispatch) => (
-  dispatch(setUsers([user, user]))
+  dispatch(setUsers([user]))
 )

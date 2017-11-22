@@ -1,17 +1,13 @@
 import React, { Component } from 'react'
-import { ScrollView, View, StyleSheet, RefreshControl } from 'react-native'
+import { ScrollView, StyleSheet, RefreshControl } from 'react-native'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Auth0 from 'react-native-auth0'
-import { Button } from 'react-native-elements'
-import jwtDecoder from 'jwt-decode'
-import { CLIENT_ID, DOMAIN_URL } from 'react-native-dotenv'
 
-import { PRIMARY_COLOR } from './utils/variables'
+import { PRIMARY_COLOR } from '../../utils/variables'
+import { actions as currentUserActions } from '../../store/currentUser'
+import { actions as usersActions } from '../../store/users'
+
 import UserListElement from './UserListElement'
-
-import { actions as currentUserActions } from './store/currentUser'
-import { actions as usersActions } from './store/users'
 
 export class Main extends Component {
   static propTypes = {
@@ -36,41 +32,10 @@ export class Main extends Component {
     }, 1000)
   }
 
-  authorize = async () => {
-    let auth0 = new Auth0({
-      clientId: CLIENT_ID,
-      domain: `https://${DOMAIN_URL}`,
-    })
-
-    auth0
-      .webAuth
-      .authorize({
-        audience: `https://${DOMAIN_URL}/userinfo`,
-        scope: 'openid email profile',
-      }).then(({ idToken }) => this.props.setCurrentUser(jwtDecoder(idToken)))
-  }
-
-  listUsers = () => this.props.users.map((user, i) => <UserListElement key={i} user={user} />)
+  listUsers = () => this.props.users.map(user => <UserListElement key={user.name} user={user} />)
 
   render() {
-    const { currentUser } = this.props
     const { isRefreshing } = this.state
-
-    if (!currentUser.name) {
-      return (
-        <View style={styles.login}>
-          <Button
-            backgroundColor={PRIMARY_COLOR}
-            borderRadius={50}
-            large
-            raised
-            onPress={this.authorize}
-            testID="loginButton"
-            title='Login'
-          />
-        </View>
-      )
-    }
 
     return (
       <ScrollView

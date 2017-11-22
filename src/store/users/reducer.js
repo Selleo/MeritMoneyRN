@@ -1,8 +1,6 @@
 import { types } from './'
 
-const initialState = [
-
-]
+const initialState = []
 
 export default (state = initialState, action) => {
   switch (action.type) {
