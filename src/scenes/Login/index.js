@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { View } from 'react-native'
 import { Button } from 'react-native-elements'
 import Auth0 from 'react-native-auth0'
@@ -8,18 +9,22 @@ import { connect } from 'react-redux'
 import { actions as currentUserActions } from '../../store/currentUser'
 
 export class Login extends Component {
+  static propTypes = {
+    setCurrentUser: PropTypes.func.isRequired,
+  }
+
   _authorize = async () => {
     let auth0 = new Auth0({
       clientId: CLIENT_ID,
       domain: `https://${DOMAIN_URL}`,
     })
 
-    auth0
-      .webAuth
+    auth0.webAuth
       .authorize({
         audience: `https://${DOMAIN_URL}/userinfo`,
         scope: 'openid email profile',
-      }).then(({ idToken }) => this.props.setCurrentUser({ idToken }))
+      })
+      .then(({ idToken }) => this.props.setCurrentUser({ idToken }))
   }
 
   render() {

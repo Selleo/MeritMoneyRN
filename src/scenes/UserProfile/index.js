@@ -10,7 +10,8 @@ import { actions as commentsActions } from '../../store/comments'
 export class UserProfile extends Component {
   static propTypes = {
     myComments: PropTypes.array.isRequired,
-    otherComments: PropTypes.array.isRequired
+    otherComments: PropTypes.array.isRequired,
+    loadComments: PropTypes.func.isRequired,
   }
 
   static defaultProps = {
@@ -18,7 +19,7 @@ export class UserProfile extends Component {
     otherComments: [],
     currentUser: {
       id: 1,
-    }
+    },
   }
 
   savedComments = async () => {
@@ -28,17 +29,16 @@ export class UserProfile extends Component {
 
     return {
       myComments: JSON.parse(myComments),
-      otherComments: JSON.parse(otherComments)
+      otherComments: JSON.parse(otherComments),
     }
   }
 
-  componentWillMount = async() => {
+  componentWillMount = async () => {
     const comments = await this.savedComments()
-    // When user will be provided fetch new comments from API
     this.props.loadComments(comments)
   }
 
-  renderComment = ({item: { comment, value } }) => {
+  renderComment = ({ item: { comment, value } }) => {
     return (
       <View style={styles.comment}>
         <Badge value={value} />
@@ -47,29 +47,25 @@ export class UserProfile extends Component {
     )
   }
 
-  keyExtractor = (item, index) => `comment${index}`;
+  keyExtractor = (item, index) => `comment${index}`
 
   render() {
     const { myComments, otherComments } = this.props
 
     return (
       <View style={styles.container}>
-        <Text style={styles.header}>
-          Selleo team appreciate…
-        </Text>
-        <Text style={styles.section}>
-          me for:
-        </Text>
+        <Text style={styles.header}>Selleo team appreciate…</Text>
+        <Text style={styles.section}>me for:</Text>
         <FlatList
           data={myComments}
-          renderItem={this.renderComment}
           keyExtractor={this.keyExtractor}
+          renderItem={this.renderComment}
         />
         <Text style={styles.section}>my colleagues for:</Text>
         <FlatList
           data={otherComments}
-          renderItem={this.renderComment}
           keyExtractor={this.keyExtractor}
+          renderItem={this.renderComment}
         />
       </View>
     )
@@ -97,16 +93,16 @@ const styles = StyleSheet.create({
     color: PRIMARY_COLOR,
     fontSize: 20,
     margin: 10,
-  }
+  },
 })
 
 const mapStateToProps = ({ comments }) => ({
   myComments: comments.myComments,
-  otherComments: comments.otherComments
+  otherComments: comments.otherComments,
 })
 
 const mapDispatchToProps = {
-  loadComments: commentsActions.loadComments
+  loadComments: commentsActions.loadComments,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserProfile)

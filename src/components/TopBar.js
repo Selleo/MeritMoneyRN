@@ -17,14 +17,15 @@ export class TopBar extends Component {
       hasReceivedMoreThanLastWeek,
       lastWeekKudos,
       sinceLastBonus,
-      kudosLeft
+      kudosLeft,
     } = this.props.currentUser
 
-    if (!picture) { return <Header style={styles.container} /> }
+    if (!picture) {
+      return <Header style={styles.container} />
+    }
 
     return (
       <Header
-        style={styles.container}
         leftComponent={
           <View style={styles.avatar}>
             <Avatar medium rounded source={{ uri: picture }} />
@@ -33,14 +34,17 @@ export class TopBar extends Component {
         }
         rightComponent={
           <View style={styles.kudoCounter}>
-            <Text style={styles.headerText}>{lastWeekKudos} ({sinceLastBonus})</Text>
+            <Text style={styles.headerText}>
+              {lastWeekKudos} ({sinceLastBonus})
+            </Text>
             <Icon
+              iconStyle={{ color: hasReceivedMoreThanLastWeek ? 'green' : 'red' }}
               name={hasReceivedMoreThanLastWeek ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
-              iconStyle={{color: hasReceivedMoreThanLastWeek ? 'green' : 'red'}}
               size={35}
             />
           </View>
         }
+        style={styles.container}
       />
     )
   }
@@ -65,11 +69,11 @@ const styles = StyleSheet.create({
   },
   kudoCounter: {
     flexDirection: 'row',
-  }
+  },
 })
 
 const mapStateToProps = ({ currentUser }) => ({
-  currentUser
+  currentUser,
 })
 
 export default connect(mapStateToProps)(TopBar)

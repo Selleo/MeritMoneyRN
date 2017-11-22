@@ -4,10 +4,10 @@ import { Icon } from 'react-native-elements'
 import { isEmpty } from 'lodash'
 
 import { PRIMARY_COLOR } from '../utils/variables'
-import UserProfile from './UserProfile/'
-import CollectorsAndHamsters from './CollectorsAndHamsters/'
-import Login from './Login/'
-import Users from './Users/'
+import UserProfile from './UserProfile'
+import CollectorsAndHamsters from './CollectorsAndHamsters'
+import Login from './Login'
+import Users from './Users'
 import TopBar from '../components/TopBar'
 
 const Scenes = {
