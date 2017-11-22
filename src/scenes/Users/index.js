@@ -39,18 +39,18 @@ export class Main extends Component {
 
     return (
       <ScrollView
-        style={styles.container}
         refreshControl={
           <RefreshControl
-            refreshing={isRefreshing}
+            colors={[PRIMARY_COLOR]}
             onRefresh={this.onRefresh}
+            progressBackgroundColor="#e2e2ff"
+            refreshing={isRefreshing}
             tintColor={PRIMARY_COLOR}
             title="Loading..."
             titleColor="black"
-            colors={[PRIMARY_COLOR]}
-            progressBackgroundColor="#e2e2ff"
           />
         }
+        style={styles.container}
       >
         {this.listUsers()}
       </ScrollView>
@@ -65,8 +65,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   container: {
-    flex: 1
-  }
+    flex: 1,
+  },
 })
 
 const mapStateToProps = ({ currentUser, users }) => ({

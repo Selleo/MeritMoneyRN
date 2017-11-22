@@ -1,44 +1,53 @@
 {
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true,
-    "jest": true
-  },
-  "extends": "eslint:recommended",
   "parser": "babel-eslint",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
-      "jsx": true
-    },
-    "sourceType": "module"
-  },
-  "plugins": [
-    "react",
-    "react-native"
-  ],
+  "plugins": ["import", "react"],
+  "extends": ["plugin:react/recommended"],
   "rules": {
-    "no-debugger": "off",
     "no-unused-vars": [
       "error",
       {
-        "varsIgnorePattern": "React"
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
       }
     ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore",
+        "imports": "always-multiline",
+        "objects": "always-multiline"
+      }
+    ],
+    "no-console": [
+      "error",
+      {
+        "allow": ["info", "error"]
+      }
+    ],
+    "react/jsx-sort-props": [
+      "error",
+      {
+        "callbacksLast": false,
+        "shorthandFirst": false,
+        "ignoreCase": false
+      }
+    ],
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["warn", "never"],
+    "no-debugger": "off",
+    "object-curly-spacing": ["error", "always"],
+    "react/jsx-filename-extension": "off",
+    "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "semi": [
-      "warn",
-      "never"
-    ]
+    "react/jsx-wrap-multilines": "off",
+    "react/no-array-index-key": "off",
+    "react/prefer-stateless-function": "off",
+    "react/require-default-props": "off",
+    "strict": "off"
   },
   "globals": {
     "by": true,

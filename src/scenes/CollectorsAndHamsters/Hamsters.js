@@ -6,12 +6,20 @@ export default class Hamsters extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View testID="hamstersContainer" style={styles.hamstersContainer}>
-          <Avatar medium rounded source={{ uri: 'https://www.emberjs.com/images/tomsters/teaching-reverse-79f66d70.png' }} />
+        <View style={styles.hamstersContainer} testID="hamstersContainer">
+          <Avatar
+            medium
+            rounded
+            source={{
+              uri: 'https://www.emberjs.com/images/tomsters/teaching-reverse-79f66d70.png',
+            }}
+          />
         </View>
         <View style={styles.imageContainer}>
           <Image
-            source={{uri: 'https://www.emberjs.com/images/tomsters/teaching-reverse-79f66d70.png'}}
+            source={{
+              uri: 'https://www.emberjs.com/images/tomsters/teaching-reverse-79f66d70.png',
+            }}
             style={styles.image}
           />
         </View>

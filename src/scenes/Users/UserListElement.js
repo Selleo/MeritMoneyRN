@@ -49,47 +49,46 @@ export default class UserListElement extends Component {
 
     return (
       <Animated.View style={[styles.container, { height: animation }]}>
-        <TouchableOpacity
-          onPress={this.toggle}
-          underlayColor="#f1f1f1"
-        >
-        <View style={styles.userInfoContainer} onLayout={this.setMinHeight}>
-          <Avatar medium rounded source={{uri: avatar}} avatarStyle={styles.avatar} />
-          <Badge value={givenKudos} />
-          <Text style={styles.userName}> {name} </Text>
+        <TouchableOpacity onPress={this.toggle} underlayColor="#f1f1f1">
+          <View onLayout={this.setMinHeight} style={styles.userInfoContainer}>
+            <Avatar avatarStyle={styles.avatar} medium rounded source={{ uri: avatar }} />
+            <Badge value={givenKudos} />
+            <Text style={styles.userName}> {name} </Text>
             <View style={styles.userInfoExpanded}>
               <Icon
-                style={styles.icon}
                 name={expanded ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
+                style={styles.icon}
               />
             </View>
           </View>
         </TouchableOpacity>
 
-        {expanded &&
-          <View style={styles.body} onLayout={this.setMaxHeight}>
+        {expanded && (
+          <View onLayout={this.setMaxHeight} style={styles.body}>
             <TextInput
               onChangeText={comment => this.setState({ comment })}
               onSubmitEditing={this.submit}
-              placeholder='Comment'
-              returnKeyType='send'
+              placeholder="Comment"
+              returnKeyType="send"
             />
             <StarRating
               maxStars={5}
               rating={rating}
-              selectedStar={(rating) => { this.setState({ rating })}}
+              selectedStar={rating => {
+                this.setState({ rating })
+              }}
             />
             <Button
               backgroundColor={PRIMARY_COLOR}
               borderRadius={25}
               disabled={disabled}
+              onPress={this.submit}
               style={styles.button}
               title="Send"
-              onPress={this.submit}
             />
           </View>
-        }
-    </Animated.View>
+        )}
+      </Animated.View>
     )
   }
 }
@@ -97,8 +96,8 @@ export default class UserListElement extends Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
-    margin:10,
-    overflow:'hidden'
+    margin: 10,
+    overflow: 'hidden',
   },
   button: {
     marginTop: 10,
@@ -108,20 +107,20 @@ const styles = StyleSheet.create({
   },
   icon: {
     width: 30,
-    height: 25
+    height: 25,
   },
   userInfoContainer: {
     flexDirection: 'row',
-    padding: 10
+    padding: 10,
   },
   userInfoExpanded: {
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   userName: {
     flex: 1,
     padding: 10,
     color: '#2a2f43',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
 })
