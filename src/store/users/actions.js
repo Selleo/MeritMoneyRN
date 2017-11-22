@@ -6,11 +6,9 @@ const user = {
   givenKudos: 5,
 }
 
-const setUsers = (users) => ({
+const setUsers = users => ({
   type: types.SET_USERS,
   payload: users,
 })
 
-export const getUsers = () => (dispatch) => (
-  dispatch(setUsers([user]))
-)
+export const getUsers = () => dispatch => dispatch(setUsers([user]))

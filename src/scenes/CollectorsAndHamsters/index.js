@@ -13,7 +13,7 @@ export default class CollectorsAndHamsters extends Component {
           <Text style={styles.header}>TOP Collectors</Text>
         </View>
         <Collectors />
-        <Divider style={styles.divider}/>
+        <Divider style={styles.divider} />
         <View style={styles.headerContainer}>
           <Text style={styles.header}>Hamsters</Text>
         </View>

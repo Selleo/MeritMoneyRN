@@ -1,6 +1,6 @@
 import { types } from './'
 
-export const setCurrentUser = (currentUser) => ({
+export const setCurrentUser = currentUser => ({
   type: types.SET_CURRENT_USER,
-  payload: currentUser
+  payload: currentUser,
 })

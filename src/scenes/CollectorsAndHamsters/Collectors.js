@@ -4,7 +4,7 @@ import { StyleSheet, View } from 'react-native'
 export default class Collectors extends Component {
   render() {
     return (
-      <View testID="collectorsContainer" style={styles.container}>
+      <View style={styles.container} testID="collectorsContainer">
         <View style={styles.firstPlace} />
         <View style={styles.secondPlace} />
         <View style={styles.thirdPlace} />
@@ -23,18 +23,18 @@ const styles = StyleSheet.create({
     height: '50%',
     width: 50,
     backgroundColor: '#888',
-    alignSelf: 'flex-end'
+    alignSelf: 'flex-end',
   },
   secondPlace: {
     height: '75%',
     width: 50,
     backgroundColor: '#888',
-    alignSelf: 'flex-end'
+    alignSelf: 'flex-end',
   },
   firstPlace: {
     height: '100%',
     width: 50,
     backgroundColor: '#888',
-    alignSelf: 'flex-end'
-  }
+    alignSelf: 'flex-end',
+  },
 })

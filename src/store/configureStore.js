@@ -7,9 +7,7 @@ import users from './users'
 import comments from './comments'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
-const composeEnhancers = isDevelopment
-  ? composeWithDevTools({ realtime: true })
-  : compose
+const composeEnhancers = isDevelopment ? composeWithDevTools({ realtime: true }) : compose
 
 const reducers = combineReducers({
   currentUser,
@@ -17,6 +15,4 @@ const reducers = combineReducers({
   users,
 })
 
-export default createStore(reducers,
-  composeEnhancers(applyMiddleware(thunkMiddleware))
-)
+export default createStore(reducers, composeEnhancers(applyMiddleware(thunkMiddleware)))
