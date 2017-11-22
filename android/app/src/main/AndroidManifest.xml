@@ -30,7 +30,7 @@
             <category android:name="android.intent.category.DEFAULT" />
             <category android:name="android.intent.category.BROWSABLE" />
             <data
-                android:host="merit-money.auth0.com"
+                android:host="selleo.eu.auth0.com"
                 android:pathPrefix="/android/${applicationId}/callback"
                 android:scheme="${applicationId}" />
         </intent-filter>
