@@ -4,11 +4,10 @@ import { connect } from 'react-redux'
 import { AsyncStorage, Text, View, StyleSheet, FlatList } from 'react-native'
 import { Badge } from 'react-native-elements'
 
-import { PRIMARY_COLOR } from './utils/variables'
-import { actions as commentsActions } from './store/comments'
+import { PRIMARY_COLOR } from '../../utils/variables'
+import { actions as commentsActions } from '../../store/comments'
 
-
-export class Comments extends Component {
+export class UserProfile extends Component {
   static propTypes = {
     myComments: PropTypes.array.isRequired,
     otherComments: PropTypes.array.isRequired
@@ -110,4 +109,4 @@ const mapDispatchToProps = {
   loadComments: commentsActions.loadComments
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Comments)
+export default connect(mapStateToProps, mapDispatchToProps)(UserProfile)

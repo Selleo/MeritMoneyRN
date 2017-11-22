@@ -4,7 +4,7 @@ import { Animated, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'r
 import { Avatar, Button, Icon, Badge } from 'react-native-elements'
 import StarRating from 'react-native-star-rating'
 
-import { PRIMARY_COLOR } from './utils/variables'
+import { PRIMARY_COLOR } from '../../utils/variables'
 
 export default class UserListElement extends Component {
   static propTypes = {
