@@ -22,7 +22,7 @@ export class AppContainer extends Component {
 
 const currentUserQuery = gql`
   query {
-    currentUser{
+    currentUser {
       email
       email_verified
       name
