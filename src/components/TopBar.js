@@ -72,9 +72,9 @@ const styles = StyleSheet.create({
   },
 })
 
-const Query = gql`
+const currentUserQuery = gql`
   query {
-    currentUser{
+    currentUser {
       email
       email_verified
       name

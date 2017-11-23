@@ -27,7 +27,7 @@ export class Main extends Component {
 
   render() {
     const { isRefreshing } = this.state
-    const { loading, userMany } = this.props.allUsersQuery
+    const { loading, allUsers } = this.props.allUsersQuery
     if (loading) return null
 
     return (
@@ -45,7 +45,7 @@ export class Main extends Component {
         }
         style={styles.container}
       >
-        {this.listUsers(userMany)}
+        {this.listUsers(allUsers)}
       </ScrollView>
     )
   }
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
 
 const allUsersQuery = gql`
   query {
-    userMany {
+    allUsers {
       name
       picture
     }
