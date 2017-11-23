@@ -9,11 +9,11 @@ import { PRIMARY_COLOR } from '../utils/variables'
 
 export class TopBar extends Component {
   static propTypes = {
-    userQuery: PropTypes.object.isRequired,
+    currentUserQuery: PropTypes.object.isRequired,
   }
 
   render() {
-    const { loading, userOne } = this.props.userQuery
+    const { loading, currentUser } = this.props.currentUserQuery
     if (loading) return null
 
     const {
@@ -22,7 +22,7 @@ export class TopBar extends Component {
       lastWeekKudos,
       sinceLastBonus,
       kudosLeft,
-    } = userOne
+    } = currentUser
 
     return (
       <Header
@@ -72,12 +72,9 @@ const styles = StyleSheet.create({
   },
 })
 
-const userQuery = gql`
+const currentUserQuery = gql`
   query {
-    userOne(filter: { _id: "5a173b4e549afe001f58b5b5" }) {
-      picture
-      _id
-    }
+    currentUser
   }
 `
-export default compose(graphql(userQuery, { name: 'userQuery' }))(TopBar)
+export default compose(graphql(currentUserQuery, { name: 'currentUserQuery' }))(TopBar)
