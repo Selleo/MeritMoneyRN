@@ -1,13 +1,39 @@
 import React, { Component } from 'react'
 import { StyleSheet, View } from 'react-native'
 
+import AnimatedCollector from './AnimatedCollector'
+
 export default class Collectors extends Component {
+  state = {
+    firstKudos: 100,
+    secondKudos: 75,
+    thirdKudos: 50,
+  }
+
   render() {
+    const { firstKudos, secondKudos, thirdKudos } = this.state
+    const allKudo = firstKudos + secondKudos + thirdKudos
+
     return (
       <View style={styles.container} testID="collectorsContainer">
-        <View style={styles.firstPlace} />
-        <View style={styles.secondPlace} />
-        <View style={styles.thirdPlace} />
+        <AnimatedCollector
+          style={{ width: 50, height: 50, backgroundColor: '#888' }}
+          targetHeight={firstKudos / allKudo * 370}
+        >
+          <View style={styles.firstPlace} />
+        </AnimatedCollector>
+        <AnimatedCollector
+          style={{ width: 50, height: 50, backgroundColor: '#888' }}
+          targetHeight={secondKudos / allKudo * 370}
+        >
+          <View style={styles.secondPlace} />
+        </AnimatedCollector>
+        <AnimatedCollector
+          style={{ width: 50, height: 50, backgroundColor: '#888' }}
+          targetHeight={thirdKudos / allKudo * 370}
+        >
+          <View style={styles.thirdPlace} />
+        </AnimatedCollector>
       </View>
     )
   }
@@ -18,23 +44,15 @@ const styles = StyleSheet.create({
     flex: 0.5,
     flexDirection: 'row',
     justifyContent: 'space-around',
+    alignItems: 'flex-end',
   },
   thirdPlace: {
-    alignSelf: 'flex-end',
-    backgroundColor: '#888',
-    height: '50%',
     width: 50,
   },
   secondPlace: {
-    alignSelf: 'flex-end',
-    backgroundColor: '#888',
-    height: '75%',
     width: 50,
   },
   firstPlace: {
-    alignSelf: 'flex-end',
-    backgroundColor: '#888',
-    height: '100%',
     width: 50,
   },
 })

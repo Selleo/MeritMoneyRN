@@ -8,34 +8,43 @@ import Comments from './Comments'
 import CollectorsAndHamsters from './CollectorsAndHamsters'
 import Users from './Users'
 import UserProfile from './UserProfile'
+import { actions } from '../store/currentTab'
 
 export const Scenes = {
   Users: {
     screen: Users,
     navigationOptions: {
       tabBarLabel: 'Users',
-      tabBarIcon: ({ tintColor }) => <Icon iconStyle={{ color: tintColor }} name="people" />,
+      tabBarIcon: ({ tintColor }) => (
+        <Icon iconStyle={{ color: tintColor }} name="people" />
+      ),
     },
   },
   Comments: {
     screen: Comments,
     navigationOptions: {
       tabBarLabel: 'Comments',
-      tabBarIcon: ({ tintColor }) => <Icon iconStyle={{ color: tintColor }} name="comment" />,
+      tabBarIcon: ({ tintColor }) => (
+        <Icon iconStyle={{ color: tintColor }} name="comment" />
+      ),
     },
   },
   CollectorsAndHamsters: {
     screen: CollectorsAndHamsters,
     navigationOptions: {
       tabBarLabel: 'Collectors & Hamsters',
-      tabBarIcon: ({ tintColor }) => <Icon iconStyle={{ color: tintColor }} name="show-chart" />,
+      tabBarIcon: ({ tintColor }) => (
+        <Icon iconStyle={{ color: tintColor }} name="show-chart" />
+      ),
     },
   },
   UserProfile: {
     screen: UserProfile,
     navigationOptions: {
       tabBarLabel: 'UserProfile',
-      tabBarIcon: ({ tintColor }) => <Icon iconStyle={{ color: tintColor }} name="perm-identity" />,
+      tabBarIcon: ({ tintColor }) => (
+        <Icon iconStyle={{ color: tintColor }} name="perm-identity" />
+      ),
     },
   },
 }
@@ -57,6 +66,11 @@ export default class App extends PureComponent {
   render() {
     const { navigation } = this.props
     const Navigator = TabNavigator(Scenes, TabNavigatorConfig)
-    return <Navigator screenProps={{ rootNavigation: navigation }} />
+    return (
+      <Navigator
+        onNavigationStateChange={actions.setCurrentTab}
+        screenProps={{ rootNavigation: navigation }}
+      />
+    )
   }
 }
