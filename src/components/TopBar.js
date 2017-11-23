@@ -72,9 +72,21 @@ const styles = StyleSheet.create({
   },
 })
 
-const currentUserQuery = gql`
+const Query = gql`
   query {
-    currentUser
+    currentUser{
+      email
+      email_verified
+      name
+      given_name
+      family_name
+      picture
+      gender
+      locale
+      user_id
+      nickname
+      created_at
+    }
   }
 `
 export default compose(graphql(currentUserQuery, { name: 'currentUserQuery' }))(TopBar)

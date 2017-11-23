@@ -22,7 +22,19 @@ export class AppContainer extends Component {
 
 const currentUserQuery = gql`
   query {
-    currentUser
+    currentUser{
+      email
+      email_verified
+      name
+      given_name
+      family_name
+      picture
+      gender
+      locale
+      user_id
+      nickname
+      created_at
+    }
   }
 `
 
