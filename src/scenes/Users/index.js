@@ -1,28 +1,19 @@
 import React, { Component } from 'react'
 import { ScrollView, StyleSheet, RefreshControl } from 'react-native'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import gql from 'graphql-tag'
+import { compose, graphql } from 'react-apollo'
 
 import { PRIMARY_COLOR } from '../../utils/variables'
-import { actions as currentUserActions } from '../../store/currentUser'
-import { actions as usersActions } from '../../store/users'
-
 import UserListElement from './UserListElement'
 
 export class Main extends Component {
   static propTypes = {
-    currentUser: PropTypes.object,
-    getUsers: PropTypes.func.isRequired,
-    setCurrentUser: PropTypes.func.isRequired,
-    users: PropTypes.array.isRequired,
+    allUsersQuery: PropTypes.object.isRequired,
   }
 
   state = {
     isRefreshing: false,
-  }
-
-  componentWillMount = () => {
-    this.props.getUsers()
   }
 
   onRefresh = () => {
@@ -32,10 +23,12 @@ export class Main extends Component {
     }, 1000)
   }
 
-  listUsers = () => this.props.users.map(user => <UserListElement key={user.name} user={user} />)
+  listUsers = users => users.map(user => <UserListElement key={user.name} user={user} />)
 
   render() {
     const { isRefreshing } = this.state
+    const { loading, userMany } = this.props.allUsersQuery
+    if (loading) return null
 
     return (
       <ScrollView
@@ -52,7 +45,7 @@ export class Main extends Component {
         }
         style={styles.container}
       >
-        {this.listUsers()}
+        {this.listUsers(userMany)}
       </ScrollView>
     )
   }
@@ -69,14 +62,13 @@ const styles = StyleSheet.create({
   },
 })
 
-const mapStateToProps = ({ currentUser, users }) => ({
-  currentUser,
-  users,
-})
+const allUsersQuery = gql`
+  query {
+    userMany {
+      name
+      picture
+    }
+  }
+`
 
-const mapDispatchToProps = {
-  setCurrentUser: currentUserActions.setCurrentUser,
-  getUsers: usersActions.getUsers,
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Main)
+export default compose(graphql(allUsersQuery, { name: 'allUsersQuery' }))(Main)

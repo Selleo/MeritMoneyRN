@@ -45,6 +45,7 @@
     "react/jsx-uses-vars": "error",
     "react/jsx-wrap-multilines": "off",
     "react/no-array-index-key": "off",
+    "react/display-name": "off",
     "react/prefer-stateless-function": "off",
     "react/require-default-props": "off",
     "strict": "off"

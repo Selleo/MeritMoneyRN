@@ -1,30 +1,21 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { View } from 'react-native'
+import { View, AsyncStorage } from 'react-native'
 import { Button } from 'react-native-elements'
 import Auth0 from 'react-native-auth0'
-import { CLIENT_ID, DOMAIN_URL } from 'react-native-dotenv'
-import { connect } from 'react-redux'
+import { CLIENT_ID, AUTH0_DOMAIN_URL } from 'react-native-dotenv'
 
-import { actions as currentUserActions } from '../../store/currentUser'
+const auth0 = new Auth0({ clientId: CLIENT_ID, domain: AUTH0_DOMAIN_URL })
 
-export class Login extends Component {
-  static propTypes = {
-    setCurrentUser: PropTypes.func.isRequired,
-  }
-
+export default class Login extends Component {
   _authorize = async () => {
-    let auth0 = new Auth0({
-      clientId: CLIENT_ID,
-      domain: `https://${DOMAIN_URL}`,
-    })
-
     auth0.webAuth
       .authorize({
-        audience: `https://${DOMAIN_URL}/userinfo`,
+        audience: `${AUTH0_DOMAIN_URL}/userinfo`,
         scope: 'openid email profile',
       })
-      .then(({ idToken }) => this.props.setCurrentUser({ idToken }))
+      .then(({ idToken }) => {
+        AsyncStorage.setItem('idToken', idToken)
+      })
   }
 
   render() {
@@ -35,9 +26,3 @@ export class Login extends Component {
     )
   }
 }
-
-const mapDispatchToProps = {
-  setCurrentUser: currentUserActions.setCurrentUser,
-}
-
-export default connect(null, mapDispatchToProps)(Login)

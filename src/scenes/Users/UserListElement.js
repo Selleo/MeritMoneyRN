@@ -16,6 +16,7 @@ export default class UserListElement extends Component {
     comment: '',
     expanded: false,
     rating: 1,
+    maxHeight: 134,
   }
 
   toggle = () => {
@@ -32,7 +33,11 @@ export default class UserListElement extends Component {
 
   submit = () => {
     this.setState({ disabled: true })
-    setTimeout(() => this.setState({ disabled: false }), 1000)
+
+    setTimeout(() => {
+      this.setState({ disabled: false, rating: 1 })
+      this.toggle()
+    }, 1000)
   }
 
   setMaxHeight = ({ nativeEvent }) => {
@@ -44,15 +49,15 @@ export default class UserListElement extends Component {
   }
 
   render() {
-    const { avatar, name, givenKudos } = this.props.user
+    const { picture, name, givenKudos } = this.props.user
     const { animation, disabled, expanded, rating } = this.state
 
     return (
       <Animated.View style={[styles.container, { height: animation }]}>
         <TouchableOpacity onPress={this.toggle} underlayColor="#f1f1f1">
           <View onLayout={this.setMinHeight} style={styles.userInfoContainer}>
-            <Avatar avatarStyle={styles.avatar} medium rounded source={{ uri: avatar }} />
-            <Badge value={givenKudos} />
+            <Avatar avatarStyle={styles.avatar} medium rounded source={{ uri: picture }} />
+            <Badge value={givenKudos || 0} />
             <Text style={styles.userName}> {name} </Text>
             <View style={styles.userInfoExpanded}>
               <Icon

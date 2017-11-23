@@ -1,24 +1,31 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { compose, graphql } from 'react-apollo'
+import gql from 'graphql-tag'
 
 import createStackNavigation from './scenes/createStackNavigator'
 
 export class AppContainer extends Component {
   static propTypes = {
-    currentUser: PropTypes.object,
+    userQuery: PropTypes.object.isRequired,
   }
 
   render() {
-    const { currentUser } = this.props
-    const Navigation = createStackNavigation(currentUser)
+    const { loading, userOne } = this.props.userQuery
+    if (loading) return null
+
+    const Navigation = createStackNavigation(userOne)
 
     return <Navigation />
   }
 }
 
-const mapStateToProps = ({ currentUser }) => ({
-  currentUser,
-})
+const userQuery = gql`
+  query {
+    userOne(filter: { _id: "5a173b4e549afe001f58b5b5" }) {
+      _id
+    }
+  }
+`
 
-export default connect(mapStateToProps)(AppContainer)
+export default compose(graphql(userQuery, { name: 'userQuery' }))(AppContainer)

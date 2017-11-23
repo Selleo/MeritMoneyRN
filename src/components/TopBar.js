@@ -1,28 +1,28 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import { View, Text, StyleSheet } from 'react-native'
 import { Header, Avatar, Icon } from 'react-native-elements'
+import { compose, graphql } from 'react-apollo'
+import gql from 'graphql-tag'
 
 import { PRIMARY_COLOR } from '../utils/variables'
 
 export class TopBar extends Component {
   static propTypes = {
-    currentUser: PropTypes.object.isRequired,
+    userQuery: PropTypes.object.isRequired,
   }
 
   render() {
+    const { loading, userOne } = this.props.userQuery
+    if (loading) return null
+
     const {
       picture,
       hasReceivedMoreThanLastWeek,
       lastWeekKudos,
       sinceLastBonus,
       kudosLeft,
-    } = this.props.currentUser
-
-    if (!picture) {
-      return <Header style={styles.container} />
-    }
+    } = userOne
 
     return (
       <Header
@@ -72,8 +72,12 @@ const styles = StyleSheet.create({
   },
 })
 
-const mapStateToProps = ({ currentUser }) => ({
-  currentUser,
-})
-
-export default connect(mapStateToProps)(TopBar)
+const userQuery = gql`
+  query {
+    userOne(filter: { _id: "5a173b4e549afe001f58b5b5" }) {
+      picture
+      _id
+    }
+  }
+`
+export default compose(graphql(userQuery, { name: 'userQuery' }))(TopBar)

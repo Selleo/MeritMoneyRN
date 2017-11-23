@@ -15,27 +15,21 @@ const Scenes = {
     screen: Users,
     navigationOptions: {
       tabBarLabel: 'Users',
-      tabBarIcon: ({ tintColor }) => (
-        <Icon name='people' iconStyle={{ color: tintColor }} />
-      )
+      tabBarIcon: ({ tintColor }) => <Icon iconStyle={{ color: tintColor }} name="people" />,
     },
   },
   UserProfile: {
     screen: UserProfile,
     navigationOptions: {
       tabBarLabel: 'UserProfile',
-      tabBarIcon: ({ tintColor }) => (
-        <Icon name='perm-identity' iconStyle={{ color: tintColor }} />
-      )
+      tabBarIcon: ({ tintColor }) => <Icon iconStyle={{ color: tintColor }} name="perm-identity" />,
     },
   },
   CollectorsAndHamsters: {
     screen: CollectorsAndHamsters,
     navigationOptions: {
       tabBarLabel: 'Collectors & Hamsters',
-      tabBarIcon: ({ tintColor }) => (
-        <Icon name='show-chart' iconStyle={{ color: tintColor }} />
-      )
+      tabBarIcon: ({ tintColor }) => <Icon iconStyle={{ color: tintColor }} name="show-chart" />,
     },
   },
 }
@@ -48,7 +42,6 @@ const TabNavigatorConfig = {
   },
 }
 
-
 const MainScenes = {
   Login: { screen: Login },
   Users: { screen: TabNavigator(Scenes, TabNavigatorConfig) },
@@ -58,7 +51,7 @@ const createStackNavigator = currentUser =>
   StackNavigator(MainScenes, {
     initialRouteName: isEmpty(currentUser) ? 'Login' : 'Users',
     navigationOptions: {
-      header: <TopBar />
+      header: <TopBar />,
     },
   })
 
