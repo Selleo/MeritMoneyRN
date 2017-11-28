@@ -2,19 +2,24 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { View, Text, StyleSheet } from 'react-native'
 import { Header, Avatar, Icon } from 'react-native-elements'
-import { compose, graphql } from 'react-apollo'
-import gql from 'graphql-tag'
 
 import { PRIMARY_COLOR } from '../utils/variables'
 
 export class TopBar extends Component {
   static propTypes = {
-    currentUserQuery: PropTypes.object.isRequired,
+    currentUser: PropTypes.object,
   }
 
   render() {
-    const { loading, currentUser } = this.props.currentUserQuery
-    if (loading) return null
+    const { currentUser } = this.props
+
+    if (!currentUser)
+      return (
+        <Header
+          centerComponent={{ text: 'Merit Money', style: { color: 'white', fontSize: 24 } }}
+          style={styles.container}
+        />
+      )
 
     const {
       picture,
@@ -72,21 +77,4 @@ const styles = StyleSheet.create({
   },
 })
 
-const currentUserQuery = gql`
-  query {
-    currentUser {
-      email
-      email_verified
-      name
-      given_name
-      family_name
-      picture
-      gender
-      locale
-      user_id
-      nickname
-      created_at
-    }
-  }
-`
-export default compose(graphql(currentUserQuery, { name: 'currentUserQuery' }))(TopBar)
+export default TopBar

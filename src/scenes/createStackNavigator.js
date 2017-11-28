@@ -1,13 +1,13 @@
 import React from 'react'
 import { TabNavigator, StackNavigator } from 'react-navigation'
 import { Icon } from 'react-native-elements'
-import { isEmpty } from 'lodash'
 
 import { PRIMARY_COLOR } from '../utils/variables'
 import UserProfile from './UserProfile'
 import CollectorsAndHamsters from './CollectorsAndHamsters'
 import Login from './Login'
 import Users from './Users'
+import OrganizationForm from './Organization/OrganizationForm'
 import TopBar from '../components/TopBar'
 
 const Scenes = {
@@ -44,14 +44,15 @@ const TabNavigatorConfig = {
 
 const MainScenes = {
   Login: { screen: Login },
-  Users: { screen: TabNavigator(Scenes, TabNavigatorConfig) },
+  OrganizationForm: { screen: OrganizationForm },
+  Main: { screen: TabNavigator(Scenes, TabNavigatorConfig) },
 }
 
-const createStackNavigator = currentUser =>
+const createStackNavigator = idToken =>
   StackNavigator(MainScenes, {
-    initialRouteName: isEmpty(currentUser) ? 'Login' : 'Users',
+    initialRouteName: idToken ? 'Main' : 'Login',
     navigationOptions: {
-      header: <TopBar />,
+      header: props => <TopBar currentUser={props.currentUser} />,
     },
   })
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ScrollView, StyleSheet, RefreshControl } from 'react-native'
+import { ScrollView, StyleSheet, RefreshControl, ActivityIndicator } from 'react-native'
 import PropTypes from 'prop-types'
 import gql from 'graphql-tag'
 import { compose, graphql } from 'react-apollo'
@@ -23,12 +23,12 @@ export class Main extends Component {
     }, 1000)
   }
 
-  listUsers = users => users.map(user => <UserListElement key={user.name} user={user} />)
+  listUsers = users => users.map(user => <UserListElement key={user._id} user={user} />)
 
   render() {
     const { isRefreshing } = this.state
     const { loading, allUsers } = this.props.allUsersQuery
-    if (loading) return null
+    if (loading) return <ActivityIndicator size="large" style={styles.loader} />
 
     return (
       <ScrollView
@@ -57,6 +57,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  loader: {
+    alignItems: 'center',
+    backgroundColor: PRIMARY_COLOR,
+    flex: 1,
+  },
   container: {
     flex: 1,
   },
@@ -65,6 +70,7 @@ const styles = StyleSheet.create({
 const allUsersQuery = gql`
   query {
     allUsers {
+      _id
       name
       picture
     }
