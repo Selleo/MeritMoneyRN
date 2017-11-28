@@ -24,7 +24,9 @@ export default class Login extends Component {
         audience: `${AUTH0_DOMAIN_URL}/userinfo`,
         scope: 'openid email profile',
       })
-      .then(({ idToken }) => AsyncStorage.setItem('idToken', idToken))
+      .then(({ idToken }) =>
+        AsyncStorage.setItem('idToken', idToken).then(() => this.props.navigation.navigate('Main'))
+      )
   }
 
   render() {

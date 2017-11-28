@@ -1,23 +1,60 @@
 import React, { Component } from 'react'
 import { AsyncStorage } from 'react-native'
+import { ApolloClient } from 'apollo-client'
+import { TabNavigator } from 'react-navigation'
+import { createHttpLink } from 'apollo-link-http'
+import { setContext } from 'apollo-link-context'
+import { InMemoryCache } from 'apollo-cache-inmemory'
+import { ApolloProvider } from 'react-apollo'
+import { Provider } from 'react-redux'
+import { API_URL } from 'react-native-dotenv'
 
-import createStackNavigation from './scenes/createStackNavigator'
+import { Scenes, TabNavigatorConfig } from './scenes'
+import store from '../src/store/configureStore'
+
+const httpLink = createHttpLink({
+  uri: API_URL,
+})
+
+const authLink = async () => {
+  const idToken = await AsyncStorage.getItem('idToken')
+
+  return setContext((_, { headers }) => ({
+    headers: {
+      ...headers,
+      authorization: idToken ? `Bearer ${idToken}` : '',
+    },
+  }))
+}
+
+const client = async () => {
+  const link = await authLink()
+  return new ApolloClient({
+    link: link.concat(httpLink),
+    cache: new InMemoryCache(),
+  })
+}
 
 export class AppContainer extends Component {
-  state = {
-    idToken: '',
-  }
+  state = {}
 
   componentWillMount = async () => {
-    this.setState({ idToken: await AsyncStorage.getItem('idToken') })
+    this.setState({ apolloClient: await client() })
   }
 
   render() {
-    const { idToken } = this.state
-    if (idToken === '') return null
+    const { apolloClient } = this.state
+    if (!apolloClient) return null
 
-    const Navigation = createStackNavigation(idToken)
-    return <Navigation />
+    const App = TabNavigator(Scenes, TabNavigatorConfig)
+
+    return (
+      <ApolloProvider client={apolloClient}>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </ApolloProvider>
+    )
   }
 }
 
