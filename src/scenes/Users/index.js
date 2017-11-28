@@ -3,17 +3,24 @@ import { ScrollView, StyleSheet, RefreshControl, ActivityIndicator } from 'react
 import PropTypes from 'prop-types'
 import gql from 'graphql-tag'
 import { compose, graphql } from 'react-apollo'
+import { Header } from 'react-native-elements'
 
 import { PRIMARY_COLOR } from '../../utils/variables'
 import UserListElement from './UserListElement'
 
-export class Main extends Component {
+export class Users extends Component {
   static propTypes = {
     allUsersQuery: PropTypes.object.isRequired,
+    currentUserQuery: PropTypes.object.isRequired,
+    navigation: PropTypes.object.isRequired,
   }
 
   state = {
     isRefreshing: false,
+  }
+
+  componentDidMount() {
+    this.props.navigation.setParams({ ready: true })
   }
 
   onRefresh = () => {
@@ -28,6 +35,7 @@ export class Main extends Component {
   render() {
     const { isRefreshing } = this.state
     const { loading, allUsers } = this.props.allUsersQuery
+
     if (loading) return <ActivityIndicator size="large" style={styles.loader} />
 
     return (
@@ -52,6 +60,9 @@ export class Main extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   login: {
     flex: 1,
     justifyContent: 'center',
@@ -60,9 +71,6 @@ const styles = StyleSheet.create({
   loader: {
     alignItems: 'center',
     backgroundColor: PRIMARY_COLOR,
-    flex: 1,
-  },
-  container: {
     flex: 1,
   },
 })
@@ -77,4 +85,15 @@ const allUsersQuery = gql`
   }
 `
 
-export default compose(graphql(allUsersQuery, { name: 'allUsersQuery' }))(Main)
+const currentUserQuery = gql`
+  query {
+    currentUser {
+      picture
+    }
+  }
+`
+
+export default compose(
+  graphql(allUsersQuery, { name: 'allUsersQuery' }),
+  graphql(currentUserQuery, { name: 'currentUserQuery' })
+)(Users)

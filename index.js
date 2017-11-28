@@ -1,38 +1,7 @@
 import React, { Component } from 'react'
 import { AppRegistry, AsyncStorage } from 'react-native'
-import { ApolloClient } from 'apollo-client'
-import { createHttpLink } from 'apollo-link-http'
-import { setContext } from 'apollo-link-context'
-import { InMemoryCache } from 'apollo-cache-inmemory'
-import { ApolloProvider } from 'react-apollo'
-import { Provider } from 'react-redux'
-import { API_URL } from 'react-native-dotenv'
 
-import store from './src/store/configureStore'
-import AppContainer from './src/AppContainer'
-
-const httpLink = createHttpLink({
-  uri: API_URL,
-})
-
-const authLink = async () => {
-  const idToken = await AsyncStorage.getItem('idToken')
-
-  return setContext((_, { headers }) => ({
-    headers: {
-      ...headers,
-      authorization: idToken ? `Bearer ${idToken}` : '',
-    },
-  }))
-}
-
-const client = async () => {
-  const link = await authLink()
-  return new ApolloClient({
-    link: link.concat(httpLink),
-    cache: new InMemoryCache(),
-  })
-}
+import createStackNavigation from './src/createStackNavigator'
 
 export default class App extends Component {
   state = {
@@ -43,17 +12,20 @@ export default class App extends Component {
     this.setState({ apolloClient: await client() })
   }
 
-  render() {
-    const { apolloClient } = this.state
-    if (!apolloClient) return null
+  state = {
+    idToken: '',
+  }
 
-    return (
-      <ApolloProvider client={apolloClient}>
-        <Provider store={store}>
-          <AppContainer />
-        </Provider>
-      </ApolloProvider>
-    )
+  componentWillMount = async () => {
+    this.setState({ idToken: await AsyncStorage.getItem('idToken') })
+  }
+
+  render() {
+    const { idToken } = this.state
+    if (idToken === '') return null
+
+    const Navigation = createStackNavigation(idToken)
+    return <Navigation />
   }
 }
 
