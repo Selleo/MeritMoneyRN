@@ -1,5 +1,6 @@
 import React from 'react'
 import { Icon } from 'react-native-elements'
+import { TabNavigator } from 'react-navigation'
 
 import { PRIMARY_COLOR } from '../utils/variables'
 import UserProfile from './UserProfile'
@@ -37,3 +38,5 @@ export const TabNavigatorConfig = {
     showIcon: true,
   },
 }
+
+export default TabNavigator(Scenes, TabNavigatorConfig)

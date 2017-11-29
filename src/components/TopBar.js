@@ -1,24 +1,39 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { View, Text, StyleSheet } from 'react-native'
 import { Header, Avatar, Icon } from 'react-native-elements'
+import { isEmpty } from 'lodash'
 
 import { PRIMARY_COLOR } from '../utils/variables'
+import store from '../store/configureStore'
 
 export class TopBar extends Component {
-  static propTypes = {
-    currentUser: PropTypes.object,
-  }
+  state = { currentUser: {} }
 
   render() {
-    const { currentUser } = this.props
-    if (!currentUser)
+    const { currentUser } = this.state
+
+    if (isEmpty(currentUser)) {
+      store.subscribe(() => this.setState({ currentUser: store.getState().currentUser }))
+
       return (
         <Header
           centerComponent={{ text: 'Merit Money', style: { color: 'white', fontSize: 24 } }}
+          leftComponent={
+            <View style={styles.avatar}>
+              <Avatar icon={{ name: 'person' }} medium rounded />
+              <Text style={styles.headerText}>0 left</Text>
+            </View>
+          }
+          rightComponent={
+            <View style={styles.kudoCounter}>
+              <Text style={styles.headerText}>0 (0)</Text>
+              <Icon iconStyle={{ color: 'green' }} name={'keyboard-arrow-up'} size={35} />
+            </View>
+          }
           style={styles.container}
         />
       )
+    }
 
     const {
       picture,

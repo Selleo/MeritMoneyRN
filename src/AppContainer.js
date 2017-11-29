@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { AsyncStorage } from 'react-native'
 import { ApolloClient } from 'apollo-client'
-import { TabNavigator } from 'react-navigation'
 import { createHttpLink } from 'apollo-link-http'
 import { setContext } from 'apollo-link-context'
 import { InMemoryCache } from 'apollo-cache-inmemory'
@@ -9,7 +8,8 @@ import { ApolloProvider } from 'react-apollo'
 import { Provider } from 'react-redux'
 import { API_URL } from 'react-native-dotenv'
 
-import { Scenes, TabNavigatorConfig } from './scenes'
+import currentUserQuery from './graphql/currentUserQuery'
+import App from './scenes'
 import store from '../src/store/configureStore'
 
 const httpLink = createHttpLink({
@@ -22,13 +22,14 @@ const authLink = async () => {
   return setContext((_, { headers }) => ({
     headers: {
       ...headers,
-      authorization: idToken ? `Bearer ${idToken}` : '',
+      authorization: idToken && `Bearer ${idToken}`,
     },
   }))
 }
 
 const client = async () => {
   const link = await authLink()
+
   return new ApolloClient({
     link: link.concat(httpLink),
     cache: new InMemoryCache(),
@@ -46,7 +47,16 @@ export class AppContainer extends Component {
     const { apolloClient } = this.state
     if (!apolloClient) return null
 
-    const App = TabNavigator(Scenes, TabNavigatorConfig)
+    apolloClient
+      .query({
+        query: currentUserQuery,
+      })
+      .then(({ data: { currentUser } }) => {
+        store.dispatch({
+          type: 'SET_CURRENT_USER',
+          payload: currentUser,
+        })
+      })
 
     return (
       <ApolloProvider client={apolloClient}>

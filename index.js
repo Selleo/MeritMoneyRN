@@ -5,14 +5,6 @@ import createStackNavigation from './src/createStackNavigator'
 
 export default class App extends Component {
   state = {
-    apolloClient: null,
-  }
-
-  componentWillMount = async () => {
-    this.setState({ apolloClient: await client() })
-  }
-
-  state = {
     idToken: '',
   }
 
