@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { View } from 'react-native'
 import { Button, FormLabel, FormInput, FormValidationMessage, Text } from 'react-native-elements'
 import { compose, graphql } from 'react-apollo'
-import gql from 'graphql-tag'
+import { createOrganizationMutation } from '../../graphql/mutations'
 
 export class OrganizationForm extends Component {
   static propTypes = {
@@ -40,12 +40,6 @@ export class OrganizationForm extends Component {
     )
   }
 }
-
-const createOrganizationMutation = gql`
-  mutation createOrganization($name: String!) {
-    createOrganization(record: { name: $name })
-  }
-`
 
 export default compose(graphql(createOrganizationMutation, { name: 'createOrganization' }))(
   OrganizationForm

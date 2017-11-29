@@ -8,7 +8,7 @@ import { ApolloProvider } from 'react-apollo'
 import { Provider } from 'react-redux'
 import { API_URL } from 'react-native-dotenv'
 
-import currentUserQuery from './graphql/currentUserQuery'
+import { currentUserQuery } from './graphql/queries'
 import App from './scenes'
 import store from '../src/store/configureStore'
 

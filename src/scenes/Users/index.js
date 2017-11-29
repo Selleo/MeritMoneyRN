@@ -5,7 +5,7 @@ import { compose, graphql } from 'react-apollo'
 
 import { PRIMARY_COLOR } from '../../utils/variables'
 import UserListElement from './UserListElement'
-import allUsersQuery from '../../graphql/allUsersQuery'
+import { allUsersQuery } from '../../graphql/queries'
 
 export class Users extends Component {
   static propTypes = {
