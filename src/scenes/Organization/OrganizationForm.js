@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { View } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import { Button, FormLabel, FormInput, FormValidationMessage, Text } from 'react-native-elements'
 import { compose, graphql } from 'react-apollo'
 import { createOrganizationMutation } from '../../graphql/mutations'
@@ -16,6 +16,7 @@ export class OrganizationForm extends Component {
 
   _onSubmit = () => {
     const { name } = this.state
+
     if (name) {
       this.props.createOrganization({ variables: { name } })
     } else {
@@ -26,20 +27,34 @@ export class OrganizationForm extends Component {
 
   render() {
     return (
-      <View>
-        <FormLabel>Name</FormLabel>
-        <FormInput
-          onChangeText={value => this._onChange('name', value)}
-          ref={ref => (this.nameInput = ref)}
-        />
-        <FormValidationMessage>
-          {this.state.error && <Text>Name cannot be blank</Text>}
-        </FormValidationMessage>
+      <View style={styles.container}>
+        <View style={styles.form}>
+          <FormLabel>Name</FormLabel>
+          <FormInput
+            onChangeText={value => this._onChange('name', value)}
+            ref={ref => (this.nameInput = ref)}
+          />
+          <FormValidationMessage>
+            {this.state.error && <Text>Name cannot be blank</Text>}
+          </FormValidationMessage>
+        </View>
+
         <Button onPress={this._onSubmit} title="Create Organization" />
       </View>
     )
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  form: {
+    width: '90%',
+  },
+})
 
 export default compose(graphql(createOrganizationMutation, { name: 'createOrganization' }))(
   OrganizationForm
