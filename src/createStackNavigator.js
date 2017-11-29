@@ -2,9 +2,9 @@ import React from 'react'
 import { StackNavigator } from 'react-navigation'
 
 import Login from './scenes/Login'
-import OrganizationForm from './scenes/Organization/OrganizationForm'
 import AppContainer from './AppContainer'
 import TopBar from './components/TopBar'
+import OrganizationForm from './scenes/Organization/OrganizationForm'
 
 const MainScenes = {
   Login: {
@@ -15,9 +15,7 @@ const MainScenes = {
   },
   Main: {
     screen: AppContainer,
-    navigationOptions: {
-      header: <TopBar />,
-    },
+    navigationOptions: { header: <TopBar /> },
   },
   OrganizationForm: { screen: OrganizationForm },
 }

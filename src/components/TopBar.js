@@ -17,7 +17,7 @@ export class TopBar extends Component {
 
       return (
         <Header
-          centerComponent={{ text: 'Merit Money', style: { color: 'white', fontSize: 24 } }}
+          centerComponent={{ text: 'MeritMoney', style: { color: 'white', fontSize: 24 } }}
           leftComponent={
             <View style={styles.avatar}>
               <Avatar icon={{ name: 'person' }} medium rounded />
@@ -45,6 +45,7 @@ export class TopBar extends Component {
 
     return (
       <Header
+        centerComponent={{ text: 'MeritMoney', style: { color: 'white', fontSize: 24 } }}
         leftComponent={
           <View style={styles.avatar}>
             <Avatar medium rounded source={{ uri: picture }} />

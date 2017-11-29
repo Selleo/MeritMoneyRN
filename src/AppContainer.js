@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { AsyncStorage } from 'react-native'
 import { ApolloClient } from 'apollo-client'
 import { createHttpLink } from 'apollo-link-http'
@@ -31,12 +32,17 @@ const client = async () => {
   const link = await authLink()
 
   return new ApolloClient({
+    connectToDevTools: true,
     link: link.concat(httpLink),
     cache: new InMemoryCache(),
   })
 }
 
 export class AppContainer extends Component {
+  static propTypes = {
+    navigation: PropTypes.object.isRequired,
+  }
+
   state = {}
 
   componentWillMount = async () => {
@@ -45,6 +51,7 @@ export class AppContainer extends Component {
 
   render() {
     const { apolloClient } = this.state
+    const { navigation } = this.props
     if (!apolloClient) return null
 
     apolloClient
@@ -61,7 +68,7 @@ export class AppContainer extends Component {
     return (
       <ApolloProvider client={apolloClient}>
         <Provider store={store}>
-          <App />
+          <App navigation={navigation} />
         </Provider>
       </ApolloProvider>
     )

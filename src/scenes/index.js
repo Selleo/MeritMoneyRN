@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 import { Icon } from 'react-native-elements'
 import { TabNavigator } from 'react-navigation'
 
 import { PRIMARY_COLOR } from '../utils/variables'
-import UserProfile from './UserProfile'
+import Comments from './Comments'
 import CollectorsAndHamsters from './CollectorsAndHamsters'
 import Users from './Users'
+import UserProfile from './UserProfile'
 
 export const Scenes = {
   Users: {
@@ -15,11 +17,11 @@ export const Scenes = {
       tabBarIcon: ({ tintColor }) => <Icon iconStyle={{ color: tintColor }} name="people" />,
     },
   },
-  UserProfile: {
-    screen: UserProfile,
+  Comments: {
+    screen: Comments,
     navigationOptions: {
-      tabBarLabel: 'UserProfile',
-      tabBarIcon: ({ tintColor }) => <Icon iconStyle={{ color: tintColor }} name="perm-identity" />,
+      tabBarLabel: 'Comments',
+      tabBarIcon: ({ tintColor }) => <Icon iconStyle={{ color: tintColor }} name="comment" />,
     },
   },
   CollectorsAndHamsters: {
@@ -29,9 +31,17 @@ export const Scenes = {
       tabBarIcon: ({ tintColor }) => <Icon iconStyle={{ color: tintColor }} name="show-chart" />,
     },
   },
+  UserProfile: {
+    screen: UserProfile,
+    navigationOptions: {
+      tabBarLabel: 'UserProfile',
+      tabBarIcon: ({ tintColor }) => <Icon iconStyle={{ color: tintColor }} name="perm-identity" />,
+    },
+  },
 }
 
 export const TabNavigatorConfig = {
+  initialRouteName: 'UserProfile',
   tabBarPosition: 'bottom',
   tabBarOptions: {
     activeTintColor: PRIMARY_COLOR,
@@ -39,4 +49,14 @@ export const TabNavigatorConfig = {
   },
 }
 
-export default TabNavigator(Scenes, TabNavigatorConfig)
+export default class App extends PureComponent {
+  static propTypes = {
+    navigation: PropTypes.object.isRequired,
+  }
+
+  render() {
+    const { navigation } = this.props
+    const Navigator = TabNavigator(Scenes, TabNavigatorConfig)
+    return <Navigator screenProps={{ rootNavigation: navigation }} />
+  }
+}

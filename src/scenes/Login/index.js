@@ -14,10 +14,6 @@ export default class Login extends Component {
     navigation: PropTypes.object.isRequired,
   }
 
-  _goToOrganizationCreator = () => {
-    this.props.navigation.navigate('OrganizationForm')
-  }
-
   _authorize = async () => {
     auth0.webAuth
       .authorize({
@@ -31,24 +27,15 @@ export default class Login extends Component {
 
   render() {
     return (
-      <View>
-        <View style={styles.container}>
-          <View style={styles.userFlow}>
-            <Button
-              buttonStyle={styles.buttonStyle}
-              icon={{ name: 'people-outline', color: PRIMARY_COLOR }}
-              onPress={this._goToOrganizationCreator}
-              raised
-              title="Create organization"
-            />
-            <Button
-              buttonStyle={styles.buttonStyle}
-              icon={{ name: 'power-settings-new', color: PRIMARY_COLOR }}
-              onPress={this._authorize}
-              raised
-              title="Login"
-            />
-          </View>
+      <View style={styles.container}>
+        <View style={styles.userFlow}>
+          <Button
+            buttonStyle={styles.buttonStyle}
+            icon={{ name: 'power-settings-new', color: PRIMARY_COLOR }}
+            onPress={this._authorize}
+            raised
+            title="Login"
+          />
         </View>
       </View>
     )
@@ -57,7 +44,9 @@ export default class Login extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   buttonStyle: {
     backgroundColor: SECONDARY_COLOR,
