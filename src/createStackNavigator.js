@@ -7,17 +7,22 @@ import AppContainer from './AppContainer'
 import TopBar from './components/TopBar'
 
 const MainScenes = {
-  Login: { screen: Login },
-  Main: { screen: AppContainer },
+  Login: {
+    screen: Login,
+    navigationOptions: {
+      header: null,
+    },
+  },
+  Main: {
+    screen: AppContainer,
+    navigationOptions: {
+      header: <TopBar />,
+    },
+  },
   OrganizationForm: { screen: OrganizationForm },
 }
 
 const createStackNavigator = idToken =>
-  StackNavigator(MainScenes, {
-    initialRouteName: idToken ? 'Main' : 'Login',
-    navigationOptions: {
-      header: <TopBar />,
-    },
-  })
+  StackNavigator(MainScenes, { initialRouteName: idToken ? 'Main' : 'Login' })
 
 export default createStackNavigator

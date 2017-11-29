@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Animated, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
-import { Avatar, Button, Icon, Badge } from 'react-native-elements'
+import { Animated, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Avatar, Button, Icon, Badge, FormInput, FormLabel } from 'react-native-elements'
 import StarRating from 'react-native-star-rating'
 
 import { PRIMARY_COLOR } from '../../utils/variables'
@@ -16,7 +16,7 @@ export default class UserListElement extends Component {
     comment: '',
     expanded: false,
     rating: 1,
-    maxHeight: 134,
+    maxHeight: 180,
   }
 
   toggle = () => {
@@ -40,13 +40,8 @@ export default class UserListElement extends Component {
     }, 1000)
   }
 
-  setMaxHeight = ({ nativeEvent }) => {
-    this.setState({ maxHeight: nativeEvent.layout.height })
-  }
-
-  setMinHeight = ({ nativeEvent }) => {
-    this.setState({ minHeight: nativeEvent.layout.height })
-  }
+  setMaxHeight = ({ nativeEvent }) => this.setState({ maxHeight: nativeEvent.layout.height })
+  setMinHeight = ({ nativeEvent }) => this.setState({ minHeight: nativeEvent.layout.height })
 
   render() {
     const { picture, name, givenKudos } = this.props.user
@@ -70,18 +65,18 @@ export default class UserListElement extends Component {
 
         {expanded && (
           <View onLayout={this.setMaxHeight} style={styles.body}>
-            <TextInput
-              onChangeText={comment => this.setState({ comment })}
-              onSubmitEditing={this.submit}
-              placeholder="Comment"
-              returnKeyType="send"
-            />
             <StarRating
               maxStars={5}
               rating={rating}
               selectedStar={rating => {
                 this.setState({ rating })
               }}
+            />
+            <FormLabel>Comment</FormLabel>
+            <FormInput
+              onChangeText={comment => this.setState({ comment })}
+              onSubmitEditing={this.submit}
+              returnKeyType="send"
             />
             <Button
               backgroundColor={PRIMARY_COLOR}

@@ -1,17 +1,15 @@
 import React, { Component } from 'react'
 import { ScrollView, StyleSheet, RefreshControl, ActivityIndicator } from 'react-native'
 import PropTypes from 'prop-types'
-import gql from 'graphql-tag'
 import { compose, graphql } from 'react-apollo'
-import { Header } from 'react-native-elements'
 
 import { PRIMARY_COLOR } from '../../utils/variables'
 import UserListElement from './UserListElement'
+import allUsersQuery from '../../graphql/allUsersQuery'
 
 export class Users extends Component {
   static propTypes = {
     allUsersQuery: PropTypes.object.isRequired,
-    currentUserQuery: PropTypes.object.isRequired,
     navigation: PropTypes.object.isRequired,
   }
 
@@ -75,25 +73,4 @@ const styles = StyleSheet.create({
   },
 })
 
-const allUsersQuery = gql`
-  query {
-    allUsers {
-      _id
-      name
-      picture
-    }
-  }
-`
-
-const currentUserQuery = gql`
-  query {
-    currentUser {
-      picture
-    }
-  }
-`
-
-export default compose(
-  graphql(allUsersQuery, { name: 'allUsersQuery' }),
-  graphql(currentUserQuery, { name: 'currentUserQuery' })
-)(Users)
+export default compose(graphql(allUsersQuery, { name: 'allUsersQuery' }))(Users)
