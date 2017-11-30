@@ -61,15 +61,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  login: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   loader: {
     alignItems: 'center',
     backgroundColor: PRIMARY_COLOR,
     flex: 1,
+  },
+  login: {
+    alignItems: 'center',
+    flex: 1,
+    justifyContent: 'center',
   },
 })
 

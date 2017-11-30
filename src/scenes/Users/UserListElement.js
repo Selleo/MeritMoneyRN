@@ -99,15 +99,15 @@ const styles = StyleSheet.create({
     margin: 10,
     overflow: 'hidden',
   },
-  button: {
-    marginTop: 10,
-  },
   body: {
     padding: 10,
   },
+  button: {
+    marginTop: 10,
+  },
   icon: {
-    width: 30,
     height: 25,
+    width: 30,
   },
   userInfoContainer: {
     flexDirection: 'row',
@@ -118,9 +118,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   userName: {
-    flex: 1,
-    padding: 10,
     color: '#2a2f43',
+    flex: 1,
     fontWeight: 'bold',
+    padding: 10,
   },
 })

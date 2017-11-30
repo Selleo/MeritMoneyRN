@@ -20,21 +20,21 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   thirdPlace: {
+    alignSelf: 'flex-end',
+    backgroundColor: '#888',
     height: '50%',
     width: 50,
-    backgroundColor: '#888',
-    alignSelf: 'flex-end',
   },
   secondPlace: {
+    alignSelf: 'flex-end',
+    backgroundColor: '#888',
     height: '75%',
     width: 50,
-    backgroundColor: '#888',
-    alignSelf: 'flex-end',
   },
   firstPlace: {
+    alignSelf: 'flex-end',
+    backgroundColor: '#888',
     height: '100%',
     width: 50,
-    backgroundColor: '#888',
-    alignSelf: 'flex-end',
   },
 })

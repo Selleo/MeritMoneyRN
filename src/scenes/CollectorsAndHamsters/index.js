@@ -27,17 +27,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  headerContainer: {
-    marginTop: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  header: {
-    fontSize: 26,
-  },
   divider: {
     backgroundColor: 'blue',
     height: 1,
     margin: 10,
+  },
+  header: {
+    fontSize: 26,
+  },
+  headerContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 10,
   },
 })
