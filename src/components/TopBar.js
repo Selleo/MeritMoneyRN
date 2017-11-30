@@ -17,7 +17,7 @@ export class TopBar extends Component {
 
       return (
         <Header
-          centerComponent={{ text: 'MeritMoney', style: { color: 'white', fontSize: 24 } }}
+          centerComponent={{ text: 'MeritMoney', style: styles.centerText }}
           leftComponent={
             <View style={styles.avatar}>
               <Avatar icon={{ name: 'person' }} medium rounded />
@@ -45,7 +45,7 @@ export class TopBar extends Component {
 
     return (
       <Header
-        centerComponent={{ text: 'MeritMoney', style: { color: 'white', fontSize: 24 } }}
+        centerComponent={{ text: 'MeritMoney', style: styles.centerText }}
         leftComponent={
           <View style={styles.avatar}>
             <Avatar medium rounded source={{ uri: picture }} />
@@ -78,14 +78,18 @@ const styles = StyleSheet.create({
     paddingTop: 15,
   },
   avatar: {
-    flexDirection: 'row',
     alignItems: 'center',
+    flexDirection: 'row',
     justifyContent: 'center',
     padding: 5,
   },
+  centerText: {
+    color: '#ffffff',
+    fontSize: 24,
+  },
   headerText: {
+    color: '#ffffff',
     padding: 10,
-    color: '#fff',
   },
   kudoCounter: {
     flexDirection: 'row',

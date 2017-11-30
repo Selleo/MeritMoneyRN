@@ -34,17 +34,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  imageContainer: {
-    alignItems: 'flex-end',
-  },
   hamstersContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    width: 200,
     margin: 10,
+    width: 200,
+  },
+  imageContainer: {
+    alignItems: 'flex-end',
   },
   image: {
-    width: 100,
     height: 100,
+    width: 100,
   },
 })
