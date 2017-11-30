@@ -18,17 +18,12 @@ export class AnimatedCollector extends Component {
   componentDidUpdate = prevProps => {
     const prevTab = prevProps.currentTab
     const { currentTab } = this.props
-    if (
-      prevTab &&
-      prevTab !== currentTab &&
-      currentTab === 'CollectorsAndHamsters'
-    ) {
+
+    if (prevTab && prevTab !== currentTab && currentTab === 'CollectorsAndHamsters') {
       this.animate()
     }
-    if (
-      prevTab === 'CollectorsAndHamsters' &&
-      currentTab !== 'CollectorsAndHamsters'
-    ) {
+
+    if (prevTab === 'CollectorsAndHamsters' && currentTab !== 'CollectorsAndHamsters') {
       this.setState({ currentHeight: new Animated.Value(0) })
     }
   }
@@ -39,8 +34,9 @@ export class AnimatedCollector extends Component {
       duration: 1000,
     }).start()
   }
+
   render() {
-    let { currentHeight } = this.state
+    const { currentHeight } = this.state
 
     return (
       <Animated.View

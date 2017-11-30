@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { Icon } from 'react-native-elements'
 import { TabNavigator } from 'react-navigation'
+import { connect } from 'react-redux'
 
 import { PRIMARY_COLOR } from '../utils/variables'
 import Comments from './Comments'
@@ -15,36 +16,28 @@ export const Scenes = {
     screen: Users,
     navigationOptions: {
       tabBarLabel: 'Users',
-      tabBarIcon: ({ tintColor }) => (
-        <Icon iconStyle={{ color: tintColor }} name="people" />
-      ),
+      tabBarIcon: ({ tintColor }) => <Icon iconStyle={{ color: tintColor }} name="people" />,
     },
   },
   Comments: {
     screen: Comments,
     navigationOptions: {
       tabBarLabel: 'Comments',
-      tabBarIcon: ({ tintColor }) => (
-        <Icon iconStyle={{ color: tintColor }} name="comment" />
-      ),
+      tabBarIcon: ({ tintColor }) => <Icon iconStyle={{ color: tintColor }} name="comment" />,
     },
   },
   CollectorsAndHamsters: {
     screen: CollectorsAndHamsters,
     navigationOptions: {
       tabBarLabel: 'Collectors & Hamsters',
-      tabBarIcon: ({ tintColor }) => (
-        <Icon iconStyle={{ color: tintColor }} name="show-chart" />
-      ),
+      tabBarIcon: ({ tintColor }) => <Icon iconStyle={{ color: tintColor }} name="show-chart" />,
     },
   },
   UserProfile: {
     screen: UserProfile,
     navigationOptions: {
       tabBarLabel: 'UserProfile',
-      tabBarIcon: ({ tintColor }) => (
-        <Icon iconStyle={{ color: tintColor }} name="perm-identity" />
-      ),
+      tabBarIcon: ({ tintColor }) => <Icon iconStyle={{ color: tintColor }} name="perm-identity" />,
     },
   },
 }
@@ -58,19 +51,27 @@ export const TabNavigatorConfig = {
   },
 }
 
-export default class App extends PureComponent {
+const mapDispatchToProps = {
+  setCurrentTab: actions.setCurrentTab,
+}
+
+export class App extends PureComponent {
   static propTypes = {
+    setCurrentTab: PropTypes.func.isRequired,
     navigation: PropTypes.object.isRequired,
   }
 
   render() {
     const { navigation } = this.props
     const Navigator = TabNavigator(Scenes, TabNavigatorConfig)
+
     return (
       <Navigator
-        onNavigationStateChange={actions.setCurrentTab}
+        onNavigationStateChange={this.props.setCurrentTab}
         screenProps={{ rootNavigation: navigation }}
       />
     )
   }
 }
+
+export default connect(null, mapDispatchToProps)(App)
