@@ -1,12 +1,11 @@
 import { types } from './'
-import store from '../configureStore'
 
-export const setCurrentTab = (prevState, currentState) => {
+export const setCurrentTab = (prevState, currentState) => dispatch => {
   const currentScreen = getCurrentRouteName(currentState)
-  store.dispatch({ type: types.SET_CURRENT_TAB , payload: currentScreen })
+  return dispatch({ type: types.SET_CURRENT_TAB, payload: currentScreen })
 }
 
-const getCurrentRouteName = (navigationState) => {
+const getCurrentRouteName = navigationState => {
   if (!navigationState) {
     return null
   }
@@ -16,4 +15,3 @@ const getCurrentRouteName = (navigationState) => {
   }
   return route.routeName
 }
-
