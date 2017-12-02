@@ -1,38 +1,32 @@
 import React, { Component } from 'react'
-import { StyleSheet, View } from 'react-native'
+import { Dimensions, StyleSheet, View } from 'react-native'
 
 import AnimatedCollector from './AnimatedCollector'
 
+const { height } = Dimensions.get('window')
+
 export default class Collectors extends Component {
   state = {
-    firstKudos: 100,
-    secondKudos: 75,
-    thirdKudos: 50,
+    firstKudo: 100,
+    secondKudo: 75,
+    thirdKudo: 50,
   }
 
   render() {
-    const { firstKudos, secondKudos, thirdKudos } = this.state
-    const allKudo = firstKudos + secondKudos + thirdKudos
+    const { firstKudo, secondKudo, thirdKudo } = this.state
+    const allKudos = firstKudo + secondKudo + thirdKudo
+    const proportionHeightToKudo = 2 * allKudos / height
 
     return (
       <View style={styles.container} testID="collectorsContainer">
-        <AnimatedCollector
-          style={{ width: 50, height: 50, backgroundColor: '#888' }}
-          targetHeight={firstKudos / allKudo * 370}
-        >
-          <View style={styles.firstPlace} />
+        <AnimatedCollector targetHeight={firstKudo / proportionHeightToKudo}>
+          <View style={styles.place} />
         </AnimatedCollector>
-        <AnimatedCollector
-          style={{ width: 50, height: 50, backgroundColor: '#888' }}
-          targetHeight={secondKudos / allKudo * 370}
-        >
-          <View style={styles.secondPlace} />
+        <AnimatedCollector targetHeight={secondKudo / proportionHeightToKudo}>
+          <View style={styles.place} />
         </AnimatedCollector>
-        <AnimatedCollector
-          style={{ width: 50, height: 50, backgroundColor: '#888' }}
-          targetHeight={thirdKudos / allKudo * 370}
-        >
-          <View style={styles.thirdPlace} />
+        <AnimatedCollector targetHeight={thirdKudo / proportionHeightToKudo}>
+          <View style={styles.place} />
         </AnimatedCollector>
       </View>
     )
@@ -46,13 +40,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'flex-end',
   },
-  thirdPlace: {
-    width: 50,
-  },
-  secondPlace: {
-    width: 50,
-  },
-  firstPlace: {
+  place: {
     width: 50,
   },
 })
