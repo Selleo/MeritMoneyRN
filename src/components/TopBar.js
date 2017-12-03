@@ -9,12 +9,22 @@ import store from '../store/configureStore'
 export class TopBar extends Component {
   state = { currentUser: {} }
 
+  componentWillMount = () => {
+    this.setState({ currentUser: store.getState().currentUser })
+
+    this.unsubscribe = store.subscribe(() =>
+      this.setState({ currentUser: store.getState().currentUser })
+    )
+  }
+
+  componentWillUnmount = () => {
+    this.unsubscribe()
+  }
+
   render() {
     const { currentUser } = this.state
 
     if (isEmpty(currentUser)) {
-      store.subscribe(() => this.setState({ currentUser: store.getState().currentUser }))
-
       return (
         <Header
           leftComponent={
