@@ -3,7 +3,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import thunkMiddleware from 'redux-thunk'
 
 import currentUser from './currentUser'
-import users from './users'
+import participants from './participants'
 import comments from './comments'
 import currentTab from './currentTab'
 
@@ -13,7 +13,7 @@ const composeEnhancers = isDevelopment ? composeWithDevTools : compose
 const reducers = combineReducers({
   currentUser,
   comments,
-  users,
+  participants,
   currentTab,
 })
 
