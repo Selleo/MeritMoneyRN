@@ -51,10 +51,6 @@ export const TabNavigatorConfig = {
   },
 }
 
-const mapDispatchToProps = {
-  setCurrentTab: actions.setCurrentTab,
-}
-
 export class App extends PureComponent {
   static propTypes = {
     setCurrentTab: PropTypes.func.isRequired,
@@ -72,6 +68,10 @@ export class App extends PureComponent {
       />
     )
   }
+}
+
+const mapDispatchToProps = {
+  setCurrentTab: actions.setCurrentTab,
 }
 
 export default connect(null, mapDispatchToProps)(App)

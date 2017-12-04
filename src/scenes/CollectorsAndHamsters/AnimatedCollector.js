@@ -35,12 +35,12 @@ export class AnimatedCollector extends Component {
     return height >= width
   }
 
-  dimensionsListener = () => {
+  createDimensionsListener = () => {
     Dimensions.addEventListener('change', () => {
       this.setState({
         currentHeight: this.isPortrait()
-          ? new Animated.Value(props.targetHeight)
-          : new Animated.Value(props.targetHeight / 2),
+          ? new Animated.Value(this.props.targetHeight)
+          : new Animated.Value(this.props.targetHeight / 2),
       })
     })
   }

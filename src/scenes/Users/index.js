@@ -17,10 +17,6 @@ export class Users extends Component {
     isRefreshing: false,
   }
 
-  componentDidMount() {
-    this.props.navigation.setParams({ ready: true })
-  }
-
   onRefresh = () => {
     this.setState({ isRefreshing: true })
     setTimeout(() => {
@@ -65,11 +61,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: PRIMARY_COLOR,
     flex: 1,
-  },
-  login: {
-    alignItems: 'center',
-    flex: 1,
-    justifyContent: 'center',
   },
 })
 

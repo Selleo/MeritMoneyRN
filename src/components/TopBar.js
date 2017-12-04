@@ -3,17 +3,27 @@ import { View, Text, StyleSheet } from 'react-native'
 import { Header, Avatar, Icon } from 'react-native-elements'
 import { isEmpty } from 'lodash'
 
-import { PRIMARY_COLOR } from '../utils/variables'
+import { PRIMARY_COLOR, WHITE_COLOR, GREEN_COLOR, RED_COLOR } from '../utils/variables'
 import store from '../store/configureStore'
 
-export class TopBar extends Component {
+export default class TopBar extends Component {
   state = { currentUser: {} }
 
   componentWillMount = () => {
-    this.setState({ currentUser: store.getState().currentUser })
+    this.setState({
+      currentUser: {
+        ...store.getState().currentUser,
+        ...store.getState().participants.currentParticipant.generatedInfo,
+      },
+    })
 
     this.unsubscribe = store.subscribe(() =>
-      this.setState({ currentUser: store.getState().currentUser })
+      this.setState({
+        currentUser: {
+          ...store.getState().currentUser,
+          ...store.getState().participants.currentParticipant.generatedInfo,
+        },
+      })
     )
   }
 
@@ -36,7 +46,7 @@ export class TopBar extends Component {
           rightComponent={
             <View style={styles.kudoCounter}>
               <Text style={styles.headerText}>0 (0)</Text>
-              <Icon iconStyle={{ color: 'green' }} name={'keyboard-arrow-up'} size={35} />
+              <Icon iconStyle={styles.greenIcon} name={'keyboard-arrow-up'} size={35} />
             </View>
           }
           style={styles.container}
@@ -44,13 +54,7 @@ export class TopBar extends Component {
       )
     }
 
-    const {
-      picture,
-      hasReceivedMoreThanLastWeek,
-      lastWeekKudos,
-      sinceLastBonus,
-      kudosLeft,
-    } = currentUser
+    const { picture, kudosLeft, lastAmountOfKudos, totalAmountOfKudos } = currentUser
 
     return (
       <Header
@@ -63,11 +67,11 @@ export class TopBar extends Component {
         rightComponent={
           <View style={styles.kudoCounter}>
             <Text style={styles.headerText}>
-              {lastWeekKudos} ({sinceLastBonus})
+              {lastAmountOfKudos} ({totalAmountOfKudos})
             </Text>
             <Icon
-              iconStyle={{ color: hasReceivedMoreThanLastWeek ? 'green' : 'red' }}
-              name={hasReceivedMoreThanLastWeek ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
+              iconStyle={[true ? styles.greenIcon : styles.redIcon]}
+              name={true ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
               size={35}
             />
           </View>
@@ -91,17 +95,17 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 5,
   },
-  centerText: {
-    color: '#ffffff',
-    fontSize: 24,
+  greenIcon: {
+    color: GREEN_COLOR,
+  },
+  redIcon: {
+    color: RED_COLOR,
   },
   headerText: {
-    color: '#ffffff',
+    color: WHITE_COLOR,
     padding: 10,
   },
   kudoCounter: {
     flexDirection: 'row',
   },
 })
-
-export default TopBar
