@@ -1,0 +1,23 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["@selleo/react", "plugin:react-native/all", "prettier/react"],
+  "plugins": ["react-native"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "no-console": ["error", { "allow": ["info", "error"] }],
+    "no-debugger": "off",
+    // TODO:
+    "react-native/no-color-literals": "off"
+  },
+  "globals": {
+    "by": true,
+    "device": true,
+    "element": true,
+    "jasmine": true
+  }
+}

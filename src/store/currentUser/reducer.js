@@ -4,10 +4,10 @@ const initialState = {}
 
 export default (state = initialState, action) => {
   switch (action.type) {
-  case types.SET_CURRENT_USER:
-    return action.payload
+    case types.SET_CURRENT_USER:
+      return action.payload
 
-  default:
-    return state
+    default:
+      return state
   }
 }

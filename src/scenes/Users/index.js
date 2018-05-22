@@ -10,7 +10,6 @@ import { allUsersQuery } from '../../graphql/queries'
 export class Users extends Component {
   static propTypes = {
     allUsersQuery: PropTypes.object.isRequired,
-    navigation: PropTypes.object.isRequired,
   }
 
   state = {

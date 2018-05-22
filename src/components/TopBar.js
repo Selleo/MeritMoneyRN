@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native'
 import { Header, Avatar, Icon } from 'react-native-elements'
 import { isEmpty } from 'lodash'
 
-import { PRIMARY_COLOR, WHITE_COLOR, GREEN_COLOR, RED_COLOR } from '../utils/variables'
+import { PRIMARY_COLOR, WHITE_COLOR, GREEN_COLOR } from '../utils/variables'
 import store from '../store/configureStore'
 
 export default class TopBar extends Component {
@@ -23,7 +23,7 @@ export default class TopBar extends Component {
           ...store.getState().currentUser,
           ...store.getState().participants.currentParticipant.generatedInfo,
         },
-      })
+      }),
     )
   }
 
@@ -69,11 +69,7 @@ export default class TopBar extends Component {
             <Text style={styles.headerText}>
               {lastAmountOfKudos} ({totalAmountOfKudos})
             </Text>
-            <Icon
-              iconStyle={[true ? styles.greenIcon : styles.redIcon]}
-              name={true ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
-              size={35}
-            />
+            <Icon iconStyle={[styles.greenIcon]} name="keyboard-arrow-up" size={35} />
           </View>
         }
         style={styles.container}
@@ -97,9 +93,6 @@ const styles = StyleSheet.create({
   },
   greenIcon: {
     color: GREEN_COLOR,
-  },
-  redIcon: {
-    color: RED_COLOR,
   },
   headerText: {
     color: WHITE_COLOR,

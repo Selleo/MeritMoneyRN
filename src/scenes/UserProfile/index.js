@@ -16,6 +16,7 @@ export class UserProfile extends Component {
     participantsQuery: PropTypes.object,
     screenProps: PropTypes.object.isRequired,
     setCurrentParticipant: PropTypes.func.isRequired,
+    participantId: PropTypes.string,
     setParticipants: PropTypes.func.isRequired,
   }
 
@@ -96,5 +97,5 @@ export default compose(
       skip: !id,
       variables: { id },
     }),
-  })
+  }),
 )(UserProfile)
