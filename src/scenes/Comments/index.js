@@ -22,12 +22,6 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'center',
   },
-  comment: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    margin: 10,
-  },
   header: {
     color: PRIMARY_COLOR,
     fontSize: 26,

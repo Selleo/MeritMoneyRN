@@ -11,6 +11,7 @@ import Users from './Users'
 import UserProfile from './UserProfile'
 import { actions } from '../store/currentTab'
 
+/* eslint-disable */
 export const Scenes = {
   Users: {
     screen: Users,
@@ -41,6 +42,7 @@ export const Scenes = {
     },
   },
 }
+/* eslint-enable */
 
 export const TabNavigatorConfig = {
   initialRouteName: 'UserProfile',

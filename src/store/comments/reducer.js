@@ -4,10 +4,10 @@ const initialState = {}
 
 export default (state = initialState, action) => {
   switch (action.type) {
-  case types.LOAD_COMMENTS:
-    return action.payload
+    case types.LOAD_COMMENTS:
+      return action.payload
 
-  default:
-    return state
+    default:
+      return state
   }
 }

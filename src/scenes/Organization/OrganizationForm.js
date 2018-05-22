@@ -57,5 +57,5 @@ const styles = StyleSheet.create({
 })
 
 export default compose(graphql(createOrganizationMutation, { name: 'createOrganization' }))(
-  OrganizationForm
+  OrganizationForm,
 )

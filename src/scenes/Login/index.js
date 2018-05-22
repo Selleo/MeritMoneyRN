@@ -21,7 +21,7 @@ export default class Login extends Component {
         scope: 'openid email profile',
       })
       .then(({ idToken }) =>
-        AsyncStorage.setItem('idToken', idToken).then(() => this.props.navigation.navigate('Main'))
+        AsyncStorage.setItem('idToken', idToken).then(() => this.props.navigation.navigate('Main')),
       )
   }
 
