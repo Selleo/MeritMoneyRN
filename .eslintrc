@@ -15,6 +15,7 @@
     "react-native/no-color-literals": "off"
   },
   "globals": {
+    "__DEV__": true,
     "by": true,
     "device": true,
     "element": true,

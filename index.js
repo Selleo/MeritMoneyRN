@@ -1,24 +1,26 @@
 import React, { Component } from 'react'
-import { AppRegistry, AsyncStorage } from 'react-native'
+import { AppRegistry, YellowBox, Text, TextInput } from 'react-native'
 
-import createStackNavigation from './src/createStackNavigator'
+import App from './src'
+import Provider from './src/Context'
 
-export default class App extends Component {
-  state = {
-    idToken: '',
-  }
+const config = {
+  allowFontScaling: false,
+}
 
-  componentWillMount = async () => {
-    this.setState({ idToken: await AsyncStorage.getItem('idToken') })
-  }
+// https://github.com/react-navigation/react-navigation/issues/3956
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader'])
+Text.defaultProps = config
+TextInput.defaultProps = config
 
+export default class Main extends Component {
   render() {
-    const { idToken } = this.state
-    if (idToken === '') return null
-
-    const Navigation = createStackNavigation(idToken)
-    return <Navigation />
+    return (
+      <Provider>
+        <App />
+      </Provider>
+    )
   }
 }
 
-AppRegistry.registerComponent('meritMoneyNative', () => App)
+AppRegistry.registerComponent('MeritMoney', () => Main)
