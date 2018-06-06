@@ -1,45 +1,51 @@
 import React from 'react'
-import { StyleSheet, Image } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { createBottomTabNavigator, BottomTabBar } from 'react-navigation-tabs'
 import LinearGradient from 'react-native-linear-gradient'
 
+import Icon from 'src/components/Icon'
 import Users from 'src/scenes/Users'
 import Profile from 'src/scenes/Profile'
 import Comments from 'src/scenes/Comments'
 import CollectorsAndHamsters from 'src/scenes/CollectorsAndHamsters'
-import images from 'src/assets/images'
-import { tab, secondary } from 'src/styles/colors'
+import { secondary, secondaryLight, primary, blueLight } from 'src/styles/colors'
 import { defaultTabBarHeight } from 'src/styles/variables'
 
+/* eslint-disable */
 const Scenes = {
   Users: {
     screen: Users,
     navigationOptions: {
-      tabBarIcon: <Image source={images.home} />,
+      tabBarIcon: ({ tintColor }) => <Icon color={tintColor} name="home2" size={25} />,
     },
   },
   Profile: {
     screen: Profile,
     navigationOptions: {
-      tabBarIcon: <Image source={images.user} />,
+      tabBarIcon: ({ tintColor }) => <Icon color={tintColor} name="user" size={25} />,
     },
   },
   Comments: {
     screen: Comments,
     navigationOptions: {
-      tabBarIcon: <Image source={images.bubbleText} />,
+      tabBarIcon: ({ tintColor }) => <Icon color={tintColor} name="bubble-text" size={25} />,
     },
   },
   CollectorsAndHamsters: {
     screen: CollectorsAndHamsters,
     navigationOptions: {
-      tabBarIcon: <Image source={images.trophy} />,
+      tabBarIcon: ({ tintColor }) => <Icon color={tintColor} name="trophy" size={25} />,
     },
   },
 }
+/* eslint-enable */
 
 const TabBarComponent = props => (
-  <LinearGradient colors={[tab, secondary]} locations={[0.8, 1]} style={styles.linearGradient}>
+  <LinearGradient
+    colors={[secondary, secondaryLight]}
+    locations={[0, 1]}
+    style={styles.linearGradient}
+  >
     <BottomTabBar {...props} style={styles.tabBar} />
   </LinearGradient>
 )
@@ -47,6 +53,8 @@ const TabBarComponent = props => (
 const config = {
   tabBarComponent: TabBarComponent,
   tabBarOptions: {
+    activeTintColor: primary,
+    inactiveTintColor: blueLight,
     showLabel: false,
   },
 }

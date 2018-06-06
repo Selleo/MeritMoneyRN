@@ -1,3 +1,12 @@
-export const primary = '#222F3F'
-export const secondary = '#30B97E'
-export const tab = '#3C6273'
+export const primary = '#2fb97d'
+export const secondaryLight = '#3c6273'
+export const secondary = '#253d47'
+
+export const black = '#000000'
+export const white = '#ffffff'
+export const yellow = '#fcda53'
+
+export const blueDark = '#222f3f'
+export const blueLight = '#49788c'
+
+export const greenFaded = '#7f9d90'
