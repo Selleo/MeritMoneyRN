@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import { Modal, ScrollView, View, StyleSheet } from 'react-native'
+import { ScrollView, View, StyleSheet } from 'react-native'
 
 import Button from 'src/components/Button'
 import TextGradient from 'src/components/TextGradient'
 import CommentsList from './CommentsList'
-import AnimatedAvatar from 'src/components/AnimatedAvatar'
 
 export default class Comments extends Component {
   state = {
@@ -23,7 +22,6 @@ export default class Comments extends Component {
     return (
       <ScrollView onScroll={this._animateAvatar} scrollEventThrottle={16}>
         <View style={styles.container}>
-          <AnimatedAvatar ref={ref => (this.avatar = ref)} />
           <View>
             <TextGradient style={styles.header}>COMMENTS</TextGradient>
           </View>
