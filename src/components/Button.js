@@ -33,6 +33,7 @@ export default class Button extends Component {
 const styles = StyleSheet.create({
   container: {
     width: 150,
+    height: 50,
   },
   linearGradient: {
     borderRadius: 25,
@@ -42,10 +43,10 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: 'transparent',
     borderRadius: 25,
-    height: 45,
+    height: 42,
     position: 'absolute',
     top: 2.5,
-    width: 145,
+    width: 142,
     zIndex: 2,
   },
   outline: {
@@ -54,8 +55,8 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     color: white,
-    fontFamily: 'Lato-Light',
-    fontSize: 22,
+    fontFamily: 'Lato-Regular',
+    fontSize: 20,
     paddingVertical: 10,
     zIndex: 3,
   },

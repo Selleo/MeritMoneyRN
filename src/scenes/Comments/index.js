@@ -6,6 +6,13 @@ import TextGradient from 'src/components/TextGradient'
 import CommentsList from './CommentsList'
 
 export default class Comments extends Component {
+  state = {
+    type: 'yours',
+  }
+
+  _selected = type => !(this.state.type === type)
+  _selectFilter = type => () => this.setState({ type })
+
   render() {
     return (
       <View style={styles.container}>
@@ -14,10 +21,18 @@ export default class Comments extends Component {
         </View>
         <View style={styles.filterContainers}>
           <View style={styles.buttonContainer}>
-            <Button text="YOURS" />
+            <Button
+              onPress={this._selectFilter('yours')}
+              outline={this._selected('yours')}
+              text="YOURS"
+            />
           </View>
           <View style={styles.buttonContainer}>
-            <Button outline text="ALL" />
+            <Button
+              onPress={this._selectFilter('all')}
+              outline={this._selected('all')}
+              text="ALL"
+            />
           </View>
         </View>
         <View style={styles.commentsContainer}>
