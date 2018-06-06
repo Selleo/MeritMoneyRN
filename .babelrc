@@ -1,5 +1,4 @@
 {
   "comments": false,
   "presets": ["react-native", "react-native-dotenv"],
-  "plugins": ["import-graphql"]
 }

@@ -15,18 +15,11 @@
     "test:e2e": "detox build && jest __e2e__"
   },
   "dependencies": {
-    "apollo-cache-inmemory": "1.2.2",
-    "apollo-client": "2.3.2",
-    "apollo-link-context": "1.0.8",
-    "apollo-link-http": "1.5.4",
-    "babel-plugin-import-graphql": "^2.4.4",
-    "graphql": "0.13.2",
-    "graphql-tag": "2.9.2",
     "prop-types": "15.6.1",
     "react": "16.3.1",
-    "react-apollo": "2.1.4",
     "react-native": "0.55.4",
     "react-native-linear-gradient": "^2.4.0",
+    "react-native-text-gradient": "^0.0.8",
     "react-native-vector-icons": "^4.6.0",
     "react-navigation": "2.2.0"
   },
