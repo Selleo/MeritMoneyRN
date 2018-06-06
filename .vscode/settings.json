@@ -1,0 +1,14 @@
+{
+  "path-autocomplete.pathMappings": {
+    "src": "${workspace}/src"
+  },
+  "editor.formatOnSave": true,
+  "eslint.autoFixOnSave": true,
+  "javascript.format.enable": true,
+  "prettier.eslintIntegration": true,
+  "prettier.printWidth": 100,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "eslint.packageManager": "yarn"
+}
