@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 
 import Icon from 'src/components/Icon'
+import Avatar from 'src/components/Avatar'
 import { yellow, greenFaded, greenFadedOpacity } from 'src/styles/colors'
 
 export default class Comment extends Component {
@@ -9,7 +10,7 @@ export default class Comment extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.infoContainer}>
-          <View style={styles.avatar} />
+          <Avatar />
           <View>
             <View style={styles.kudosContainer}>
               <Icon color={yellow} name="star-full2" size={15} style={styles.kudo} />
@@ -20,7 +21,7 @@ export default class Comment extends Component {
             </View>
             <Text style={styles.kudoInfo}> this week</Text>
           </View>
-          <View style={styles.avatar} />
+          <Avatar />
         </View>
         <Text ellipsizeMode="tail" numberOfLines={2} style={styles.comment}>
           Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsum
@@ -36,12 +37,6 @@ const styles = StyleSheet.create({
     borderTopWidth: StyleSheet.hairlineWidth,
     borderTopColor: greenFadedOpacity,
     paddingHorizontal: 20,
-  },
-  avatar: {
-    borderRadius: 25,
-    height: 50,
-    width: 50,
-    backgroundColor: '#fff',
   },
   infoContainer: {
     flexDirection: 'row',
