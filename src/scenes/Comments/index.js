@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { View, StyleSheet } from 'react-native'
+import { Modal, ScrollView, View, StyleSheet } from 'react-native'
 
 import Button from 'src/components/Button'
 import TextGradient from 'src/components/TextGradient'
 import CommentsList from './CommentsList'
+import AnimatedAvatar from 'src/components/AnimatedAvatar'
 
 export default class Comments extends Component {
   state = {
@@ -13,32 +14,40 @@ export default class Comments extends Component {
   _selected = type => !(this.state.type === type)
   _selectFilter = type => () => this.setState({ type })
 
+  _animateAvatar = ({ nativeEvent: { contentOffset: { y } } }) => {
+    const animationValue = y > 30 ? 0 : 1
+    this.avatar.animate(animationValue)
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <View>
-          <TextGradient style={styles.header}>COMMENTS</TextGradient>
-        </View>
-        <View style={styles.filterContainers}>
-          <View style={styles.buttonContainer}>
-            <Button
-              onPress={this._selectFilter('yours')}
-              outline={this._selected('yours')}
-              text="YOURS"
-            />
+      <ScrollView onScroll={this._animateAvatar} scrollEventThrottle={16}>
+        <View style={styles.container}>
+          <AnimatedAvatar ref={ref => (this.avatar = ref)} />
+          <View>
+            <TextGradient style={styles.header}>COMMENTS</TextGradient>
           </View>
-          <View style={styles.buttonContainer}>
-            <Button
-              onPress={this._selectFilter('all')}
-              outline={this._selected('all')}
-              text="ALL"
-            />
+          <View style={styles.filterContainers}>
+            <View style={styles.buttonContainer}>
+              <Button
+                onPress={this._selectFilter('yours')}
+                outline={this._selected('yours')}
+                text="YOURS"
+              />
+            </View>
+            <View style={styles.buttonContainer}>
+              <Button
+                onPress={this._selectFilter('all')}
+                outline={this._selected('all')}
+                text="ALL"
+              />
+            </View>
+          </View>
+          <View style={styles.commentsContainer}>
+            <CommentsList />
           </View>
         </View>
-        <View style={styles.commentsContainer}>
-          <CommentsList />
-        </View>
-      </View>
+      </ScrollView>
     )
   }
 }
