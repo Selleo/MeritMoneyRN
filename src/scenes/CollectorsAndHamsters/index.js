@@ -56,8 +56,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   userList: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+    flex: 2,
   },
   buttonContainer: {
     marginHorizontal: 20,

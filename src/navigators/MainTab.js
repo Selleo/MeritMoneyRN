@@ -21,12 +21,6 @@ const Scenes = {
       tabBarIcon: ({ tintColor }) => <Icon color={tintColor} name="home2" size={25} />,
     },
   },
-  Profile: {
-    screen: Profile,
-    navigationOptions: {
-      tabBarIcon: ({ tintColor }) => <Icon color={tintColor} name="user" size={25} />,
-    },
-  },
   Comments: {
     screen: Comments,
     navigationOptions: {
@@ -37,6 +31,12 @@ const Scenes = {
     screen: CollectorsAndHamsters,
     navigationOptions: {
       tabBarIcon: ({ tintColor }) => <Icon color={tintColor} name="trophy" size={25} />,
+    },
+  },
+  Profile: {
+    screen: Profile,
+    navigationOptions: {
+      tabBarIcon: ({ tintColor }) => <Icon color={tintColor} name="user" size={25} />,
     },
   },
 }
