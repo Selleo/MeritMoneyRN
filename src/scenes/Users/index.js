@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native'
+
+import TextGradient from 'src/components/TextGradient'
 
 export default class Users extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text> Users </Text>
+      <View>
+        <TextGradient style={styles.header}>KUDO BOARD</TextGradient>
       </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+  header: {
+    fontSize: 30,
   },
 })

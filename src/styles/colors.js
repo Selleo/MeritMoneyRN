@@ -10,3 +10,4 @@ export const blueDark = '#222f3f'
 export const blueLight = '#49788c'
 
 export const greenFaded = '#7f9d90'
+export const greenFadedOpacity = 'rgba(127,157,144,0.5)'
