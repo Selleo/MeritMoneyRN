@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
 
+const defaultState = {
+  authToken: 'hehe',
+  user: {},
+}
+
 const defaultValues = {
-  state: {
-    user: {},
-  },
+  state: defaultState,
+  setAuthToken: () => {},
 }
 
 const StoreContext = React.createContext(defaultValues)
 
 export default class StoreProvider extends Component {
-  state = {
-    authToken: '',
-    user: {},
-  }
+  state = defaultState
 
   _setAuthToken = authToken => this.setState({ authToken })
 

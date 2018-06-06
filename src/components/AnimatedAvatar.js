@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Animated, StyleSheet } from 'react-native'
+
 import { white } from 'src/styles/colors'
 import Avatar from './Avatar'
 
@@ -48,5 +49,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 30,
     marginBottom: 100,
+    zIndex: 100,
   },
 })
