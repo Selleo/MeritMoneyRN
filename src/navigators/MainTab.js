@@ -1,14 +1,16 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
+import { createStackNavigator } from 'react-navigation'
 import { createBottomTabNavigator, BottomTabBar } from 'react-navigation-tabs'
 import LinearGradient from 'react-native-linear-gradient'
 
+import Header from 'src/components/Header'
 import Icon from 'src/components/Icon'
 import Users from 'src/scenes/Users'
 import Profile from 'src/scenes/Profile'
 import Comments from 'src/scenes/Comments'
 import CollectorsAndHamsters from 'src/scenes/CollectorsAndHamsters'
-import { secondary, secondaryLight, primary, blueLight } from 'src/styles/colors'
+import { secondary, secondaryLight, primary, blueLight, blueDark } from 'src/styles/colors'
 import { defaultTabBarHeight } from 'src/styles/variables'
 
 /* eslint-disable */
@@ -75,4 +77,20 @@ const styles = StyleSheet.create({
   },
 })
 
-export default createBottomTabNavigator(Scenes, config)
+const TabBarNavigation = createBottomTabNavigator(Scenes, config)
+
+export default createStackNavigator(
+  {
+    Main: {
+      screen: TabBarNavigation,
+      navigationOptions: {
+        header: <Header />,
+      },
+    },
+  },
+  {
+    cardStyle: {
+      backgroundColor: blueDark,
+    },
+  },
+)

@@ -12,6 +12,7 @@ export default class Header extends Component {
         end={{ x: 1, y: 1 }}
         locations={[0, 1]}
         start={{ x: 0, y: 1 }}
+        style={styles.container}
       >
         <View style={styles.headerContainer}>
           <View style={styles.textContainer}>
@@ -29,6 +30,9 @@ export default class Header extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    height: 70,
+  },
   headerContainer: {
     paddingVertical: 25,
     paddingHorizontal: 20,
