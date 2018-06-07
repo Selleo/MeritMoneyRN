@@ -14,8 +14,18 @@ export class Comments extends Component {
   _selected = type => !(this.state.type === type)
   _selectFilter = type => () => this.setState({ type })
 
+  componentDidMount = () => {
+    this._navListener = this.props.navigation.addListener('didFocus', () => {
+      this.scrollView.scrollTo({ x: 0 })
+    })
+  }
+
+  componentWillUnmount = () => {
+    this._navListener.remove()
+  }
+
   _animateAvatar = ({ nativeEvent: { contentOffset: { y } } }) => {
-    const animationValue = y > 30 ? 0 : 1
+    const animationValue = y > 50 ? 0 : 1
 
     if (this.props.avatarAnimationValue !== animationValue) {
       this.props.setAvatarAnimationValue(animationValue)
@@ -24,7 +34,11 @@ export class Comments extends Component {
 
   render() {
     return (
-      <ScrollView onScroll={this._animateAvatar} scrollEventThrottle={16}>
+      <ScrollView
+        onScroll={this._animateAvatar}
+        ref={ref => (this.scrollView = ref)}
+        scrollEventThrottle={16}
+      >
         <View style={styles.container}>
           <View>
             <TextGradient style={styles.header}>COMMENTS</TextGradient>
@@ -61,6 +75,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    paddingTop: 40,
   },
   commentsContainer: {
     flex: 3,
