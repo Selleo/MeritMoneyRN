@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, StyleSheet } from 'react-native'
+import { View, StyleSheet, ScrollView } from 'react-native'
 
 import Button from 'src/components/Button'
 import TextGradient from 'src/components/TextGradient'
@@ -15,30 +15,32 @@ export default class Comments extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <View>
-          <TextGradient style={styles.header}>TOP</TextGradient>
-        </View>
-        <View style={styles.filterContainers}>
-          <View style={styles.buttonContainer}>
-            <Button
-              onPress={this._selectFilter('collectors')}
-              outline={this._selected('collectors')}
-              text="COLLECTORS"
-            />
+      <ScrollView>
+        <View style={styles.container}>
+          <View>
+            <TextGradient style={styles.header}>TOP</TextGradient>
           </View>
-          <View style={styles.buttonContainer}>
-            <Button
-              onPress={this._selectFilter('hamsters')}
-              outline={this._selected('hamsters')}
-              text="HAMSTERS"
-            />
+          <View style={styles.filterContainers}>
+            <View style={styles.buttonContainer}>
+              <Button
+                onPress={this._selectFilter('collectors')}
+                outline={this._selected('collectors')}
+                text="COLLECTORS"
+              />
+            </View>
+            <View style={styles.buttonContainer}>
+              <Button
+                onPress={this._selectFilter('hamsters')}
+                outline={this._selected('hamsters')}
+                text="HAMSTERS"
+              />
+            </View>
+          </View>
+          <View style={styles.userList}>
+            <AvatarsList />
           </View>
         </View>
-        <View style={styles.userList}>
-          <AvatarsList />
-        </View>
-      </View>
+      </ScrollView>
     )
   }
 }
@@ -48,15 +50,17 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  filterContainers: {
-    paddingHorizontal: 20,
-    flex: 1,
-    alignItems: 'center',
-    flexDirection: 'row',
+    paddingTop: 70,
   },
   userList: {
-    flex: 2,
+    flex: 3,
+  },
+  filterContainers: {
+    alignItems: 'center',
+    flex: 1,
+    flexDirection: 'row',
+    paddingHorizontal: 20,
+    paddingVertical: 30,
   },
   buttonContainer: {
     marginHorizontal: 20,

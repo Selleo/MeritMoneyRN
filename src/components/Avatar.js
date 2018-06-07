@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Image, View, StyleSheet } from 'react-native'
+import { Image, View, Text, StyleSheet } from 'react-native'
 
-import { white } from 'src/styles/colors'
+import { white, primary } from 'src/styles/colors'
 
 export default class Avatar extends Component {
   static defaultProps = {
@@ -10,7 +10,7 @@ export default class Avatar extends Component {
   }
 
   render() {
-    const { size, source } = this.props
+    const { size, source, showBadge, badgeCounter } = this.props
     const avatarStyles = {
       height: size,
       width: size,
@@ -19,6 +19,11 @@ export default class Avatar extends Component {
 
     return (
       <View style={[styles.container, avatarStyles]}>
+        {showBadge && (
+          <View style={styles.badgeContainer}>
+            <Text style={styles.badgeText}>{badgeCounter}</Text>
+          </View>
+        )}
         <Image source={{ uri: source }} />
       </View>
     )
@@ -28,5 +33,21 @@ export default class Avatar extends Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: white,
+  },
+  badgeContainer: {
+    backgroundColor: primary,
+    borderRadius: 12.5,
+    height: 25,
+    position: 'absolute',
+    right: -5,
+    top: 5,
+    width: 25,
+  },
+  badgeText: {
+    alignSelf: 'center',
+    paddingTop: 2,
+    justifyContent: 'center',
+    fontFamily: 'Lato-Regular',
+    textAlign: 'center',
   },
 })

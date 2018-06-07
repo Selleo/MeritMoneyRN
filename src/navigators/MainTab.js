@@ -6,7 +6,7 @@ import LinearGradient from 'react-native-linear-gradient'
 
 import Header from 'src/components/Header'
 import Icon from 'src/components/Icon'
-import Users from 'src/scenes/Users'
+import KudoBoard from 'src/scenes/KudoBoard'
 import Profile from 'src/scenes/Profile'
 import Comments from 'src/scenes/Comments'
 import CollectorsAndHamsters from 'src/scenes/CollectorsAndHamsters'
@@ -15,8 +15,8 @@ import { defaultTabBarHeight } from 'src/styles/variables'
 
 /* eslint-disable */
 const Scenes = {
-  Users: {
-    screen: Users,
+  KudoBoard: {
+    screen: KudoBoard,
     navigationOptions: {
       tabBarIcon: ({ tintColor }) => <Icon color={tintColor} name="home2" size={25} />,
     },
@@ -53,8 +53,10 @@ const TabBarComponent = props => (
 )
 
 const config = {
+  animationEnabled: true,
   tabBarComponent: TabBarComponent,
   tabBarOptions: {
+    allowFontScaling: false,
     activeTintColor: primary,
     inactiveTintColor: blueLight,
     showLabel: false,

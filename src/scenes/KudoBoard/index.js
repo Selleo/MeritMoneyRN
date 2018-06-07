@@ -1,18 +1,15 @@
 import React, { Component } from 'react'
-import { ScrollView, View, StyleSheet } from 'react-native'
+import { Platform, TextInput, ScrollView, View, StyleSheet } from 'react-native'
 
 import consumer from 'src/hocs/consumer'
-import Button from 'src/components/Button'
 import TextGradient from 'src/components/TextGradient'
-import CommentsList from './CommentsList'
+import { secondary, greenFaded } from 'src/styles/colors'
+import UserList from './UserList'
 
-export class Comments extends Component {
+export class KudoBoard extends Component {
   state = {
     type: 'yours',
   }
-
-  _selected = type => !(this.state.type === type)
-  _selectFilter = type => () => this.setState({ type })
 
   componentDidMount = () => {
     this._navListener = this.props.navigation.addListener('willBlur', () =>
@@ -24,6 +21,7 @@ export class Comments extends Component {
     this._navListener.remove()
   }
 
+  _handleSearch = name => this.setState({ name })
   _animateAvatar = ({ nativeEvent: { contentOffset: { y } } }) => {
     const animationValue = y > 20 ? 0 : 1
 
@@ -40,25 +38,17 @@ export class Comments extends Component {
         scrollEventThrottle={16}
       >
         <View style={styles.container}>
-          <TextGradient style={styles.header}>COMMENTS</TextGradient>
-          <View style={styles.filterContainers}>
-            <View style={styles.buttonContainer}>
-              <Button
-                onPress={this._selectFilter('yours')}
-                outline={this._selected('yours')}
-                text="YOURS"
-              />
-            </View>
-            <View style={styles.buttonContainer}>
-              <Button
-                onPress={this._selectFilter('all')}
-                outline={this._selected('all')}
-                text="ALL"
-              />
-            </View>
+          <TextGradient style={styles.header}>KUDO BOARD</TextGradient>
+          <View style={styles.searchContainer}>
+            <TextInput
+              onChangeText={this._handleSearch}
+              placeholder="Search by name"
+              placeholderTextColor={greenFaded}
+              style={styles.search}
+            />
           </View>
-          <View style={styles.commentsContainer}>
-            <CommentsList />
+          <View style={styles.usersContainer}>
+            <UserList />
           </View>
         </View>
       </ScrollView>
@@ -66,7 +56,7 @@ export class Comments extends Component {
   }
 }
 
-export default consumer(Comments)
+export default consumer(KudoBoard)
 
 const styles = StyleSheet.create({
   container: {
@@ -75,19 +65,36 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingTop: 70,
   },
-  commentsContainer: {
+  usersContainer: {
     flex: 3,
     width: '100%',
   },
-  filterContainers: {
+  searchContainer: {
+    shadowColor: 'black',
+    shadowOffset: { height: 0, width: 0 },
+    shadowOpacity: 0.5,
+    shadowRadius: 25,
     alignItems: 'center',
     flex: 1,
     flexDirection: 'row',
     padding: 20,
     paddingVertical: 30,
   },
-  buttonContainer: {
-    marginHorizontal: 20,
+  search: {
+    ...Platform.select({
+      ios: {
+        paddingLeft: 25,
+      },
+      android: {
+        marginLeft: 25,
+      },
+    }),
+    backgroundColor: secondary,
+    color: greenFaded,
+    fontSize: 18,
+    height: 50,
+    borderRadius: 25,
+    flex: 1,
   },
   header: {
     fontSize: 30,
