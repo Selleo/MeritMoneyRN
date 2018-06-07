@@ -13,7 +13,7 @@ export default class AvatarsList extends Component {
         </View>
         <View style={styles.userContainer}>
           <Avatar size={80} />
-          <Text style={styles.name}>Jak{'\n'}Smies</Text>
+          <Text style={styles.name}>Jak{'\n'}Smiesz</Text>
         </View>
         <View style={styles.userContainer}>
           <Avatar size={80} />
