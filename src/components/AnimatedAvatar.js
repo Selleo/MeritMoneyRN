@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Animated, StyleSheet } from 'react-native'
+import { Animated, View, StyleSheet } from 'react-native'
 
 import consumer from 'src/hocs/consumer'
-import { white } from 'src/styles/colors'
+import { primaryLight } from 'src/styles/colors'
 import Avatar from './Avatar'
 
 export class AnimatedAvatar extends Component {
@@ -37,7 +37,9 @@ export class AnimatedAvatar extends Component {
           },
         ]}
       >
-        <Avatar size={80} />
+        <View style={styles.avatarBorder}>
+          <Avatar size={80} />
+        </View>
       </Animated.View>
     )
   }
@@ -47,14 +49,19 @@ export default consumer(AnimatedAvatar)
 
 const styles = StyleSheet.create({
   avatarContainer: {
-    borderRadius: 40,
-    height: 80,
-    width: 80,
-    backgroundColor: white,
     alignSelf: 'center',
     position: 'absolute',
-    top: 30,
-    marginBottom: 100,
-    zIndex: 100,
+    top: 25,
+    zIndex: 2,
+  },
+  avatarBorder: {
+    borderRadius: 45,
+    height: 90,
+    width: 90,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 5,
+    borderColor: primaryLight,
+    zIndex: 3,
   },
 })
