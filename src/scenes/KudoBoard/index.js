@@ -45,6 +45,7 @@ export class KudoBoard extends Component {
               placeholder="Search by name"
               placeholderTextColor={greenFaded}
               style={styles.search}
+              underlineColorAndroid="transparent"
             />
           </View>
           <View style={styles.usersContainer}>
@@ -82,11 +83,8 @@ const styles = StyleSheet.create({
   },
   search: {
     ...Platform.select({
-      ios: {
-        paddingLeft: 25,
-      },
       android: {
-        marginLeft: 25,
+        marginLeft: 15,
       },
     }),
     backgroundColor: secondary,
@@ -95,6 +93,7 @@ const styles = StyleSheet.create({
     height: 50,
     borderRadius: 25,
     flex: 1,
+    paddingHorizontal: 15,
   },
   header: {
     fontSize: 30,
