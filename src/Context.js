@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 const defaultState = {
   authToken: 'hehe',
+  avatarAnimationValue: 0,
   user: {},
 }
 
@@ -16,10 +17,12 @@ export default class StoreProvider extends Component {
   state = defaultState
 
   _setAuthToken = authToken => this.setState({ authToken })
+  _setAvatarAnimationValue = avatarAnimationValue => this.setState({ avatarAnimationValue })
 
   render() {
     const value = {
       setAuthToken: this._setAuthToken,
+      setAvatarAnimationValue: this._setAvatarAnimationValue,
       state: this.state,
     }
 

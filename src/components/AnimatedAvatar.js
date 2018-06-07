@@ -1,29 +1,33 @@
 import React, { Component } from 'react'
 import { Animated, StyleSheet } from 'react-native'
 
+import consumer from 'src/hocs/consumer'
 import { white } from 'src/styles/colors'
 import Avatar from './Avatar'
 
-export default class AnimatedAvatar extends Component {
+export class AnimatedAvatar extends Component {
   state = {
     animatedValue: new Animated.Value(1),
   }
 
-  componentDidMount = () => {
-    setTimeout(this.animate, 3000)
+  componentDidUpdate = () => {
+    this.animate(this.props.avatarAnimationValue)
   }
 
   animate = toValue => {
     Animated.timing(this.state.animatedValue, {
       toValue,
       useNativeDriver: true,
+      duration: 200,
     }).start()
   }
+
   render() {
     const interpolatedValue = this.state.animatedValue.interpolate({
       inputRange: [0, 1],
       outputRange: [0, 1],
     })
+
     return (
       <Animated.View
         style={[
@@ -38,6 +42,8 @@ export default class AnimatedAvatar extends Component {
     )
   }
 }
+
+export default consumer(AnimatedAvatar)
 
 const styles = StyleSheet.create({
   avatarContainer: {

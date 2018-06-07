@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { ScrollView, View, StyleSheet } from 'react-native'
 
+import consumer from 'src/hocs/consumer'
 import Button from 'src/components/Button'
 import TextGradient from 'src/components/TextGradient'
 import CommentsList from './CommentsList'
 
-export default class Comments extends Component {
+export class Comments extends Component {
   state = {
     type: 'yours',
   }
@@ -15,7 +16,10 @@ export default class Comments extends Component {
 
   _animateAvatar = ({ nativeEvent: { contentOffset: { y } } }) => {
     const animationValue = y > 30 ? 0 : 1
-    this.avatar.animate(animationValue)
+
+    if (this.props.avatarAnimationValue !== animationValue) {
+      this.props.setAvatarAnimationValue(animationValue)
+    }
   }
 
   render() {
@@ -49,6 +53,8 @@ export default class Comments extends Component {
     )
   }
 }
+
+export default consumer(Comments)
 
 const styles = StyleSheet.create({
   container: {
