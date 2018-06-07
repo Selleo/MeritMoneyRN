@@ -15,8 +15,8 @@ export class Comments extends Component {
   _selectFilter = type => () => this.setState({ type })
 
   componentDidMount = () => {
-    this._navListener = this.props.navigation.addListener('didFocus', () => {
-      this.scrollView.scrollTo({ x: 0 })
+    this._navListener = this.props.navigation.addListener('willBlur', () => {
+      this.scrollView.scrollTo({ x: 0, animated: true })
     })
   }
 
@@ -25,7 +25,7 @@ export class Comments extends Component {
   }
 
   _animateAvatar = ({ nativeEvent: { contentOffset: { y } } }) => {
-    const animationValue = y > 50 ? 0 : 1
+    const animationValue = y > 20 ? 0 : 1
 
     if (this.props.avatarAnimationValue !== animationValue) {
       this.props.setAvatarAnimationValue(animationValue)
