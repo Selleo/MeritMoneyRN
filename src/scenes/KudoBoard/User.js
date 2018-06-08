@@ -4,6 +4,8 @@ import { View, Animated, Text, TouchableOpacity, StyleSheet } from 'react-native
 import Avatar from 'src/components/Avatar'
 import { greenFadedOpacity, white } from 'src/styles/colors'
 import Button from 'src/components/Button'
+import StarRating from 'src/scenes/KudoBoard/StarRating'
+import CommentInput from 'src/scenes/KudoBoard/CommentInput'
 
 export default class User extends Component {
   state = {
@@ -12,6 +14,8 @@ export default class User extends Component {
     containerAnimation: new Animated.Value(0),
     opacityAnimation: new Animated.Value(0),
     maxHeight: 0,
+    kudoAmount: 0,
+    comment: '',
   }
 
   toggle = () => {
@@ -29,8 +33,12 @@ export default class User extends Component {
 
   setMaxHeight = ({ nativeEvent: { layout: { height } } }) => this.setState({ maxHeight: height })
 
+  _handleCommentUpdate = comment => this.setState({ comment })
+
+  _setKudoAmount = kudoAmount => () => this.setState({ kudoAmount })
+
   render() {
-    const { opacityAnimation, containerAnimation, expanded, maxHeight } = this.state
+    const { opacityAnimation, containerAnimation, expanded, maxHeight, kudoAmount } = this.state
     const container = containerAnimation.interpolate({
       inputRange: [0, 1],
       outputRange: [-maxHeight, 0],
@@ -52,6 +60,8 @@ export default class User extends Component {
             { opacity: opacityAnimation, transform: [{ translateY: container }] },
           ]}
         >
+          <StarRating kudoAmount={kudoAmount} setKudoAmount={this._setKudoAmount} />
+          <CommentInput handleCommentUpdate={this._handleCommentUpdate} />
           <Button text="GIVE KUDO" />
         </Animated.View>
       </Animated.View>
@@ -71,7 +81,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   body: {
-    padding: 10,
+    paddingHorizontal: 10,
+    alignItems: 'center',
   },
   displayNone: {
     display: 'none',
