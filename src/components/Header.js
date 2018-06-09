@@ -21,7 +21,7 @@ export default class Header extends Component {
           </View>
           <View style={styles.textContainer}>
             <Text style={styles.text}>24(54)</Text>
-            <Text>^</Text>
+            <Icon name="chevron-up" size={18} style={styles.star} />
           </View>
         </View>
       </LinearGradient>
