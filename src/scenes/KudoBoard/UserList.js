@@ -5,7 +5,7 @@ import {
   Text,
   TouchableOpacity,
   TouchableWithoutFeedback,
-  View,
+  ScrollView,
 } from 'react-native'
 import Accordion from 'react-native-collapsible/Accordion'
 import * as Animatable from 'react-native-animatable'
@@ -50,7 +50,7 @@ export default class UserList extends Component {
     const Touchable = Platform.OS === 'ios' ? TouchableOpacity : TouchableWithoutFeedback
 
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <Accordion
           activeSection={activeUser}
           duration={300}
@@ -60,14 +60,14 @@ export default class UserList extends Component {
           sections={sections}
           touchableComponent={Touchable}
         />
-      </View>
+      </ScrollView>
     )
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: 10,
+    flex: 1,
   },
   keepHeight: { height: 220 },
   userName: {
@@ -77,17 +77,17 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   content: {
-    padding: 10,
     alignItems: 'center',
+    padding: 10,
   },
   userInfoContainer: {
-    flexDirection: 'row',
-    padding: 10,
+    alignItems: 'center',
     borderTopColor: greenFadedOpacity,
     borderTopWidth: StyleSheet.hairlineWidth,
     flex: 1,
-    alignItems: 'center',
+    flexDirection: 'row',
     justifyContent: 'space-between',
+    padding: 10,
     paddingHorizontal: 20,
     paddingVertical: 10,
   },
