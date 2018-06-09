@@ -22,7 +22,7 @@ export default class StarRating extends Component {
         <TouchableOpacity key={i} onPress={setQuantity(i)}>
           <Icon
             color={yellow}
-            name={quantity >= i ? 'star-full2' : 'star-empty3'}
+            name={quantity >= i ? 'star-full' : 'star-empty'}
             size={28}
             style={styles.kudo}
           />

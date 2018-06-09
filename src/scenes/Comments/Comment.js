@@ -13,11 +13,11 @@ export default class Comment extends Component {
           <Avatar />
           <View>
             <View style={styles.kudosContainer}>
-              <Icon color={yellow} name="star-full2" size={15} style={styles.kudo} />
-              <Icon color={yellow} name="star-full2" size={15} style={styles.kudo} />
-              <Icon color={yellow} name="star-full2" size={15} style={styles.kudo} />
-              <Icon color={yellow} name="star-empty3" size={15} style={styles.kudo} />
-              <Icon color={yellow} name="star-empty3" size={15} style={styles.kudo} />
+              <Icon color={yellow} name="star-full" size={15} style={styles.kudo} />
+              <Icon color={yellow} name="star-full" size={15} style={styles.kudo} />
+              <Icon color={yellow} name="star-full" size={15} style={styles.kudo} />
+              <Icon color={yellow} name="star-empty" size={15} style={styles.kudo} />
+              <Icon color={yellow} name="star-empty" size={15} style={styles.kudo} />
             </View>
             <Text style={styles.kudoInfo}> this week</Text>
           </View>

@@ -16,7 +16,7 @@ export default class Header extends Component {
       >
         <View style={styles.headerContainer}>
           <View style={styles.textContainer}>
-            <Icon name="star-empty3" size={18} style={styles.star} />
+            <Icon name="star-empty" size={18} style={styles.star} />
             <Text style={styles.text}>15 left</Text>
           </View>
           <View style={styles.textContainer}>
