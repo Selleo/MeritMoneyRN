@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Image, View, Text, StyleSheet } from 'react-native'
+import { Platform, Image, View, Text, StyleSheet } from 'react-native'
 
 import { white, primary } from 'src/styles/colors'
 
@@ -15,8 +15,6 @@ export default class Avatar extends Component {
       height: size,
       width: size,
       borderRadius: size / 2,
-      maxHeight: size,
-      maxWidth: size,
     }
 
     return (
@@ -37,20 +35,29 @@ const styles = StyleSheet.create({
     backgroundColor: white,
   },
   badgeContainer: {
+    alignItems: 'center',
     backgroundColor: primary,
     borderRadius: 12.5,
     height: 25,
+    overflow: 'hidden',
+    justifyContent: 'center',
     position: 'absolute',
-    right: -5,
-    top: 5,
     width: 25,
+    ...Platform.select({
+      ios: {
+        right: -5,
+        top: 5,
+      },
+      android: {
+        top: 0,
+        left: 0,
+      },
+    }),
   },
   badgeText: {
-    alignSelf: 'center',
     paddingTop: 2,
-    justifyContent: 'center',
     fontFamily: 'Lato-Regular',
-    textAlign: 'center',
+    fontSize: 16,
   },
   image: {
     zIndex: -1,

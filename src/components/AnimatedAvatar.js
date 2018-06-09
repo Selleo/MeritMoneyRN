@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Animated, View, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native'
+import * as Animatable from 'react-native-animatable'
 
 import consumer from 'src/hocs/consumer'
 import { primaryLight } from 'src/styles/colors'
@@ -7,40 +8,29 @@ import Avatar from './Avatar'
 
 export class AnimatedAvatar extends Component {
   state = {
-    animatedValue: new Animated.Value(1),
+    visible: true,
   }
+
+  shouldComponentUpdate = nextProps =>
+    this.props.avatarAnimationValue !== nextProps.avatarAnimationValue
 
   componentDidUpdate = () => {
     this.animate(this.props.avatarAnimationValue)
   }
 
-  animate = toValue => {
-    Animated.timing(this.state.animatedValue, {
-      toValue,
-      useNativeDriver: true,
-      duration: 200,
-    }).start()
-  }
+  animate = visible => this.setState({ visible: !visible })
 
   render() {
-    const interpolatedValue = this.state.animatedValue.interpolate({
-      inputRange: [0, 1],
-      outputRange: [0, 1],
-    })
-
     return (
-      <Animated.View
-        style={[
-          styles.avatarContainer,
-          {
-            transform: [{ scaleX: interpolatedValue }, { scaleY: interpolatedValue }],
-          },
-        ]}
+      <Animatable.View
+        animation={this.state.visible ? 'zoomIn' : 'zoomOut'}
+        duration={300}
+        style={styles.avatarContainer}
       >
         <View style={styles.avatarBorder}>
           <Avatar size={80} />
         </View>
-      </Animated.View>
+      </Animatable.View>
     )
   }
 }
