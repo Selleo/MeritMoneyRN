@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { TouchableOpacity, Text, StyleSheet, View } from 'react-native'
+import { Platform, TouchableOpacity, Text, StyleSheet, View } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
 import { secondaryLight, primary, white, blueDark } from 'src/styles/colors'
 
@@ -48,6 +48,14 @@ const styles = StyleSheet.create({
     top: 2.5,
     width: 142,
     zIndex: 2,
+    ...Platform.select({
+      ios: {
+        height: 42,
+      },
+      android: {
+        height: 38,
+      },
+    }),
   },
   outline: {
     backgroundColor: blueDark,

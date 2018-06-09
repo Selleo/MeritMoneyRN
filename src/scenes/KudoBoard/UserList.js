@@ -1,5 +1,12 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native'
 import Accordion from 'react-native-collapsible/Accordion'
 import * as Animatable from 'react-native-animatable'
 
@@ -36,6 +43,7 @@ export default class UserList extends Component {
 
   render() {
     const { activeUser } = this.state
+    const Touchable = Platform.OS === 'ios' ? TouchableOpacity : TouchableWithoutFeedback
 
     return (
       <View style={styles.container}>
@@ -46,7 +54,7 @@ export default class UserList extends Component {
           renderContent={this._renderContent}
           renderHeader={this._renderHeader}
           sections={sections}
-          touchableComponent={TouchableOpacity}
+          touchableComponent={Touchable}
         />
       </View>
     )
@@ -55,7 +63,7 @@ export default class UserList extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    margin: 10,
+    marginHorizontal: 10,
   },
   userName: {
     color: white,

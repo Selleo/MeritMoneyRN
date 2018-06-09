@@ -1,5 +1,14 @@
 import React, { Component } from 'react'
-import { AppRegistry, StatusBar, YellowBox, Text, TextInput, View, StyleSheet } from 'react-native'
+import {
+  AppRegistry,
+  StatusBar,
+  YellowBox,
+  Text,
+  TextInput,
+  View,
+  StyleSheet,
+  Platform,
+} from 'react-native'
 
 import App from './src'
 import Provider from './src/Context'
@@ -17,12 +26,12 @@ const config = {
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader'])
 Text.defaultProps = config
 TextInput.defaultProps = config
-StatusBar.setBarStyle('light-content')
 
 export default class Main extends Component {
   render() {
     return (
       <Provider>
+        <StatusBar barStyle="light-content" hidden={Platform.OS === 'android'} />
         <View style={styles.container}>
           <App />
         </View>
