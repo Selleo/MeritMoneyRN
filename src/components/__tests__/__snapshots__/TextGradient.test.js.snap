@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextGradient /> render 1`] = `
+<RNLinearTextGradient
+  accessible={true}
+  allowFontScaling={true}
+  colors={
+    Array [
+      4282147443,
+      4281317757,
+    ]
+  }
+  ellipsizeMode="tail"
+  gradientEnd={
+    Object {
+      "x": 1,
+      "y": 0,
+    }
+  }
+  gradientStart={
+    Object {
+      "x": 0,
+      "y": 0,
+    }
+  }
+  locations={
+    Array [
+      0,
+      1,
+    ]
+  }
+  style={
+    Array [
+      Object {
+        "color": "gray",
+      },
+      Object {},
+    ]
+  }
+>
+  test text
+</RNLinearTextGradient>
+`;

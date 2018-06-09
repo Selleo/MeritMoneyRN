@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Avatar /> render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#ffffff",
+      },
+      Object {
+        "borderRadius": 25,
+        "height": 50,
+        "width": 50,
+      },
+    ]
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "https://i.imgur.com/ckqCXMS.png",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "borderRadius": 25,
+          "height": 50,
+          "width": 50,
+        },
+        Object {
+          "zIndex": -1,
+        },
+      ]
+    }
+  />
+</View>
+`;

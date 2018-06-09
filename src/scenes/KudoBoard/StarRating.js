@@ -11,8 +11,6 @@ export default class StarRating extends Component {
     setQuantity: PropTypes.func.isRequired,
   }
 
-  _setKudoAmount = kudoAmount => () => this.setState({ kudoAmount })
-
   renderStarts = () => {
     const { quantity, setQuantity } = this.props
     const stars = []

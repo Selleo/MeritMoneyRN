@@ -1,0 +1,371 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AvatarsList /> render 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "row",
+      "flexWrap": "wrap",
+      "justifyContent": "space-between",
+      "paddingHorizontal": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 15,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#ffffff",
+          },
+          Object {
+            "borderRadius": 40,
+            "height": 80,
+            "width": 80,
+          },
+        ]
+      }
+    >
+      <Image
+        source={
+          Object {
+            "uri": "https://i.imgur.com/ckqCXMS.png",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "borderRadius": 40,
+              "height": 80,
+              "width": 80,
+            },
+            Object {
+              "zIndex": -1,
+            },
+          ]
+        }
+      />
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#ffffff",
+          "paddingVertical": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      Dominik
+      
+
+       Duda
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 15,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#ffffff",
+          },
+          Object {
+            "borderRadius": 40,
+            "height": 80,
+            "width": 80,
+          },
+        ]
+      }
+    >
+      <Image
+        source={
+          Object {
+            "uri": "https://i.imgur.com/ckqCXMS.png",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "borderRadius": 40,
+              "height": 80,
+              "width": 80,
+            },
+            Object {
+              "zIndex": -1,
+            },
+          ]
+        }
+      />
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#ffffff",
+          "paddingVertical": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      Jak
+      
+
+      Smiesz
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 15,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#ffffff",
+          },
+          Object {
+            "borderRadius": 40,
+            "height": 80,
+            "width": 80,
+          },
+        ]
+      }
+    >
+      <Image
+        source={
+          Object {
+            "uri": "https://i.imgur.com/ckqCXMS.png",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "borderRadius": 40,
+              "height": 80,
+              "width": 80,
+            },
+            Object {
+              "zIndex": -1,
+            },
+          ]
+        }
+      />
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#ffffff",
+          "paddingVertical": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      Bartłomiej
+      
+
+      Wójtowicz
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 15,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#ffffff",
+          },
+          Object {
+            "borderRadius": 40,
+            "height": 80,
+            "width": 80,
+          },
+        ]
+      }
+    >
+      <Image
+        source={
+          Object {
+            "uri": "https://i.imgur.com/ckqCXMS.png",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "borderRadius": 40,
+              "height": 80,
+              "width": 80,
+            },
+            Object {
+              "zIndex": -1,
+            },
+          ]
+        }
+      />
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#ffffff",
+          "paddingVertical": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      Grzegorz
+      
+
+      aaaaa
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 15,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#ffffff",
+          },
+          Object {
+            "borderRadius": 40,
+            "height": 80,
+            "width": 80,
+          },
+        ]
+      }
+    >
+      <Image
+        source={
+          Object {
+            "uri": "https://i.imgur.com/ckqCXMS.png",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "borderRadius": 40,
+              "height": 80,
+              "width": 80,
+            },
+            Object {
+              "zIndex": -1,
+            },
+          ]
+        }
+      />
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#ffffff",
+          "paddingVertical": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      Panie
+      
+
+      Janie
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 15,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#ffffff",
+          },
+          Object {
+            "borderRadius": 40,
+            "height": 80,
+            "width": 80,
+          },
+        ]
+      }
+    >
+      <Image
+        source={
+          Object {
+            "uri": "https://i.imgur.com/ckqCXMS.png",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "borderRadius": 40,
+              "height": 80,
+              "width": 80,
+            },
+            Object {
+              "zIndex": -1,
+            },
+          ]
+        }
+      />
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#ffffff",
+          "paddingVertical": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      Rano
+      
+
+      Wstań
+    </Text>
+  </View>
+</View>
+`;

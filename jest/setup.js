@@ -1,18 +1,25 @@
-import detox from 'detox'
-import pkg from '../package.json'
+jest.mock('Animated', () => ({
+  View: () => 'View',
+  Text: () => 'Text',
+  ScrollView: () => 'ScrollView',
+  Value: jest.fn(() => ({ interpolate: jest.fn() })),
+  event: jest.fn(),
+  timing: jest.fn(() => ({ start: jest.fn() })),
+  interpolate: jest.fn(),
+}))
 
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 120000
+jest.mock('Linking', () => ({
+  addEventListener: jest.fn(),
+  removeEventListener: jest.fn(),
+  openURL: jest.fn(),
+  canOpenURL: jest.fn(),
+  getInitialURL: jest.fn(),
+}))
 
-if (process.argv[2].includes('__e2e__')) {
-  beforeAll(async () => {
-    await detox.init(pkg.detox)
-  })
+Date.now = jest.fn(() => new Date('2018-03-19T10:00:00.000'))
 
-  beforeEach(async () => {
-    await device.reloadReactNative()
-  })
+jest.mock('react-dom/server', () => {}, { virtual: true })
 
-  afterAll(async () => {
-    await detox.cleanup()
-  })
-}
+jest.mock('react-native-animatable', () => ({
+  View: () => 'View',
+}))

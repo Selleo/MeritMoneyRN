@@ -1,0 +1,1742 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CommentsList /> render 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "borderTopColor": "rgba(127,157,144,0.5)",
+        "borderTopWidth": 0.5,
+        "paddingHorizontal": 20,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+            },
+            Object {
+              "borderRadius": 25,
+              "height": 50,
+              "width": 50,
+            },
+          ]
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://i.imgur.com/ckqCXMS.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 25,
+                "height": 50,
+                "width": 50,
+              },
+              Object {
+                "zIndex": -1,
+              },
+            ]
+          }
+        />
+      </View>
+      <View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingHorizontal": 50,
+              "paddingVertical": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#7f9d90",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+           this week
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+            },
+            Object {
+              "borderRadius": 25,
+              "height": 50,
+              "width": 50,
+            },
+          ]
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://i.imgur.com/ckqCXMS.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 25,
+                "height": 50,
+                "width": 50,
+              },
+              Object {
+                "zIndex": -1,
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      numberOfLines={2}
+      style={
+        Object {
+          "color": "#7f9d90",
+          "fontSize": 16,
+          "lineHeight": 20,
+          "paddingTop": 5,
+          "textAlign": "left",
+        }
+      }
+    >
+      Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsum
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderTopColor": "rgba(127,157,144,0.5)",
+        "borderTopWidth": 0.5,
+        "paddingHorizontal": 20,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+            },
+            Object {
+              "borderRadius": 25,
+              "height": 50,
+              "width": 50,
+            },
+          ]
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://i.imgur.com/ckqCXMS.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 25,
+                "height": 50,
+                "width": 50,
+              },
+              Object {
+                "zIndex": -1,
+              },
+            ]
+          }
+        />
+      </View>
+      <View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingHorizontal": 50,
+              "paddingVertical": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#7f9d90",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+           this week
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+            },
+            Object {
+              "borderRadius": 25,
+              "height": 50,
+              "width": 50,
+            },
+          ]
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://i.imgur.com/ckqCXMS.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 25,
+                "height": 50,
+                "width": 50,
+              },
+              Object {
+                "zIndex": -1,
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      numberOfLines={2}
+      style={
+        Object {
+          "color": "#7f9d90",
+          "fontSize": 16,
+          "lineHeight": 20,
+          "paddingTop": 5,
+          "textAlign": "left",
+        }
+      }
+    >
+      Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsum
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderTopColor": "rgba(127,157,144,0.5)",
+        "borderTopWidth": 0.5,
+        "paddingHorizontal": 20,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+            },
+            Object {
+              "borderRadius": 25,
+              "height": 50,
+              "width": 50,
+            },
+          ]
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://i.imgur.com/ckqCXMS.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 25,
+                "height": 50,
+                "width": 50,
+              },
+              Object {
+                "zIndex": -1,
+              },
+            ]
+          }
+        />
+      </View>
+      <View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingHorizontal": 50,
+              "paddingVertical": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#7f9d90",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+           this week
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+            },
+            Object {
+              "borderRadius": 25,
+              "height": 50,
+              "width": 50,
+            },
+          ]
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://i.imgur.com/ckqCXMS.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 25,
+                "height": 50,
+                "width": 50,
+              },
+              Object {
+                "zIndex": -1,
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      numberOfLines={2}
+      style={
+        Object {
+          "color": "#7f9d90",
+          "fontSize": 16,
+          "lineHeight": 20,
+          "paddingTop": 5,
+          "textAlign": "left",
+        }
+      }
+    >
+      Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsum
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderTopColor": "rgba(127,157,144,0.5)",
+        "borderTopWidth": 0.5,
+        "paddingHorizontal": 20,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+            },
+            Object {
+              "borderRadius": 25,
+              "height": 50,
+              "width": 50,
+            },
+          ]
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://i.imgur.com/ckqCXMS.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 25,
+                "height": 50,
+                "width": 50,
+              },
+              Object {
+                "zIndex": -1,
+              },
+            ]
+          }
+        />
+      </View>
+      <View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingHorizontal": 50,
+              "paddingVertical": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#7f9d90",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+           this week
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+            },
+            Object {
+              "borderRadius": 25,
+              "height": 50,
+              "width": 50,
+            },
+          ]
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://i.imgur.com/ckqCXMS.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 25,
+                "height": 50,
+                "width": 50,
+              },
+              Object {
+                "zIndex": -1,
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      numberOfLines={2}
+      style={
+        Object {
+          "color": "#7f9d90",
+          "fontSize": 16,
+          "lineHeight": 20,
+          "paddingTop": 5,
+          "textAlign": "left",
+        }
+      }
+    >
+      Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsum
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderTopColor": "rgba(127,157,144,0.5)",
+        "borderTopWidth": 0.5,
+        "paddingHorizontal": 20,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+            },
+            Object {
+              "borderRadius": 25,
+              "height": 50,
+              "width": 50,
+            },
+          ]
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://i.imgur.com/ckqCXMS.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 25,
+                "height": 50,
+                "width": 50,
+              },
+              Object {
+                "zIndex": -1,
+              },
+            ]
+          }
+        />
+      </View>
+      <View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingHorizontal": 50,
+              "paddingVertical": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#7f9d90",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+           this week
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+            },
+            Object {
+              "borderRadius": 25,
+              "height": 50,
+              "width": 50,
+            },
+          ]
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://i.imgur.com/ckqCXMS.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 25,
+                "height": 50,
+                "width": 50,
+              },
+              Object {
+                "zIndex": -1,
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      numberOfLines={2}
+      style={
+        Object {
+          "color": "#7f9d90",
+          "fontSize": 16,
+          "lineHeight": 20,
+          "paddingTop": 5,
+          "textAlign": "left",
+        }
+      }
+    >
+      Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsum
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderTopColor": "rgba(127,157,144,0.5)",
+        "borderTopWidth": 0.5,
+        "paddingHorizontal": 20,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+            },
+            Object {
+              "borderRadius": 25,
+              "height": 50,
+              "width": 50,
+            },
+          ]
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://i.imgur.com/ckqCXMS.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 25,
+                "height": 50,
+                "width": 50,
+              },
+              Object {
+                "zIndex": -1,
+              },
+            ]
+          }
+        />
+      </View>
+      <View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingHorizontal": 50,
+              "paddingVertical": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#7f9d90",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+           this week
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+            },
+            Object {
+              "borderRadius": 25,
+              "height": 50,
+              "width": 50,
+            },
+          ]
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://i.imgur.com/ckqCXMS.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 25,
+                "height": 50,
+                "width": 50,
+              },
+              Object {
+                "zIndex": -1,
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      numberOfLines={2}
+      style={
+        Object {
+          "color": "#7f9d90",
+          "fontSize": 16,
+          "lineHeight": 20,
+          "paddingTop": 5,
+          "textAlign": "left",
+        }
+      }
+    >
+      Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsum
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "borderTopColor": "rgba(127,157,144,0.5)",
+        "borderTopWidth": 0.5,
+        "paddingHorizontal": 20,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+            },
+            Object {
+              "borderRadius": 25,
+              "height": 50,
+              "width": 50,
+            },
+          ]
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://i.imgur.com/ckqCXMS.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 25,
+                "height": 50,
+                "width": 50,
+              },
+              Object {
+                "zIndex": -1,
+              },
+            ]
+          }
+        />
+      </View>
+      <View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingHorizontal": 50,
+              "paddingVertical": 5,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#fcda53",
+                  "fontSize": 15,
+                },
+                Object {
+                  "paddingHorizontal": 4,
+                },
+                Object {
+                  "fontFamily": "icomoon",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#7f9d90",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+           this week
+        </Text>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#ffffff",
+            },
+            Object {
+              "borderRadius": 25,
+              "height": 50,
+              "width": 50,
+            },
+          ]
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://i.imgur.com/ckqCXMS.png",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "borderRadius": 25,
+                "height": 50,
+                "width": 50,
+              },
+              Object {
+                "zIndex": -1,
+              },
+            ]
+          }
+        />
+      </View>
+    </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      numberOfLines={2}
+      style={
+        Object {
+          "color": "#7f9d90",
+          "fontSize": 16,
+          "lineHeight": 20,
+          "paddingTop": 5,
+          "textAlign": "left",
+        }
+      }
+    >
+      Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsum
+    </Text>
+  </View>
+</View>
+`;
