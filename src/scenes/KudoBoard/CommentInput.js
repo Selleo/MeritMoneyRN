@@ -3,6 +3,7 @@ import { View, TextInput, StyleSheet } from 'react-native'
 import LinearGradient from 'react-native-linear-gradient'
 
 import { blueDark, secondaryLight, primary, greenFaded } from 'src/styles/colors'
+
 export default class CommentInput extends Component {
   render() {
     return (
@@ -16,7 +17,7 @@ export default class CommentInput extends Component {
         <View style={styles.textContainer} />
         <TextInput
           multiline
-          onChangeText={this.props.handleCommentUpdate}
+          onChangeText={this.props.handleChange}
           placeholder="I'd like to add a kudo because..."
           placeholderTextColor={greenFaded}
           style={styles.kudoCommentInput}
