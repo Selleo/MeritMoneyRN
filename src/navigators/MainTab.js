@@ -18,7 +18,7 @@ const Scenes = {
   KudoBoard: {
     screen: KudoBoard,
     navigationOptions: {
-      tabBarIcon: ({ tintColor }) => <Icon color={tintColor} name="home2" size={25} />,
+      tabBarIcon: ({ tintColor }) => <Icon color={tintColor} name="home" size={25} />,
     },
   },
   Comments: {
