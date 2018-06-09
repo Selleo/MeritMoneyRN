@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { Platform, StyleSheet, View, Text } from 'react-native'
 
 import Avatar from 'src/components/Avatar'
 import { white } from 'src/styles/colors'
@@ -45,12 +45,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 20,
   },
-  userContainer: {
-    paddingHorizontal: 15,
-  },
+  userContainer: Platform.select({
+    android: {
+      paddingHorizontal: 10,
+    },
+    ios: {
+      paddingHorizontal: 15,
+    },
+  }),
   name: {
-    paddingVertical: 10,
-    paddingBottom: 5,
+    paddingVertical: 5,
     color: white,
     textAlign: 'center',
   },
