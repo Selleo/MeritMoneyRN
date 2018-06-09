@@ -31,7 +31,6 @@
     "babel-eslint": "8.2.3",
     "babel-jest": "23.0.1",
     "babel-preset-react-native": "4.0.0",
-    "detox": "5.8.1",
     "eslint": "4.19.1",
     "eslint-plugin-react-native": "3.2.1",
     "husky": "^1.0.0-rc.6",
