@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "clean": "rm -rf ~/.rncache && watchman watch-del-all && yarn remove-builds",
-    "remove-builds": "rm -rf ios/build android/build",
+    "remove-builds": "rm -rf ios/build android/build android/app/build",
     "lint": "eslint ./src --ext .js",
     "generate-apk": "cd android && ./gradlew assembleRelease",
     "test:watch": "jest --watch",
