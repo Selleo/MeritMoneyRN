@@ -16,7 +16,72 @@ exports[`renders correctly 1`] = `
       }
     }
   >
-    View
+    <View
+      style={
+        Object {
+          "alignSelf": "center",
+          "opacity": 0,
+          "position": "absolute",
+          "top": 25,
+          "transform": Array [
+            Object {
+              "scale": 0.3,
+            },
+          ],
+          "zIndex": 2,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "borderColor": "#30B97E",
+            "borderRadius": 45,
+            "borderWidth": 5,
+            "height": 90,
+            "justifyContent": "center",
+            "width": 90,
+            "zIndex": 3,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#ffffff",
+              },
+              Object {
+                "borderRadius": 40,
+                "height": 80,
+                "width": 80,
+              },
+            ]
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://i.imgur.com/ckqCXMS.png",
+              }
+            }
+            style={
+              Array [
+                Object {
+                  "borderRadius": 40,
+                  "height": 80,
+                  "width": 80,
+                },
+                Object {
+                  "zIndex": -1,
+                },
+              ]
+            }
+          />
+        </View>
+      </View>
+    </View>
     <View
       style={
         Object {

@@ -1,3 +1,90 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> render 1`] = `"View"`;
+exports[`<Button /> render 1`] = `
+<View
+  accessible={true}
+  isTVSelectable={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "height": 50,
+      "opacity": 1,
+      "width": 150,
+    }
+  }
+>
+  <BVLinearGradient
+    colors={
+      Array [
+        4282147443,
+        4281317757,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 1,
+        "y": 1,
+      }
+    }
+    locations={
+      Array [
+        0,
+        1,
+      ]
+    }
+    startPoint={
+      Object {
+        "x": 0,
+        "y": 1,
+      }
+    }
+    style={
+      Object {
+        "borderRadius": 25,
+        "zIndex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignSelf": "center",
+            "backgroundColor": "transparent",
+            "borderRadius": 25,
+            "height": 42,
+            "position": "absolute",
+            "top": 2.5,
+            "width": 142,
+            "zIndex": 2,
+          },
+          false,
+        ]
+      }
+    />
+    <Text
+      accessible={true}
+      adjustsFontSizeToFit={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#ffffff",
+          "fontFamily": "Lato-Regular",
+          "fontSize": 20,
+          "paddingVertical": 10,
+          "textAlign": "center",
+          "zIndex": 3,
+        }
+      }
+    >
+      Click me
+    </Text>
+  </BVLinearGradient>
+</View>
+`;
