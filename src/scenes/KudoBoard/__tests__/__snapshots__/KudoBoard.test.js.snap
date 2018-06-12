@@ -1,0 +1,3344 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<KudoBoard /> render 1`] = `
+<RCTScrollView
+  onScroll={[Function]}
+>
+  <View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "paddingTop": 70,
+        }
+      }
+    >
+      <RNLinearTextGradient
+        accessible={true}
+        allowFontScaling={true}
+        colors={
+          Array [
+            4282147443,
+            4281317757,
+          ]
+        }
+        ellipsizeMode="tail"
+        gradientEnd={
+          Object {
+            "x": 1,
+            "y": 0,
+          }
+        }
+        gradientStart={
+          Object {
+            "x": 0,
+            "y": 0,
+          }
+        }
+        locations={
+          Array [
+            0,
+            1,
+          ]
+        }
+        style={
+          Array [
+            Object {
+              "color": "gray",
+            },
+            Object {
+              "fontSize": 30,
+            },
+          ]
+        }
+      >
+        KUDO BOARD
+      </RNLinearTextGradient>
+      <View
+        accessible={true}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#253d47",
+            "borderRadius": 25,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "margin": 20,
+            "marginVertical": 30,
+            "shadowColor": "black",
+            "shadowOffset": Object {
+              "height": 0,
+              "width": 0,
+            },
+            "shadowOpacity": 0.5,
+            "shadowRadius": 25,
+          }
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={false}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#7f9d90",
+                "fontSize": 20,
+              },
+              Object {
+                "paddingLeft": 20,
+              },
+              Object {
+                "fontFamily": "icomoon",
+                "fontStyle": "normal",
+                "fontWeight": "normal",
+              },
+            ]
+          }
+        >
+          
+        </Text>
+        <TextInput
+          allowFontScaling={true}
+          onChangeText={[Function]}
+          placeholder="Search by name"
+          placeholderTextColor="#7f9d90"
+          style={
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#7f9d90",
+              "flex": 1,
+              "fontSize": 18,
+              "height": 50,
+              "paddingHorizontal": 15,
+            }
+          }
+          underlineColorAndroid="transparent"
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 3,
+            "width": "100%",
+          }
+        }
+      >
+        <RCTScrollView
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <View>
+            <View>
+              <View>
+                <View
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "rgba(0,0,0,0)",
+                        "borderTopColor": "rgba(127,157,144,0.5)",
+                        "borderTopWidth": 0.5,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "justifyContent": "space-between",
+                        "padding": 10,
+                        "paddingHorizontal": 20,
+                        "paddingVertical": 10,
+                      }
+                    }
+                  >
+                    <View
+                      style={Object {}}
+                    >
+                      <View
+                        style={
+                          Array [
+                            Object {
+                              "backgroundColor": "#ffffff",
+                            },
+                            Object {
+                              "borderRadius": 30,
+                              "height": 60,
+                              "width": 60,
+                            },
+                          ]
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "#2fb97d",
+                              "borderRadius": 12.5,
+                              "height": 25,
+                              "justifyContent": "center",
+                              "overflow": "hidden",
+                              "position": "absolute",
+                              "right": -5,
+                              "top": 5,
+                              "width": 25,
+                            }
+                          }
+                        >
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "fontFamily": "Lato-Regular",
+                                "fontSize": 16,
+                                "paddingTop": 2,
+                              }
+                            }
+                          >
+                            4
+                          </Text>
+                        </View>
+                        <Image
+                          source={
+                            Object {
+                              "uri": "https://i.imgur.com/ckqCXMS.png",
+                            }
+                          }
+                          style={
+                            Array [
+                              Object {
+                                "borderRadius": 30,
+                                "height": 60,
+                                "width": 60,
+                              },
+                              Object {
+                                "zIndex": -1,
+                              },
+                            ]
+                          }
+                        />
+                      </View>
+                    </View>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "#ffffff",
+                          "fontFamily": "Lato-Regular",
+                          "fontSize": 20,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Some guy
+                    </Text>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={false}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#ffffff",
+                            "fontSize": 25,
+                          },
+                          undefined,
+                          Object {
+                            "fontFamily": "icomoon",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                        ]
+                      }
+                    >
+                      
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  pointerEvents="none"
+                  style={
+                    Object {
+                      "height": 0,
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  <View
+                    onLayout={[Function]}
+                    style={Object {}}
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "padding": 10,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "flex": 1,
+                            "paddingHorizontal": 10,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "flexDirection": "row",
+                              "marginVertical": 5,
+                            }
+                          }
+                        >
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                        </View>
+                        <BVLinearGradient
+                          colors={
+                            Array [
+                              4282147443,
+                              4281317757,
+                            ]
+                          }
+                          endPoint={
+                            Object {
+                              "x": 1,
+                              "y": 1,
+                            }
+                          }
+                          locations={
+                            Array [
+                              0,
+                              1,
+                            ]
+                          }
+                          startPoint={
+                            Object {
+                              "x": 0,
+                              "y": 1,
+                            }
+                          }
+                          style={
+                            Object {
+                              "borderRadius": 10,
+                              "marginVertical": 15,
+                              "zIndex": 1,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "alignSelf": "center",
+                                "backgroundColor": "#222f3f",
+                                "borderRadius": 10,
+                                "height": 75,
+                                "position": "absolute",
+                                "top": 2.5,
+                                "width": 275,
+                                "zIndex": 2,
+                              }
+                            }
+                          />
+                          <TextInput
+                            allowFontScaling={true}
+                            multiline={true}
+                            onChangeText={[Function]}
+                            placeholder="I'd like to add a kudo because..."
+                            placeholderTextColor="#7f9d90"
+                            style={
+                              Object {
+                                "borderRadius": 10,
+                                "color": "#7f9d90",
+                                "fontSize": 16,
+                                "height": 80,
+                                "paddingHorizontal": 15,
+                                "paddingVertical": 3,
+                                "width": 280,
+                                "zIndex": 3,
+                              }
+                            }
+                            underlineColorAndroid="transparent"
+                          />
+                        </BVLinearGradient>
+                        <View
+                          accessible={true}
+                          isTVSelectable={true}
+                          onResponderGrant={[Function]}
+                          onResponderMove={[Function]}
+                          onResponderRelease={[Function]}
+                          onResponderTerminate={[Function]}
+                          onResponderTerminationRequest={[Function]}
+                          onStartShouldSetResponder={[Function]}
+                          style={
+                            Object {
+                              "height": 50,
+                              "opacity": 1,
+                              "width": 150,
+                            }
+                          }
+                        >
+                          <BVLinearGradient
+                            colors={
+                              Array [
+                                4282147443,
+                                4281317757,
+                              ]
+                            }
+                            endPoint={
+                              Object {
+                                "x": 1,
+                                "y": 1,
+                              }
+                            }
+                            locations={
+                              Array [
+                                0,
+                                1,
+                              ]
+                            }
+                            startPoint={
+                              Object {
+                                "x": 0,
+                                "y": 1,
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderRadius": 25,
+                                "zIndex": 1,
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Array [
+                                  Object {
+                                    "alignSelf": "center",
+                                    "backgroundColor": "transparent",
+                                    "borderRadius": 25,
+                                    "height": 42,
+                                    "position": "absolute",
+                                    "top": 2.5,
+                                    "width": 142,
+                                    "zIndex": 2,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
+                            <Text
+                              accessible={true}
+                              adjustsFontSizeToFit={true}
+                              allowFontScaling={true}
+                              ellipsizeMode="tail"
+                              style={
+                                Object {
+                                  "color": "#ffffff",
+                                  "fontFamily": "Lato-Regular",
+                                  "fontSize": 20,
+                                  "paddingVertical": 10,
+                                  "textAlign": "center",
+                                  "zIndex": 3,
+                                }
+                              }
+                            >
+                              GIVE KUDO
+                            </Text>
+                          </BVLinearGradient>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View>
+                <View
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "rgba(0,0,0,0)",
+                        "borderTopColor": "rgba(127,157,144,0.5)",
+                        "borderTopWidth": 0.5,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "justifyContent": "space-between",
+                        "padding": 10,
+                        "paddingHorizontal": 20,
+                        "paddingVertical": 10,
+                      }
+                    }
+                  >
+                    <View
+                      style={Object {}}
+                    >
+                      <View
+                        style={
+                          Array [
+                            Object {
+                              "backgroundColor": "#ffffff",
+                            },
+                            Object {
+                              "borderRadius": 30,
+                              "height": 60,
+                              "width": 60,
+                            },
+                          ]
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "#2fb97d",
+                              "borderRadius": 12.5,
+                              "height": 25,
+                              "justifyContent": "center",
+                              "overflow": "hidden",
+                              "position": "absolute",
+                              "right": -5,
+                              "top": 5,
+                              "width": 25,
+                            }
+                          }
+                        >
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "fontFamily": "Lato-Regular",
+                                "fontSize": 16,
+                                "paddingTop": 2,
+                              }
+                            }
+                          >
+                            4
+                          </Text>
+                        </View>
+                        <Image
+                          source={
+                            Object {
+                              "uri": "https://i.imgur.com/ckqCXMS.png",
+                            }
+                          }
+                          style={
+                            Array [
+                              Object {
+                                "borderRadius": 30,
+                                "height": 60,
+                                "width": 60,
+                              },
+                              Object {
+                                "zIndex": -1,
+                              },
+                            ]
+                          }
+                        />
+                      </View>
+                    </View>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "#ffffff",
+                          "fontFamily": "Lato-Regular",
+                          "fontSize": 20,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Another guy
+                    </Text>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={false}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#ffffff",
+                            "fontSize": 25,
+                          },
+                          undefined,
+                          Object {
+                            "fontFamily": "icomoon",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                        ]
+                      }
+                    >
+                      
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  pointerEvents="none"
+                  style={
+                    Object {
+                      "height": 0,
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  <View
+                    onLayout={[Function]}
+                    style={Object {}}
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "padding": 10,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "flex": 1,
+                            "paddingHorizontal": 10,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "flexDirection": "row",
+                              "marginVertical": 5,
+                            }
+                          }
+                        >
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                        </View>
+                        <BVLinearGradient
+                          colors={
+                            Array [
+                              4282147443,
+                              4281317757,
+                            ]
+                          }
+                          endPoint={
+                            Object {
+                              "x": 1,
+                              "y": 1,
+                            }
+                          }
+                          locations={
+                            Array [
+                              0,
+                              1,
+                            ]
+                          }
+                          startPoint={
+                            Object {
+                              "x": 0,
+                              "y": 1,
+                            }
+                          }
+                          style={
+                            Object {
+                              "borderRadius": 10,
+                              "marginVertical": 15,
+                              "zIndex": 1,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "alignSelf": "center",
+                                "backgroundColor": "#222f3f",
+                                "borderRadius": 10,
+                                "height": 75,
+                                "position": "absolute",
+                                "top": 2.5,
+                                "width": 275,
+                                "zIndex": 2,
+                              }
+                            }
+                          />
+                          <TextInput
+                            allowFontScaling={true}
+                            multiline={true}
+                            onChangeText={[Function]}
+                            placeholder="I'd like to add a kudo because..."
+                            placeholderTextColor="#7f9d90"
+                            style={
+                              Object {
+                                "borderRadius": 10,
+                                "color": "#7f9d90",
+                                "fontSize": 16,
+                                "height": 80,
+                                "paddingHorizontal": 15,
+                                "paddingVertical": 3,
+                                "width": 280,
+                                "zIndex": 3,
+                              }
+                            }
+                            underlineColorAndroid="transparent"
+                          />
+                        </BVLinearGradient>
+                        <View
+                          accessible={true}
+                          isTVSelectable={true}
+                          onResponderGrant={[Function]}
+                          onResponderMove={[Function]}
+                          onResponderRelease={[Function]}
+                          onResponderTerminate={[Function]}
+                          onResponderTerminationRequest={[Function]}
+                          onStartShouldSetResponder={[Function]}
+                          style={
+                            Object {
+                              "height": 50,
+                              "opacity": 1,
+                              "width": 150,
+                            }
+                          }
+                        >
+                          <BVLinearGradient
+                            colors={
+                              Array [
+                                4282147443,
+                                4281317757,
+                              ]
+                            }
+                            endPoint={
+                              Object {
+                                "x": 1,
+                                "y": 1,
+                              }
+                            }
+                            locations={
+                              Array [
+                                0,
+                                1,
+                              ]
+                            }
+                            startPoint={
+                              Object {
+                                "x": 0,
+                                "y": 1,
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderRadius": 25,
+                                "zIndex": 1,
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Array [
+                                  Object {
+                                    "alignSelf": "center",
+                                    "backgroundColor": "transparent",
+                                    "borderRadius": 25,
+                                    "height": 42,
+                                    "position": "absolute",
+                                    "top": 2.5,
+                                    "width": 142,
+                                    "zIndex": 2,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
+                            <Text
+                              accessible={true}
+                              adjustsFontSizeToFit={true}
+                              allowFontScaling={true}
+                              ellipsizeMode="tail"
+                              style={
+                                Object {
+                                  "color": "#ffffff",
+                                  "fontFamily": "Lato-Regular",
+                                  "fontSize": 20,
+                                  "paddingVertical": 10,
+                                  "textAlign": "center",
+                                  "zIndex": 3,
+                                }
+                              }
+                            >
+                              GIVE KUDO
+                            </Text>
+                          </BVLinearGradient>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View>
+                <View
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "rgba(0,0,0,0)",
+                        "borderTopColor": "rgba(127,157,144,0.5)",
+                        "borderTopWidth": 0.5,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "justifyContent": "space-between",
+                        "padding": 10,
+                        "paddingHorizontal": 20,
+                        "paddingVertical": 10,
+                      }
+                    }
+                  >
+                    <View
+                      style={Object {}}
+                    >
+                      <View
+                        style={
+                          Array [
+                            Object {
+                              "backgroundColor": "#ffffff",
+                            },
+                            Object {
+                              "borderRadius": 30,
+                              "height": 60,
+                              "width": 60,
+                            },
+                          ]
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "#2fb97d",
+                              "borderRadius": 12.5,
+                              "height": 25,
+                              "justifyContent": "center",
+                              "overflow": "hidden",
+                              "position": "absolute",
+                              "right": -5,
+                              "top": 5,
+                              "width": 25,
+                            }
+                          }
+                        >
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "fontFamily": "Lato-Regular",
+                                "fontSize": 16,
+                                "paddingTop": 2,
+                              }
+                            }
+                          >
+                            4
+                          </Text>
+                        </View>
+                        <Image
+                          source={
+                            Object {
+                              "uri": "https://i.imgur.com/ckqCXMS.png",
+                            }
+                          }
+                          style={
+                            Array [
+                              Object {
+                                "borderRadius": 30,
+                                "height": 60,
+                                "width": 60,
+                              },
+                              Object {
+                                "zIndex": -1,
+                              },
+                            ]
+                          }
+                        />
+                      </View>
+                    </View>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "#ffffff",
+                          "fontFamily": "Lato-Regular",
+                          "fontSize": 20,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Guy guy
+                    </Text>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={false}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#ffffff",
+                            "fontSize": 25,
+                          },
+                          undefined,
+                          Object {
+                            "fontFamily": "icomoon",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                        ]
+                      }
+                    >
+                      
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  pointerEvents="none"
+                  style={
+                    Object {
+                      "height": 0,
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  <View
+                    onLayout={[Function]}
+                    style={Object {}}
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "padding": 10,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "flex": 1,
+                            "paddingHorizontal": 10,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "flexDirection": "row",
+                              "marginVertical": 5,
+                            }
+                          }
+                        >
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                        </View>
+                        <BVLinearGradient
+                          colors={
+                            Array [
+                              4282147443,
+                              4281317757,
+                            ]
+                          }
+                          endPoint={
+                            Object {
+                              "x": 1,
+                              "y": 1,
+                            }
+                          }
+                          locations={
+                            Array [
+                              0,
+                              1,
+                            ]
+                          }
+                          startPoint={
+                            Object {
+                              "x": 0,
+                              "y": 1,
+                            }
+                          }
+                          style={
+                            Object {
+                              "borderRadius": 10,
+                              "marginVertical": 15,
+                              "zIndex": 1,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "alignSelf": "center",
+                                "backgroundColor": "#222f3f",
+                                "borderRadius": 10,
+                                "height": 75,
+                                "position": "absolute",
+                                "top": 2.5,
+                                "width": 275,
+                                "zIndex": 2,
+                              }
+                            }
+                          />
+                          <TextInput
+                            allowFontScaling={true}
+                            multiline={true}
+                            onChangeText={[Function]}
+                            placeholder="I'd like to add a kudo because..."
+                            placeholderTextColor="#7f9d90"
+                            style={
+                              Object {
+                                "borderRadius": 10,
+                                "color": "#7f9d90",
+                                "fontSize": 16,
+                                "height": 80,
+                                "paddingHorizontal": 15,
+                                "paddingVertical": 3,
+                                "width": 280,
+                                "zIndex": 3,
+                              }
+                            }
+                            underlineColorAndroid="transparent"
+                          />
+                        </BVLinearGradient>
+                        <View
+                          accessible={true}
+                          isTVSelectable={true}
+                          onResponderGrant={[Function]}
+                          onResponderMove={[Function]}
+                          onResponderRelease={[Function]}
+                          onResponderTerminate={[Function]}
+                          onResponderTerminationRequest={[Function]}
+                          onStartShouldSetResponder={[Function]}
+                          style={
+                            Object {
+                              "height": 50,
+                              "opacity": 1,
+                              "width": 150,
+                            }
+                          }
+                        >
+                          <BVLinearGradient
+                            colors={
+                              Array [
+                                4282147443,
+                                4281317757,
+                              ]
+                            }
+                            endPoint={
+                              Object {
+                                "x": 1,
+                                "y": 1,
+                              }
+                            }
+                            locations={
+                              Array [
+                                0,
+                                1,
+                              ]
+                            }
+                            startPoint={
+                              Object {
+                                "x": 0,
+                                "y": 1,
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderRadius": 25,
+                                "zIndex": 1,
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Array [
+                                  Object {
+                                    "alignSelf": "center",
+                                    "backgroundColor": "transparent",
+                                    "borderRadius": 25,
+                                    "height": 42,
+                                    "position": "absolute",
+                                    "top": 2.5,
+                                    "width": 142,
+                                    "zIndex": 2,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
+                            <Text
+                              accessible={true}
+                              adjustsFontSizeToFit={true}
+                              allowFontScaling={true}
+                              ellipsizeMode="tail"
+                              style={
+                                Object {
+                                  "color": "#ffffff",
+                                  "fontFamily": "Lato-Regular",
+                                  "fontSize": 20,
+                                  "paddingVertical": 10,
+                                  "textAlign": "center",
+                                  "zIndex": 3,
+                                }
+                              }
+                            >
+                              GIVE KUDO
+                            </Text>
+                          </BVLinearGradient>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View>
+                <View
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "rgba(0,0,0,0)",
+                        "borderTopColor": "rgba(127,157,144,0.5)",
+                        "borderTopWidth": 0.5,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "justifyContent": "space-between",
+                        "padding": 10,
+                        "paddingHorizontal": 20,
+                        "paddingVertical": 10,
+                      }
+                    }
+                  >
+                    <View
+                      style={Object {}}
+                    >
+                      <View
+                        style={
+                          Array [
+                            Object {
+                              "backgroundColor": "#ffffff",
+                            },
+                            Object {
+                              "borderRadius": 30,
+                              "height": 60,
+                              "width": 60,
+                            },
+                          ]
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "#2fb97d",
+                              "borderRadius": 12.5,
+                              "height": 25,
+                              "justifyContent": "center",
+                              "overflow": "hidden",
+                              "position": "absolute",
+                              "right": -5,
+                              "top": 5,
+                              "width": 25,
+                            }
+                          }
+                        >
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "fontFamily": "Lato-Regular",
+                                "fontSize": 16,
+                                "paddingTop": 2,
+                              }
+                            }
+                          >
+                            4
+                          </Text>
+                        </View>
+                        <Image
+                          source={
+                            Object {
+                              "uri": "https://i.imgur.com/ckqCXMS.png",
+                            }
+                          }
+                          style={
+                            Array [
+                              Object {
+                                "borderRadius": 30,
+                                "height": 60,
+                                "width": 60,
+                              },
+                              Object {
+                                "zIndex": -1,
+                              },
+                            ]
+                          }
+                        />
+                      </View>
+                    </View>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "#ffffff",
+                          "fontFamily": "Lato-Regular",
+                          "fontSize": 20,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      much guy
+                    </Text>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={false}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#ffffff",
+                            "fontSize": 25,
+                          },
+                          undefined,
+                          Object {
+                            "fontFamily": "icomoon",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                        ]
+                      }
+                    >
+                      
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  pointerEvents="none"
+                  style={
+                    Object {
+                      "height": 0,
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  <View
+                    onLayout={[Function]}
+                    style={Object {}}
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "padding": 10,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "flex": 1,
+                            "paddingHorizontal": 10,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "flexDirection": "row",
+                              "marginVertical": 5,
+                            }
+                          }
+                        >
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                        </View>
+                        <BVLinearGradient
+                          colors={
+                            Array [
+                              4282147443,
+                              4281317757,
+                            ]
+                          }
+                          endPoint={
+                            Object {
+                              "x": 1,
+                              "y": 1,
+                            }
+                          }
+                          locations={
+                            Array [
+                              0,
+                              1,
+                            ]
+                          }
+                          startPoint={
+                            Object {
+                              "x": 0,
+                              "y": 1,
+                            }
+                          }
+                          style={
+                            Object {
+                              "borderRadius": 10,
+                              "marginVertical": 15,
+                              "zIndex": 1,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "alignSelf": "center",
+                                "backgroundColor": "#222f3f",
+                                "borderRadius": 10,
+                                "height": 75,
+                                "position": "absolute",
+                                "top": 2.5,
+                                "width": 275,
+                                "zIndex": 2,
+                              }
+                            }
+                          />
+                          <TextInput
+                            allowFontScaling={true}
+                            multiline={true}
+                            onChangeText={[Function]}
+                            placeholder="I'd like to add a kudo because..."
+                            placeholderTextColor="#7f9d90"
+                            style={
+                              Object {
+                                "borderRadius": 10,
+                                "color": "#7f9d90",
+                                "fontSize": 16,
+                                "height": 80,
+                                "paddingHorizontal": 15,
+                                "paddingVertical": 3,
+                                "width": 280,
+                                "zIndex": 3,
+                              }
+                            }
+                            underlineColorAndroid="transparent"
+                          />
+                        </BVLinearGradient>
+                        <View
+                          accessible={true}
+                          isTVSelectable={true}
+                          onResponderGrant={[Function]}
+                          onResponderMove={[Function]}
+                          onResponderRelease={[Function]}
+                          onResponderTerminate={[Function]}
+                          onResponderTerminationRequest={[Function]}
+                          onStartShouldSetResponder={[Function]}
+                          style={
+                            Object {
+                              "height": 50,
+                              "opacity": 1,
+                              "width": 150,
+                            }
+                          }
+                        >
+                          <BVLinearGradient
+                            colors={
+                              Array [
+                                4282147443,
+                                4281317757,
+                              ]
+                            }
+                            endPoint={
+                              Object {
+                                "x": 1,
+                                "y": 1,
+                              }
+                            }
+                            locations={
+                              Array [
+                                0,
+                                1,
+                              ]
+                            }
+                            startPoint={
+                              Object {
+                                "x": 0,
+                                "y": 1,
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderRadius": 25,
+                                "zIndex": 1,
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Array [
+                                  Object {
+                                    "alignSelf": "center",
+                                    "backgroundColor": "transparent",
+                                    "borderRadius": 25,
+                                    "height": 42,
+                                    "position": "absolute",
+                                    "top": 2.5,
+                                    "width": 142,
+                                    "zIndex": 2,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
+                            <Text
+                              accessible={true}
+                              adjustsFontSizeToFit={true}
+                              allowFontScaling={true}
+                              ellipsizeMode="tail"
+                              style={
+                                Object {
+                                  "color": "#ffffff",
+                                  "fontFamily": "Lato-Regular",
+                                  "fontSize": 20,
+                                  "paddingVertical": 10,
+                                  "textAlign": "center",
+                                  "zIndex": 3,
+                                }
+                              }
+                            >
+                              GIVE KUDO
+                            </Text>
+                          </BVLinearGradient>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View>
+                <View
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "rgba(0,0,0,0)",
+                        "borderTopColor": "rgba(127,157,144,0.5)",
+                        "borderTopWidth": 0.5,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "justifyContent": "space-between",
+                        "padding": 10,
+                        "paddingHorizontal": 20,
+                        "paddingVertical": 10,
+                      }
+                    }
+                  >
+                    <View
+                      style={Object {}}
+                    >
+                      <View
+                        style={
+                          Array [
+                            Object {
+                              "backgroundColor": "#ffffff",
+                            },
+                            Object {
+                              "borderRadius": 30,
+                              "height": 60,
+                              "width": 60,
+                            },
+                          ]
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "#2fb97d",
+                              "borderRadius": 12.5,
+                              "height": 25,
+                              "justifyContent": "center",
+                              "overflow": "hidden",
+                              "position": "absolute",
+                              "right": -5,
+                              "top": 5,
+                              "width": 25,
+                            }
+                          }
+                        >
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "fontFamily": "Lato-Regular",
+                                "fontSize": 16,
+                                "paddingTop": 2,
+                              }
+                            }
+                          >
+                            4
+                          </Text>
+                        </View>
+                        <Image
+                          source={
+                            Object {
+                              "uri": "https://i.imgur.com/ckqCXMS.png",
+                            }
+                          }
+                          style={
+                            Array [
+                              Object {
+                                "borderRadius": 30,
+                                "height": 60,
+                                "width": 60,
+                              },
+                              Object {
+                                "zIndex": -1,
+                              },
+                            ]
+                          }
+                        />
+                      </View>
+                    </View>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "#ffffff",
+                          "fontFamily": "Lato-Regular",
+                          "fontSize": 20,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Huehue guy
+                    </Text>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={false}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#ffffff",
+                            "fontSize": 25,
+                          },
+                          undefined,
+                          Object {
+                            "fontFamily": "icomoon",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                        ]
+                      }
+                    >
+                      
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  pointerEvents="none"
+                  style={
+                    Object {
+                      "height": 0,
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  <View
+                    onLayout={[Function]}
+                    style={Object {}}
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "padding": 10,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "flex": 1,
+                            "paddingHorizontal": 10,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "flexDirection": "row",
+                              "marginVertical": 5,
+                            }
+                          }
+                        >
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                        </View>
+                        <BVLinearGradient
+                          colors={
+                            Array [
+                              4282147443,
+                              4281317757,
+                            ]
+                          }
+                          endPoint={
+                            Object {
+                              "x": 1,
+                              "y": 1,
+                            }
+                          }
+                          locations={
+                            Array [
+                              0,
+                              1,
+                            ]
+                          }
+                          startPoint={
+                            Object {
+                              "x": 0,
+                              "y": 1,
+                            }
+                          }
+                          style={
+                            Object {
+                              "borderRadius": 10,
+                              "marginVertical": 15,
+                              "zIndex": 1,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "alignSelf": "center",
+                                "backgroundColor": "#222f3f",
+                                "borderRadius": 10,
+                                "height": 75,
+                                "position": "absolute",
+                                "top": 2.5,
+                                "width": 275,
+                                "zIndex": 2,
+                              }
+                            }
+                          />
+                          <TextInput
+                            allowFontScaling={true}
+                            multiline={true}
+                            onChangeText={[Function]}
+                            placeholder="I'd like to add a kudo because..."
+                            placeholderTextColor="#7f9d90"
+                            style={
+                              Object {
+                                "borderRadius": 10,
+                                "color": "#7f9d90",
+                                "fontSize": 16,
+                                "height": 80,
+                                "paddingHorizontal": 15,
+                                "paddingVertical": 3,
+                                "width": 280,
+                                "zIndex": 3,
+                              }
+                            }
+                            underlineColorAndroid="transparent"
+                          />
+                        </BVLinearGradient>
+                        <View
+                          accessible={true}
+                          isTVSelectable={true}
+                          onResponderGrant={[Function]}
+                          onResponderMove={[Function]}
+                          onResponderRelease={[Function]}
+                          onResponderTerminate={[Function]}
+                          onResponderTerminationRequest={[Function]}
+                          onStartShouldSetResponder={[Function]}
+                          style={
+                            Object {
+                              "height": 50,
+                              "opacity": 1,
+                              "width": 150,
+                            }
+                          }
+                        >
+                          <BVLinearGradient
+                            colors={
+                              Array [
+                                4282147443,
+                                4281317757,
+                              ]
+                            }
+                            endPoint={
+                              Object {
+                                "x": 1,
+                                "y": 1,
+                              }
+                            }
+                            locations={
+                              Array [
+                                0,
+                                1,
+                              ]
+                            }
+                            startPoint={
+                              Object {
+                                "x": 0,
+                                "y": 1,
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderRadius": 25,
+                                "zIndex": 1,
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Array [
+                                  Object {
+                                    "alignSelf": "center",
+                                    "backgroundColor": "transparent",
+                                    "borderRadius": 25,
+                                    "height": 42,
+                                    "position": "absolute",
+                                    "top": 2.5,
+                                    "width": 142,
+                                    "zIndex": 2,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
+                            <Text
+                              accessible={true}
+                              adjustsFontSizeToFit={true}
+                              allowFontScaling={true}
+                              ellipsizeMode="tail"
+                              style={
+                                Object {
+                                  "color": "#ffffff",
+                                  "fontFamily": "Lato-Regular",
+                                  "fontSize": 20,
+                                  "paddingVertical": 10,
+                                  "textAlign": "center",
+                                  "zIndex": 3,
+                                }
+                              }
+                            >
+                              GIVE KUDO
+                            </Text>
+                          </BVLinearGradient>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+              <View>
+                <View
+                  accessible={true}
+                  isTVSelectable={true}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "opacity": 1,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "rgba(0,0,0,0)",
+                        "borderTopColor": "rgba(127,157,144,0.5)",
+                        "borderTopWidth": 0.5,
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "justifyContent": "space-between",
+                        "padding": 10,
+                        "paddingHorizontal": 20,
+                        "paddingVertical": 10,
+                      }
+                    }
+                  >
+                    <View
+                      style={Object {}}
+                    >
+                      <View
+                        style={
+                          Array [
+                            Object {
+                              "backgroundColor": "#ffffff",
+                            },
+                            Object {
+                              "borderRadius": 30,
+                              "height": 60,
+                              "width": 60,
+                            },
+                          ]
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "backgroundColor": "#2fb97d",
+                              "borderRadius": 12.5,
+                              "height": 25,
+                              "justifyContent": "center",
+                              "overflow": "hidden",
+                              "position": "absolute",
+                              "right": -5,
+                              "top": 5,
+                              "width": 25,
+                            }
+                          }
+                        >
+                          <Text
+                            accessible={true}
+                            allowFontScaling={true}
+                            ellipsizeMode="tail"
+                            style={
+                              Object {
+                                "fontFamily": "Lato-Regular",
+                                "fontSize": 16,
+                                "paddingTop": 2,
+                              }
+                            }
+                          >
+                            4
+                          </Text>
+                        </View>
+                        <Image
+                          source={
+                            Object {
+                              "uri": "https://i.imgur.com/ckqCXMS.png",
+                            }
+                          }
+                          style={
+                            Array [
+                              Object {
+                                "borderRadius": 30,
+                                "height": 60,
+                                "width": 60,
+                              },
+                              Object {
+                                "zIndex": -1,
+                              },
+                            ]
+                          }
+                        />
+                      </View>
+                    </View>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={true}
+                      ellipsizeMode="tail"
+                      style={
+                        Object {
+                          "color": "#ffffff",
+                          "fontFamily": "Lato-Regular",
+                          "fontSize": 20,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      JJIJ guy
+                    </Text>
+                    <Text
+                      accessible={true}
+                      allowFontScaling={false}
+                      ellipsizeMode="tail"
+                      style={
+                        Array [
+                          Object {
+                            "color": "#ffffff",
+                            "fontSize": 25,
+                          },
+                          undefined,
+                          Object {
+                            "fontFamily": "icomoon",
+                            "fontStyle": "normal",
+                            "fontWeight": "normal",
+                          },
+                        ]
+                      }
+                    >
+                      
+                    </Text>
+                  </View>
+                </View>
+                <View
+                  pointerEvents="none"
+                  style={
+                    Object {
+                      "height": 0,
+                      "overflow": "hidden",
+                    }
+                  }
+                >
+                  <View
+                    onLayout={[Function]}
+                    style={Object {}}
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "padding": 10,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "flex": 1,
+                            "paddingHorizontal": 10,
+                          }
+                        }
+                      >
+                        <View
+                          style={
+                            Object {
+                              "flexDirection": "row",
+                              "marginVertical": 5,
+                            }
+                          }
+                        >
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                          <View
+                            accessible={true}
+                            isTVSelectable={true}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
+                            style={
+                              Object {
+                                "opacity": 1,
+                              }
+                            }
+                          >
+                            <Text
+                              accessible={true}
+                              allowFontScaling={false}
+                              ellipsizeMode="tail"
+                              style={
+                                Array [
+                                  Object {
+                                    "color": "#fcda53",
+                                    "fontSize": 28,
+                                  },
+                                  Object {
+                                    "paddingHorizontal": 8,
+                                  },
+                                  Object {
+                                    "fontFamily": "icomoon",
+                                    "fontStyle": "normal",
+                                    "fontWeight": "normal",
+                                  },
+                                ]
+                              }
+                            >
+                              
+                            </Text>
+                          </View>
+                        </View>
+                        <BVLinearGradient
+                          colors={
+                            Array [
+                              4282147443,
+                              4281317757,
+                            ]
+                          }
+                          endPoint={
+                            Object {
+                              "x": 1,
+                              "y": 1,
+                            }
+                          }
+                          locations={
+                            Array [
+                              0,
+                              1,
+                            ]
+                          }
+                          startPoint={
+                            Object {
+                              "x": 0,
+                              "y": 1,
+                            }
+                          }
+                          style={
+                            Object {
+                              "borderRadius": 10,
+                              "marginVertical": 15,
+                              "zIndex": 1,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "alignSelf": "center",
+                                "backgroundColor": "#222f3f",
+                                "borderRadius": 10,
+                                "height": 75,
+                                "position": "absolute",
+                                "top": 2.5,
+                                "width": 275,
+                                "zIndex": 2,
+                              }
+                            }
+                          />
+                          <TextInput
+                            allowFontScaling={true}
+                            multiline={true}
+                            onChangeText={[Function]}
+                            placeholder="I'd like to add a kudo because..."
+                            placeholderTextColor="#7f9d90"
+                            style={
+                              Object {
+                                "borderRadius": 10,
+                                "color": "#7f9d90",
+                                "fontSize": 16,
+                                "height": 80,
+                                "paddingHorizontal": 15,
+                                "paddingVertical": 3,
+                                "width": 280,
+                                "zIndex": 3,
+                              }
+                            }
+                            underlineColorAndroid="transparent"
+                          />
+                        </BVLinearGradient>
+                        <View
+                          accessible={true}
+                          isTVSelectable={true}
+                          onResponderGrant={[Function]}
+                          onResponderMove={[Function]}
+                          onResponderRelease={[Function]}
+                          onResponderTerminate={[Function]}
+                          onResponderTerminationRequest={[Function]}
+                          onStartShouldSetResponder={[Function]}
+                          style={
+                            Object {
+                              "height": 50,
+                              "opacity": 1,
+                              "width": 150,
+                            }
+                          }
+                        >
+                          <BVLinearGradient
+                            colors={
+                              Array [
+                                4282147443,
+                                4281317757,
+                              ]
+                            }
+                            endPoint={
+                              Object {
+                                "x": 1,
+                                "y": 1,
+                              }
+                            }
+                            locations={
+                              Array [
+                                0,
+                                1,
+                              ]
+                            }
+                            startPoint={
+                              Object {
+                                "x": 0,
+                                "y": 1,
+                              }
+                            }
+                            style={
+                              Object {
+                                "borderRadius": 25,
+                                "zIndex": 1,
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Array [
+                                  Object {
+                                    "alignSelf": "center",
+                                    "backgroundColor": "transparent",
+                                    "borderRadius": 25,
+                                    "height": 42,
+                                    "position": "absolute",
+                                    "top": 2.5,
+                                    "width": 142,
+                                    "zIndex": 2,
+                                  },
+                                  undefined,
+                                ]
+                              }
+                            />
+                            <Text
+                              accessible={true}
+                              adjustsFontSizeToFit={true}
+                              allowFontScaling={true}
+                              ellipsizeMode="tail"
+                              style={
+                                Object {
+                                  "color": "#ffffff",
+                                  "fontFamily": "Lato-Regular",
+                                  "fontSize": 20,
+                                  "paddingVertical": 10,
+                                  "textAlign": "center",
+                                  "zIndex": 3,
+                                }
+                              }
+                            >
+                              GIVE KUDO
+                            </Text>
+                          </BVLinearGradient>
+                        </View>
+                      </View>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </RCTScrollView>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

@@ -39,6 +39,9 @@
   },
   "jest": {
     "preset": "react-native",
+    "coveragePathIgnorePatterns": [
+      "src/components/Icon"
+    ],
     "transformIgnorePatterns": [
       "node_modules/(?!(react-navigation|react-native))/"
     ]

@@ -54,7 +54,6 @@ exports[`<Header /> render 1`] = `
         accessible={true}
         allowFontScaling={false}
         ellipsizeMode="tail"
-        onPress={[Function]}
         style={
           Array [
             Object {

@@ -54,5 +54,14 @@ describe('<Comments />', () => {
       instance._animateAvatar({ nativeEvent: { contentOffset: { y: 10 } } })
       expect(instance.props.setAvatarAnimationValue).toHaveBeenCalledWith(1)
     })
+
+    test('should not call setAvatarAnimationValue if animationValue is equal props', () => {
+      const wrapper = renderer.create(
+        <CommentsComponent {...defaultProps} setAvatarAnimationValue={jest.fn()} />,
+      )
+      const instance = wrapper.root.findByType(Comments)._fiber.stateNode
+      instance._animateAvatar({ nativeEvent: { contentOffset: { y: 30 } } })
+      expect(instance.props.setAvatarAnimationValue).not.toBeCalled()
+    })
   })
 })
