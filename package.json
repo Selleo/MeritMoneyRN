@@ -8,9 +8,9 @@
     "remove-builds": "rm -rf ios/build android/build android/app/build",
     "lint": "eslint ./src --ext .js",
     "generate-apk": "cd android && ./gradlew assembleRelease",
-    "test:watch": "jest --watch",
-    "test:ci": "jest --coverage --runInBand --verbose",
-    "test": "jest -u"
+    "test:watch": "jest --watch src/",
+    "test:ci": "jest --coverage --runInBand --verbose src/",
+    "test": "jest -u src/"
   },
   "dependencies": {
     "prop-types": "15.6.1",
@@ -21,7 +21,7 @@
     "react-native-linear-gradient": "2.4.0",
     "react-native-text-gradient": "0.0.8",
     "react-native-vector-icons": "4.6.0",
-    "react-navigation": "2.2.2"
+    "react-navigation": "2.3.0"
   },
   "devDependencies": {
     "@selleo/eslint-config-react": "^0.4.0",
@@ -39,7 +39,6 @@
   },
   "jest": {
     "preset": "react-native",
-    "bail": true,
     "transformIgnorePatterns": [
       "node_modules/(?!(react-navigation|react-native))/"
     ]

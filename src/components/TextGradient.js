@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import { LinearTextGradient } from 'react-native-text-gradient'
+
 import { secondaryLight, primary } from 'src/styles/colors'
 
 export default class TextGradient extends Component {
   render() {
     const { style, children } = this.props
+
     return (
       <LinearTextGradient
         colors={[secondaryLight, primary]}

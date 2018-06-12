@@ -2,10 +2,12 @@ import 'react-native'
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import Index from '../index.js'
+import Main from '../'
 
-it('renders correctly', () => {
-  const tree = renderer.create(<Index />).toJSON()
+describe('<Main />', () => {
+  const wrapper = renderer.create(<Main />)
 
-  expect(tree).toMatchSnapshot()
+  test('render', () => {
+    expect(wrapper).toMatchSnapshot()
+  })
 })
